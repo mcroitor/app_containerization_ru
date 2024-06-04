@@ -1,0 +1,5 @@
+FROM debian
+
+WORKDIR /var
+
+CMD ["ls", "-l"]

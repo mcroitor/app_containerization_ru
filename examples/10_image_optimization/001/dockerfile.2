@@ -1,0 +1,5 @@
+# install php-cli and remove the apt cache
+FROM debian:bookworm-slim
+
+RUN apt-get update && apt-get install -y php-cli
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

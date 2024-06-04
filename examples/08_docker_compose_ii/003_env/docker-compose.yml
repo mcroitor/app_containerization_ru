@@ -1,0 +1,39 @@
+version: "3.0"
+
+services:
+  frontend:
+    image: nginx:1.25.4-alpine
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+    depends_on:
+      - backend
+    volumes:
+      - ./files/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./mounts/site:/var/www/html
+  backend:
+    build:
+      context: ./files/php
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - database
+    volumes:
+      - ./mounts/site:/var/www/html
+    env_file:
+      - mysql.env
+  database:
+    image: mariadb:10.6
+    env_file:
+      - mysql.env
+    networks:
+      - backend
+    volumes:
+      - ./mounts/site/install/structure.sql:/docker-entrypoint-initdb.d/01_structure.sql
+      - ./mounts/site/install/data.sql:/docker-entrypoint-initdb.d/02_data.sql
+
+networks:
+  frontend: {}
+  backend: {}

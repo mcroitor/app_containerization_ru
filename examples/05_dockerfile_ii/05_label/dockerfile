@@ -1,0 +1,5 @@
+FROM debian
+
+LABEL maintainer="Mihail Croitor"
+LABEL version="1.0"
+LABEL description="This is a sample of a Dockerfile with labels"

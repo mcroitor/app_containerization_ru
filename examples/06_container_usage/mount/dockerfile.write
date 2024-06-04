@@ -1,0 +1,10 @@
+# container mount /opt directory
+# after that each 5 seconds will be written a random number in the file /opt/data.txt
+FROM debian:latest
+
+ARG TIMEOUT=5
+ENV TIMEOUT=${TIMEOUT}
+
+VOLUME [ "/opt" ]
+
+CMD ["sh", "-c", "while true; do shuf -i1-10 -n1 > /opt/data.txt; sleep ${TIMEOUT}; done"]

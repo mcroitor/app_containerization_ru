@@ -1,0 +1,4 @@
+FROM debian
+
+# Create a directory in the container
+RUN mkdir -p /var/www/html

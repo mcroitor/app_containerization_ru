@@ -1,0 +1,4 @@
+FROM debian
+
+# CMD is used to provide defaults for an executing container.
+CMD ["echo", "Hello world"]

@@ -1,0 +1,7 @@
+FROM debian
+
+# update list of packages and packages
+RUN apt-get update && apt-get -y upgrade
+
+# install apache2
+RUN apt-get install -y apache2

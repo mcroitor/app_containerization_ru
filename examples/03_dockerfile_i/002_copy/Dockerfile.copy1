@@ -1,0 +1,5 @@
+FROM debian
+
+# The COPY instruction copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>.
+# In our case, the index.html file from the site directory is copied to the root of the container's filesystem.
+COPY site/index.html /index.html

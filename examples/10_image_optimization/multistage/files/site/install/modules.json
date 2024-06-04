@@ -1,0 +1,32 @@
+[
+    {
+        "user": "mcroitor",
+        "repository": "database",
+        "destination": "./../core/database",
+        "source": "src"
+    },
+    {
+        "user": "mcroitor",
+        "repository": "logger",
+        "source": "src",
+        "destination": "./../core/logger"
+    },
+    {
+        "user": "mcroitor",
+        "repository": "router",
+        "source": "src",
+        "branch": "master",
+        "destination": "./../core/router"
+    },
+    {
+        "user": "mcroitor",
+        "repository": "template",
+        "source": "src",
+        "destination": "./../core/template"
+    },
+    {
+        "user": "mcroitor",
+        "repository": "metadb",
+        "destination": "./metadb"
+    }
+]

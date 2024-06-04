@@ -1,0 +1,117 @@
+// # Вопросы по теме "Дополнительные директивы Dockerfile"
+
+$CATEGORY: 05_dockerfile_ii/1_knowledge
+
+::05k001:: [markdown] Чтобы задать переменную окружения в образе контейнера, используется директива{
+    =[markdown] `ENV`
+    ~[markdown] `ARG`
+    ~[markdown] `VAR`
+    ~[markdown] `VARIABLE`
+}
+
+::05k002:: [markdown] Для задания аргумента сборки, который можно использовать во время сборки образа, используется директива
+{
+    =[markdown] `ARG`
+    ~[markdown] `ENV`
+    ~[markdown] `BUILD_ARG`
+    ~[markdown] `VAR`
+}
+
+::05k003:: [markdown] Чтобы открыть порт контейнера, используется директива
+{
+    =[markdown] `EXPOSE`
+    ~[markdown] `PORT`
+    ~[markdown] `OPEN`
+    ~[markdown] `PUBLISH`
+}
+
+::05k004:: [markdown] Для указания точки монтирования тома в контейнере используется директива
+{
+    =[markdown] `VOLUME`
+    ~[markdown] `MOUNT`
+    ~[markdown] `MOUNTPOINT`
+    ~[markdown] `MOUNTVOLUME`
+}
+
+::05k005:: [markdown] Метаданные образа можно задать с помощью директивы
+{
+    =[markdown] `LABEL`
+    ~[markdown] `META`
+    ~[markdown] `METADATA`
+    ~[markdown] `COMMENT`
+}
+
+::05k006:: [markdown] Сменить командную оболочку по умолчанию в образе можно с помощью директивы
+{
+    =[markdown] `SHELL`
+    ~[markdown] `CMD`
+    ~[markdown] `SH`
+    ~[markdown] `BASH`
+}
+
+::05k007:: [markdown] Проверить работу образа можно с помощью директивы
+{
+    =[markdown] `HEALTHCHECK`
+    ~[markdown] `CHECK`
+    ~[markdown] `TEST`
+    ~[markdown] `VERIFY`
+}
+
+::05k008:: [markdown] Задать аргумент `DEBIAN_VERSION` сборки в Dockerfile можно следующим образом
+{
+    =[markdown] `ARG DEBIAN_VERSION`
+    ~[markdown] `ENV DEBIAN_VERSION`
+    ~[markdown] `VAR DEBIAN_VERSION`
+    ~[markdown] `SET DEBIAN_VERSION`
+}
+
+::05k009:: [markdown] Задать переменную окружения `DEBIAN_VERSION` в Dockerfile можно следующим образом
+{
+    =[markdown] `ENV DEBIAN_VERSION`
+    ~[markdown] `ARG DEBIAN_VERSION`
+    ~[markdown] `VAR DEBIAN_VERSION`
+    ~[markdown] `SET DEBIAN_VERSION`
+}
+
+::05k010:: [markdown] Определить аргумент сборки `DEBIAN_VERSION` со значением `10` при сборке образа `myimage`, нужно использовать команду
+{
+    =[markdown] `docker build --build-arg DEBIAN_VERSION=10 -t myimage .`
+    ~[markdown] `docker build -e DEBIAN_VERSION=10 -t myimage .`
+    ~[markdown] `docker build --arg DEBIAN_VERSION=10 -t myimage .`
+    ~[markdown] `docker build --build-env DEBIAN_VERSION=10 -t myimage .`
+}
+
+//Вопросы типа _"короткий ответ"_:
+$CATEGORY: 05_dockerfile_ii/2_usage
+
+::05u001:: [markdown] Чтобы задать аргумент сборки `UBUNTU_VERSION` со значением `20.04`, нужно добавить в Dockerfile следующую строку {=ARG UBUNTU_VERSION=20.04}
+
+::05u001:: [markdown] Чтобы задать аргумент сборки `APP_DIR` со значением `/usr/src/app`, нужно добавить в Dockerfile следующую строку {=ARG APP_DIR=/usr/src/app}
+
+::05u001:: [markdown] Чтобы задать переменную окружения `APP_DIR` со значением `/usr/src/app`, нужно добавить в Dockerfile следующую строку{=ENV APP_DIR=/usr/src/app}
+
+::05u001:: [markdown] Чтобы задать переменную окружения `UBUNTU_VERSION` со значением `20.04`, нужно добавить в Dockerfile следующую строку{=ENV UBUNTU_VERSION=20.04}
+
+::05u001:: [markdown] Чтобы определить аргумент сборки `UBUNTU_VERSION` со значением `20.04` при сборке образа `myimage`, нужно использовать команду{=docker build --build-arg UBUNTU_VERSION=20.04 -t myimage . =docker build -t myimage --build-arg UBUNTU_VERSION=20.04 .}
+
+::05u001:: [markdown] Чтобы определить аргумент сборки `APP_DIR` со значением `/usr/src/app` при сборке образа `myimage`, нужно использовать команду {=docker build --build-arg APP_DIR=/usr/src/app -t myimage . =docker build -t myimage --build-arg APP_DIR=/usr/src/app .}
+
+::05u001:: [markdown] В Dockerfile определена переменная окружения `UBUNTU_VERSION`. Напишите директиву, которая выведет значение этой переменной во время сборки образа в файл `/version.txt`. {=RUN echo $UBUNTU_VERSION > /version.txt =RUN echo "$UBUNTU_VERSION" > /version.txt =RUN echo $\{UBUNTU_VERSION\} > /version.txt}
+
+::05u001:: [markdown] В Dockerfile определён аргумент сборки `UBUNTU_VERSION`. Напишите директиву, которая определит переменную окружения `UBUNTU_VERSION` со значением аргумента сборки.{=ENV UBUNTU_VERSION=$UBUNTU_VERSION=ENV UBUNTU_VERSION=$\{UBUNTU_VERSION\}=ENV UBUNTU_VERSION="$UBUNTU_VERSION"}
+
+::05u001:: [markdown] В Dockerfile определён аргумент сборки `UBUNTU_VERSION`. Напишите директиву, которая определяет создание образа на базе образа `ubuntu` с использованием аргумента сборки `UBUNTU_VERSION`. {=FROM ubuntu\:$UBUNTU_VERSION=FROM ubuntu\:$\{UBUNTU_VERSION\}}
+
+::05u001:: [markdown] Чтобы открыть порт `80` в контейнере, нужно добавить в Dockerfile следующую строку{=EXPOSE 80}
+
+::05u001:: [markdown] Чтобы открыть порт `8080` в контейнере, нужно добавить в Dockerfile следующую строку{=EXPOSE 8080}
+
+::05u001:: [markdown] Чтобы пробросить порт `80` контейнера на порт `8080` хоста при создании и запуске контейнера с образом `myimage`, нужно использовать команду{=docker run -p 8080\:80 myimage}
+
+::05u001:: [markdown] Чтобы определить точку монтирования тома к каталогу `/data` в контейнере, нужно добавить в Dockerfile следующую строку{=VOLUME /data}
+
+::05u001:: [markdown] Чтобы определить точку монтирования тома к каталогу `/var/lib/mysql` в контейнере, нужно добавить в Dockerfile следующую строку{=VOLUME /var/lib/mysql}
+
+::05u001:: [markdown] Чтобы задать метаданные образа `maintainer` со значением `Gicu Stirbu`, нужно добавить в Dockerfile следующую строку{=LABEL maintainer="Gicu Stirbu"=LABEL maintainer=Gicu Stirbu}
+
+::05u001:: [markdown] Чтобы задать метаданные образа `version` со значением `1.0`, нужно добавить в Dockerfile следующую строку{=LABEL version="1.0"=LABEL version=1.0}

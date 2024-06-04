@@ -1,0 +1,11 @@
+FROM gcc:latest AS builder
+
+WORKDIR /app
+COPY helloworld.cpp .
+RUN g++ helloworld.cpp -o helloworld -static
+
+FROM scratch
+
+COPY --from=builder /app/helloworld /helloworld
+
+CMD ["/helloworld"]

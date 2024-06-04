@@ -1,0 +1,6 @@
+*.log
+config.php
+*.db
+*.sqlite
+__tmp__/
+install/modules/

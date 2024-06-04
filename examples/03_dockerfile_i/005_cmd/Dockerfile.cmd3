@@ -1,0 +1,11 @@
+# Image based on debian:buster with apache2 installed and a custom site copied to /var/www/html
+FROM debian:buster
+
+# update list of packages and packages, install apache2
+RUN apt-get update && apt-get -y upgrade && apt-get install -y apache2
+
+# copy custom site to /var/www/html
+COPY site /var/www/html
+
+# start apache2 in the foreground
+CMD ["apache2ctl", "-D", "FOREGROUND"]

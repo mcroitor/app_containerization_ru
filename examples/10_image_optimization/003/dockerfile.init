@@ -1,0 +1,6 @@
+FROM alpine:latest
+
+VOLUME [ "/usr/share/nginx/html" ]
+COPY site /usr/share/nginx/html
+
+CMD ["echo", "Data container for Nginx is ready..."]

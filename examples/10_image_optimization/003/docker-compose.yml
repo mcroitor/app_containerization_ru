@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  init:
+    build:
+      context: .
+      dockerfile: dockerfile.init
+    volumes:
+      - site:/usr/share/nginx/html
+  webserver:
+    build:
+      context: .
+      dockerfile: dockerfile.2
+    ports:
+      - "80:80"
+    volumes:
+      - site:/usr/share/nginx/html
+    depends_on:
+      - init
+
+volumes:
+  site: {}

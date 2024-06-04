@@ -1,0 +1,74 @@
+// # Вопросы по теме "Оптимизация образа контейнера"
+
+$CATEGORY: 10_image_optimization/1_knowledge
+
+::10k001:: [markdown] Какой командой можно просмотреть список образов контейнеров?
+{
+   = [markdown]`docker images`
+   ~ [markdown]`docker ps`
+   ~ [markdown]`docker container ls`
+   ~ [markdown]`docker inspect`
+}
+
+::10k002:: [markdown] Какой командой можно просмотреть информацию о слоях образа?
+{
+   = [markdown]`docker history`
+   ~ [markdown]`docker inspect`
+   ~ [markdown]`docker image ls`
+   ~ [markdown]`docker image inspect`
+}
+
+::10k003:: [markdown] Дан Dockerfile\:
+   ```dockerfile
+   FROM nginx\:latest
+   COPY ./site /usr/share/nginx/html
+   ```
+   Как можно уменьшить размер получаемого образа?
+{
+   = [markdown]заменить `nginx\:latest` на `nginx\:alpine`
+   ~ [markdown]использовать многоэтапную сборку
+   ~ [markdown]уменьшить количество слоев
+   ~ [markdown]использовать `.dockerignore`
+}
+
+::10k004:: [markdown] Дан Dockerfile\:
+   ```dockerfile
+   FROM nginx\:alpine
+   COPY ./site /usr/share/nginx/html
+   ```
+   Как можно уменьшить размер получаемого образа?
+{
+   = [markdown]хранить сайт в монтированном томе
+   ~ [markdown]использовать многоэтапную сборку
+   ~ [markdown]уменьшить количество слоев
+   ~ [markdown]использовать `.dockerignore`
+}
+
+::10k005:: [markdown] Дан Dockerfile\:
+    ```dockerfile
+    FROM debian\:bookworm-slim
+    RUN apt-get update && apt-get install -y php-cli
+    RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    ```
+    Как можно уменьшить размер получаемого образа?
+{
+    = [markdown]объединить слои
+    ~ [markdown]использовать многоэтапную сборку
+    ~ [markdown]хранить данные в монтированном томе
+    ~ [markdown]использовать `.dockerignore`
+}
+
+::10k006:: [markdown] Дан Dockerfile\:
+    ```dockerfile
+    FROM gcc\:latest
+    COPY app.cpp .
+    RUN g++ app.cpp -o app -static
+    CMD ["./app"]
+    ```
+    Как можно уменьшить размер получаемого образа?
+{
+    = [markdown]использовать многоэтапную сборку
+    ~ [markdown]уменьшить количество слоев
+    ~ [markdown]хранить данные в монтированном томе
+    ~ [markdown]использовать `.dockerignore`
+}

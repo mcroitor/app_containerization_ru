@@ -1,0 +1,7 @@
+FROM gcc:12.2
+
+COPY ./files/sample.cpp .
+
+RUN g++ sample.cpp -o sample -static
+
+CMD [ "/sample" ]

@@ -1,0 +1,124 @@
+// # Вопросы по теме "Взаимодействие контейнеров"
+
+$CATEGORY: 06_container_usage/1_knowledge
+
+::05k001:: [markdown] Просмотреть список существующих томов можно с помощью команды\:
+{
+   =[markdown]`docker volume ls`
+   ~[markdown]`docker volume list`
+   ~[markdown]`docker volume show`
+   ~[markdown]`docker volume inspect`
+}
+
+::05k002:: [markdown] Чтобы создать том с именем `opt`, используется команда\:
+{
+   =[markdown]`docker volume create opt`
+   ~[markdown]`docker volume create --name opt`
+   ~[markdown]`docker volume make opt`
+   ~[markdown]`docker volume create name\=opt`
+}
+
+::05k003:: [markdown] Чтобы просмотреть информацию о томе `opt`, используется команда\:
+{
+   =[markdown]`docker volume inspect opt`
+   ~[markdown]`docker volume show opt`
+   ~[markdown]`docker volume info opt`
+   ~[markdown]`docker volume ls opt`
+}
+
+::05k004:: [markdown] Удалить том `opt` можно командой\:
+{
+   =[markdown]`docker volume rm opt`
+   ~[markdown]`docker volume remove opt`
+   ~[markdown]`docker volume delete opt`
+   ~[markdown]`docker volume prune opt`
+}
+
+::05k005:: [markdown] Удалить все неиспользуемые тома можно командой\:
+{
+   =[markdown]`docker volume prune`
+   ~[markdown]`docker volume remove`
+   ~[markdown]`docker volume clear`
+   ~[markdown]`docker volume rm`
+}
+
+::05k006:: [markdown] Просмотреть список сетей можно с помощью команды\:
+{
+   =[markdown]`docker network ls`
+   ~[markdown]`docker network list`
+   ~[markdown]`docker network show`
+   ~[markdown]`docker network inspect`
+}
+
+::05k007:: [markdown] Чтобы создать сеть с именем `local`, используется команда\:
+{
+   =[markdown]`docker network create local`
+   ~[markdown]`docker network make --name local`
+   ~[markdown]`docker network make local`
+   ~[markdown]`docker network create name=local`
+}
+
+::05k008:: [markdown] Чтобы просмотреть информацию о сети `local`, используется команда\:
+{
+   =[markdown]`docker network inspect local`
+   ~[markdown]`docker network show local`
+   ~[markdown]`docker network info local`
+   ~[markdown]`docker network ls local`
+}
+
+::05k009:: [markdown] Удалить сеть `local` можно командой\:
+{
+   =[markdown]`docker network rm local`
+   ~[markdown]`docker network remove local`
+   ~[markdown]`docker network delete local`
+   ~[markdown]`docker network prune local`
+}
+
+::05k010:: [markdown] Подключить контейнер `frontend` к сети `local` можно командой\:
+{
+   =[markdown]`docker network connect local frontend`
+   ~[markdown]`docker network connect frontend local`
+   ~[markdown]`docker network attach frontend local`
+   ~[markdown]`docker network attach local frontend`
+}
+
+::05k011:: [markdown] Отключить контейнер `frontend` от сети `local` можно командой\:
+{
+   =[markdown]`docker network disconnect local frontend`
+   ~[markdown]`docker network disconnect frontend local`
+   ~[markdown]`docker network detach frontend local`
+   ~[markdown]`docker network detach local frontend`
+}
+
+::05k012:: [markdown] Удалить все неиспользуемые сети можно командой\:
+{
+   =[markdown]`docker network prune`
+   ~[markdown]`docker network remove`
+   ~[markdown]`docker network clear`
+   ~[markdown]`docker network rm`
+}
+
+$CATEGORY: 06_container_usage/2_usage
+//Вопросы _короткий ответ_:
+
+::05u001:: [markdown] Для создания контейнера `webserver` на базе образа `webserver` с пробросом порта `80` контейнера на порт `8000` хоста используется команда\: {=docker create --name webserver -p 8000\:80 webserver =docker create --name webserver --port 8000\:80 webserver =docker create -p 8000\:80 --name webserver webserver =docker create --port 8000\:80 --name webserver webserver}
+
+::05u002:: [markdown] Для создания и запуска контейнера `webserver` на базе образа `webserver` с пробросом порта `80` контейнера на порт `8080` хоста используется команда\: {=docker run --name webserver -p 8080\:80 webserver =docker run -p 8080\:80 --name webserver webserver =docker run --name webserver --port 8080\:80 webserver =docker run --port 8080\:80 --name webserver webserver}
+
+::05u003:: [markdown] Чтобы создать и запустить контейнер `webserver` на базе образа `webserver` с монтированием тома `opt` в директорию `/opt` контейнера используется команда\: {=docker run -v opt\:/opt --name webserver webserver =docker run --volume opt\:/opt --name webserver webserver =docker run --name webserver -v opt\:/opt webserver =docker run --name webserver --volume opt\:/opt webserver}
+
+::05u004:: [markdown] Чтобы создать и запустить контейнер `nodeapp` на базе образа `nodeapp` с монтированием тома `app` в директорию `/app` контейнера используется команда\: {=docker run -v app\:/app --name nodeapp nodeapp =docker run --volume app\:/app --name nodeapp nodeapp =docker run --name nodeapp -v app\:/app nodeapp =docker run --name nodeapp --volume app\:/app nodeapp}
+
+::05u005:: [markdown] Чтобы создать и запустить контейнер `webserver` на базе образа `webserver` с подключением к сети `local` используется команда\: {= docker run --name webserver --network local webserver =docker run --network local --name webserver webserver}
+
+::05u006:: [markdown] Чтобы создать и запустить контейнер `nodeapp` на базе образа `nodeapp` с подключением к сети `backend` используется команда\: {=docker run --name nodeapp --network backend nodeapp =docker run --network backend --name nodeapp nodeapp}
+
+::05u007:: [markdown] Для удаления сети `local` используется команда\: {=docker network rm local}
+
+::05u008:: [markdown] В Docker для создания сети с именем `local` используется команда\: {=docker network create local}
+
+::05u009:: [markdown] Добавить контейнер `frontend` к сети `local` можно командой\: {=docker network connect local frontend}
+
+::05u010:: [markdown] В Docker для создания тома с именем `opt` используется команда\: {=docker volume create opt}
+
+::05u011:: [markdown] Для удаления тома `opt` используется команда\: {=docker volume rm opt}

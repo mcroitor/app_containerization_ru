@@ -1,0 +1,68 @@
+// # Вопросы к занятию "Особенности настройки кластера контейнеров"
+// Вопросы с выбором одного варианта из четырёх.
+
+$CATEGORY:  08_docker_compose_ii/1_knowledge
+
+::07k001:: [markdown] Какой ключ используется в файле `docker-compose.yml` для указания переменных окружения, которые необходимо передать в контейнер?
+{
+    = [markdown]environment
+    ~ [markdown]env
+    ~ [markdown]variables
+    ~ [markdown]vars
+}
+
+::07k002:: [markdown] Какой ключ используется в файле `docker-compose.yml` для указания файла с переменными окружения?
+{
+    = [markdown]env_file
+    ~ [markdown]environment_file
+    ~ [markdown]variables_file
+    ~ [markdown]vars_file
+}
+
+::07k003:: [markdown] Какой файл автоматически подставляет Docker Compose в файл `docker-compose.yml`, если переменные окружения объявлены в нём?
+{
+    = [markdown].env
+    ~ [markdown].vars
+    ~ [markdown].variables
+    ~ [markdown].env_file
+}
+
+::07k004:: [markdown] Какой ключ используется в файле `docker-compose.yml` для указания аргументов сборки образа?
+{
+    = [markdown]build.args
+    ~ [markdown]image.args
+    ~ [markdown]build.arguments
+    ~ [markdown]image.variables
+}
+
+::07k005:: [markdown] Какой ключ используется в файле `docker-compose.yml` для указания контекста сборки образа?
+{
+    = [markdown]build.context
+    ~ [markdown]image.context
+    ~ [markdown]build.dir
+    ~ [markdown]image.dir
+}
+
+::07k006:: [markdown] Каким образом можно в `docker-compose.yml` ограничить процессорное время, доступное контейнеру?
+{
+    = [markdown]указать значение ключа `deploy.resources.limits.cpus`
+    ~ [markdown]указать значение ключа `deploy.resources.cpu_limit`
+    ~ [markdown]указать значение ключа `deploy.resources.cpu.quota`
+    ~ [markdown]указать значение ключа `deploy.resources.cpu.shares`
+}
+
+::07k007:: [markdown] Каким образом можно в `docker-compose.yml` ограничить объём памяти, доступный контейнеру?
+{
+    = [markdown]указать значение ключа `deploy.resources.limits.memory`
+    ~ [markdown]указать значение ключа `deploy.resources.memory_limit`
+    ~ [markdown]указать значение ключа `deploy.resources.memory.quota`
+    ~ [markdown]указать значение ключа `deploy.resources.memory.shares`
+}
+
+::07k008:: [markdown] Какой ключ используется в файле `docker-compose.yml` для указания ограничений ресурсов контейнера?
+{
+    = [markdown]deploy.resources
+    ~ [markdown]resources
+    ~ [markdown]limits
+    ~ [markdown]deploy.limits
+}

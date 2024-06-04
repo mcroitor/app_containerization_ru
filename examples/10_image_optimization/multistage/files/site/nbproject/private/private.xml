@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <coverage xmlns="http://www.netbeans.org/ns/code-coverage/1" enabled="false"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Group 20190725-11:38:35">
+            <file>file:/D:/WORK/srv/home/yacms/themes/default/main.css</file>
+            <file>file:/D:/WORK/srv/home/yacms/core/page.class.php</file>
+            <file>file:/D:/WORK/srv/home/yacms/core/database.class.php</file>
+        </group>
+        <group>
+            <file>file:/D:/projects/NetBeansProjects/git/yacms/module/user/db/install.sql</file>
+            <file>file:/D:/projects/NetBeansProjects/git/yacms/module/user/templates/login.template.php</file>
+            <file>file:/D:/projects/NetBeansProjects/git/yacms/themes/default/main.css</file>
+            <file>file:/D:/projects/NetBeansProjects/git/yacms/module/pisa/pisa.class.php</file>
+        </group>
+    </open-files>
+</project-private>

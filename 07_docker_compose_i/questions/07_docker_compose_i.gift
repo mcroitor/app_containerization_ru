@@ -1,0 +1,179 @@
+// # Вопросы по теме "Создание кластера контейнеров при помощи Docker Compose"
+
+$CATEGORY:  07_docker_compose_i/1_knowledge
+
+::07k001:: [markdown] Docker Compose это
+{
+    = [markdown]инструментальное средство для описания и запуска многоконтейнерных приложений
+    ~ [markdown]инструментальное средство для описания и запуска одноконтейнерных приложений
+    ~ [markdown]сервис для управления образами контейнеров
+    ~ [markdown]сервис для управления контейнерами
+}
+
+::07k002:: [markdown] Какой формат используется для описания многоконтейнерных приложений в Docker Compose?
+{
+    = [markdown]YAML
+    ~ [markdown]JSON
+    ~ [markdown]XML
+    ~ [markdown]TOML
+}
+
+::07k003:: [markdown] Какой файл используется для описания многоконтейнерных приложений в Docker Compose?
+{
+    = [markdown]docker-compose.yml
+    ~ [markdown]docker-compose.xml
+    ~ [markdown]docker-compose.json
+    ~ [markdown]docker-compose.toml
+}
+
+::07k004:: [markdown] Какой командой можно построить и запустить многоконтейнерное приложение, описанное в файле `docker-compose.yml`?
+{
+   = [markdown]`docker-compose up`
+   ~ [markdown]`docker-compose start`
+   ~ [markdown]`docker-compose run`
+   ~ [markdown]`docker-compose exec`
+}
+
+::07k005:: [markdown] Какой командой можно остановить и удалить запущенное многоконтейнерное приложение?
+{
+   = [markdown]`docker-compose down`
+   ~ [markdown]`docker-compose stop`
+   ~ [markdown]`docker-compose stop`
+   ~ [markdown]`docker-compose rm`
+}
+
+::07k006:: [markdown] Чтобы собрать многоконтейнерное приложение, описанное в файле `docker-compose.yml`, необходимо выполнить команду
+{
+   = [markdown]`docker-compose build`
+   ~ [markdown]`docker-compose compile`
+   ~ [markdown]`docker-compose start`
+   ~ [markdown]`docker-compose run`
+}
+
+::07k007:: [markdown] Дан файл `docker-compose.yml`
+    ```yaml
+    version\: '3.7'
+    services\:
+      web\:
+        image\: nginx\:latest
+        ports\:
+          - "8080\:80"
+    ```
+    Какой контейнер будет запущен при выполнении команды `docker-compose up`?
+{
+    = [markdown]web
+    ~ [markdown]nginx
+    ~ [markdown]latest
+    ~ [markdown]не хва́тает информации для ответа
+}
+
+::07k008:: [markdown] В файле `docker-compose.yml` необходимо обязательно указывать
+{
+    = [markdown]список сервисов
+    ~ [markdown]список образов
+    ~ [markdown]список сетей
+    ~ [markdown]список томов
+}
+
+::07k009:: [markdown] Какой ключ для указания сервисов в файле `docker-compose.yml`?
+{
+    = [markdown]services
+    ~ [markdown]containers
+    ~ [markdown]service
+    ~ [markdown]images
+}
+
+::07k010:: [markdown] Какой ключ для указания образа, на основе которого будет создан контейнер, в файле `docker-compose.yml`?
+{
+    = [markdown]image
+    ~ [markdown]container
+    ~ [markdown]service
+    ~ [markdown]images
+}
+
+::07k011:: [markdown] Если для сервиса не указан ключ `image`, то необходимо указать ключ
+{
+    = [markdown]build
+    ~ [markdown]create
+    ~ [markdown]run
+    ~ [markdown]from
+}
+
+::07k012:: [markdown] Какой ключ для указания портов, которые необходимо пробросить из контейнера в хост-систему, в файле `docker-compose.yml`?
+{
+    = [markdown]ports
+    ~ [markdown]expose
+    ~ [markdown]publish
+    ~ [markdown]forward
+}
+
+::07k013:: [markdown] Для указания монтирования тома в контейнер в файле `docker-compose.yml` используется ключ
+{
+    = [markdown]volumes
+    ~ [markdown]mounts
+    ~ [markdown]bind
+    ~ [markdown]attach
+}
+
+::07k014:: [markdown] Для указания используемых сетей сервисом в файле `docker-compose.yml` используется ключ
+{
+    = [markdown]networks
+    ~ [markdown]net
+    ~ [markdown]network
+    ~ [markdown]nets
+}
+
+::07k015:: [markdown] Для указания очереди запуска сервисов в файле `docker-compose.yml` используется ключ
+{
+    = [markdown]depends_on
+    ~ [markdown]run_after
+    ~ [markdown]after
+    ~ [markdown]before
+}
+
+::07k016:: [markdown] Для просмотра журнала событий сервиса `myservice`, описанного в файле `docker-compose.yml`, необходимо выполнить команду
+{
+    = [markdown]`docker-compose logs myservice`
+    ~ [markdown]`docker-compose log myservice`
+    ~ [markdown]`docker-compose journal myservice`
+    ~ [markdown]`docker-compose events myservice`
+}
+
+::07k017:: [markdown] Для выполнения команды `command` внутри контейнера сервиса `myservice`, описанного в файле `docker-compose.yml`, необходимо выполнить команду
+{
+    = [markdown]`docker-compose exec myservice command`
+    ~ [markdown]`docker-compose run myservice command`
+    ~ [markdown]`docker-compose start myservice command`
+    ~ [markdown]`docker-compose stop myservice command`
+}
+
+$CATEGORY:  07_docker_compose_i/2_usage
+// ## Вопросы с коротким ответом
+
+::07u001:: [markdown] Для указания версии синтаксиса Docker Compose в файле `docker-compose.yml` используется ключ {=version}
+
+::07u002:: [markdown] Для указания сервисов в файле `docker-compose.yml` используется ключ {=services}
+
+::07u003:: [markdown] Для указания образа, на основе которого будет создан контейнер, в файле `docker-compose.yml` используется ключ {=image}
+
+::07u004:: [markdown] Для указания портов, которые необходимо пробросить из контейнера в хост-систему, в файле `docker-compose.yml` используется ключ {=ports}
+
+::07u005:: [markdown] Для указания монтирования тома в контейнер в файле `docker-compose.yml` используется ключ {=volumes}
+
+::07u006:: [markdown] Для указания используемых сетей сервисом в файле `docker-compose.yml` используется ключ {=networks}
+
+::07u007:: [markdown] Для указания очереди запуска сервисов в файле `docker-compose.yml` используется ключ {=depends_on}
+
+::07u008:: [markdown] Для указания пути к катаогу с файлом `Dockerfile` в файле `docker-compose.yml` используется ключ {=build}
+
+::07u009:: [markdown] Для указания команды, которая будет выполнена при запуске контейнера, в файле `docker-compose.yml` используется ключ {=command}
+
+::07u010:: [markdown] Чтобы создать инфраструктуру определенную в файле `docker-compose.yml` и построить контейнеры сервисов, необходимо выполнить команду {=docker-compose build =docker compose build}
+
+::07u011:: [markdown] Чтобы запустить контейнеры сервисов, определённые в файле `docker-compose.yml`, необходимо выполнить команду {=docker-compose up =docker-compose up -d =docker compose up =docker compose up -d}
+
+::07u012:: [markdown] Чтобы остановить и удалить контейнеры сервисов, определённые в файле `docker-compose.yml`, необходимо выполнить команду {=docker-compose down =docker compose down}
+
+::07u013:: [markdown] Чтобы просмотреть журнал событий сервиса `myservice`, определённого в файле `docker-compose.yml`, необходимо выполнить команду {=docker-compose logs myservice =docker compose logs myservice =docker-compose logs -f myservice =docker compose logs -f myservice}
+
+::07u014:: [markdown] Чтобы выполнить команду `command` внутри контейнера сервиса `myservice`, определённого в файле `docker-compose.yml`, необходимо выполнить команду {=docker-compose exec myservice command =docker compose exec myservice command}

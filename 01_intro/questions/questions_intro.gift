@@ -1,0 +1,349 @@
+// intro
+$CATEGORY: 01_intro/knowledge
+
+// ### Операционные системы
+
+::01k001:: [markdown] Что такое операционная система?
+{
+   =[markdown] программа, которая управляет ресурсами компьютера и позволяет запускать прикладные программы
+   ~[markdown] текстовый процессор
+   ~[markdown] программа мониторинга ресурсов компьютера
+   ~[markdown] информационная система, выполняющая операции
+}
+
+::01k002:: [markdown] Какие функции выполняет операционная система?
+{
+   =[markdown] все перечисленное
+   ~[markdown] управление ресурсами компьютера
+   ~[markdown] управление запуском прикладных программ
+   ~[markdown] управление взаимодействием с пользователем
+}
+
+::01k003:: [markdown] Какое из перечисленных приложений не является операционной системой?
+{
+   =[markdown] Microsoft Office
+   ~[markdown] Windows
+   ~[markdown] Linux
+   ~[markdown] Android
+}
+
+::01k004:: [markdown] Как в консольном окне ОС Windows вывести список файлов и папок в текущей директории?
+{
+   =[markdown] `dir`
+   ~[markdown] `ls`
+   ~[markdown] `cd`
+   ~[markdown] `pwd`
+}
+
+::01k005:: [markdown] Как в консольном окне ОС Linux вывести список файлов и папок в текущей директории?
+{
+   =[markdown] `ls`
+   ~[markdown] `dir`
+   ~[markdown] `cd`
+   ~[markdown] `pwd`
+}
+
+::01k006:: [markdown] Как в консольном окне ОС Windows перейти в директорию `C\:\Users\user\Documents`?
+{
+   =[markdown] `cd C\:\Users\user\Documents`
+   ~[markdown] `cd \Users\user\Documents`
+   ~[markdown] `dir C\:/Users/user/Documents`
+   ~[markdown] `dir C\:\Users\user\Documents`
+}
+
+::01k007:: Как в консольном окне ОС Linux перейти в директорию `/home/user/Documents`?
+{
+   =[markdown] `cd /home/user/Documents`
+   ~[markdown] `dir /home/user/Documents`
+   ~[markdown] `goto /home/user/Documents`
+   ~[markdown] `switch /home/user/Documents`
+}
+
+::01k008:: [markdown] Как в консольном окне ОС Windows создать папку `my_folder`?
+{
+   =[markdown] `mkdir my_folder`
+   ~[markdown] `dir my_folder`
+   ~[markdown] `make my_folder`
+   ~[markdown] `touch my_folder`
+}
+
+::01k009:: [markdown] Как в консольном окне ОС Linux создать папку `/home/user/Documents/my_folder`?
+{
+   =[markdown] `mkdir my_folder`
+   ~[markdown] `dir my_folder`
+   ~[markdown] `make my_folder`
+   ~[markdown] `touch my_folder`
+}
+
+::01k010:: [markdown] В операционных системах при описании пути к файлу символ `.` означает {
+    =[markdown] текущую директорию
+    ~[markdown] родительскую директорию
+    ~[markdown] корневую директорию
+    ~[markdown] домашнюю директорию
+}
+
+// ### Компьютерные сети
+
+::01k011:: [markdown] Компьютер в компьютерной сети идентифицируется
+{
+   =[markdown] IP-адресом
+   ~[markdown] MAC-адресом
+   ~[markdown] именем
+   ~[markdown] всем перечисленным
+}
+
+::01k012:: [markdown] Специализированный компьютер (программа), оказывающий услуги другим компьютерам (программам) в сети\:
+{
+   =[markdown] сервер
+   ~[markdown] клиент
+   ~[markdown] хост
+   ~[markdown] роутер
+}
+
+::01k013:: [markdown] Промежуточный сервер в цепи передачи данных, выполняющий роль посредника\:
+{
+   =[markdown] прокси
+   ~[markdown] хост
+   ~[markdown] шлюз
+   ~[markdown] роутер
+}
+
+::01k014:: [markdown] Символическое имя, идентификационная строка, назначенная сетевому ресурсу, административной области или организации в сети Internet\:
+{
+   =[markdown] доменное имя
+   ~[markdown] IP-адрес
+   ~[markdown] MAC-адрес
+   ~[markdown] URL
+}
+
+::01k015:: [markdown] Сетевой протокол, используемый удаленного доступа к OS Linux\:
+{
+   =[markdown] SSH
+   ~[markdown] HTTP
+   ~[markdown] SMTP
+   ~[markdown] FTP
+}
+
+::01k016:: [markdown] Размер адреса IPv4 составляет
+{
+   =[markdown] 32 бита
+   ~[markdown] 64 бита
+   ~[markdown] 128 бит
+   ~[markdown] 16 бит
+}
+
+::01k017:: [markdown] Специализированное приложение, предназначенное для предоставления клиенту статической информации (статических документов) по протоколу HTTP\:
+{
+   =[markdown] веб-сервер
+   ~[markdown] почтовый сервер
+   ~[markdown] DNS-сервер
+   ~[markdown] FTP-сервер
+}
+
+::01k018:: [markdown] Протокол HTTP использует порт
+{
+   =[markdown] 80
+   ~[markdown] 25
+   ~[markdown] 22
+   ~[markdown] 443
+   }
+
+::01k019:: [markdown] Протокол HTTPS использует порт
+{
+   =[markdown] 443
+   ~[markdown] 80
+   ~[markdown] 25
+   ~[markdown] 22
+}
+
+::01k020:: [markdown] Символическое имя, идентификационная строка, определяющая местоположение ресурса в сети Internet\:
+{
+   =[markdown] URL
+   ~[markdown] IP-адрес
+   ~[markdown] MAC-адрес
+   ~[markdown] доменное имя
+}
+
+// ### Базы данных (SQL)
+
+::01k021:: [markdown] Что такое база данных?
+{
+   =[markdown] набор связанных данных, хранимых в упорядоченном виде
+   ~[markdown] набор несвязанных данных, хранимых в упорядоченном виде
+   ~[markdown] набор связанных данных, хранимых в неупорядоченном виде
+   ~[markdown] набор несвязанных данных, хранимых в неупорядоченном виде
+}
+
+::01k022:: [markdown] Что такое СУБД?
+{
+   =[markdown] система управления базами данных
+   ~[markdown] система управления бизнес-данными
+   ~[markdown] сервер управления большими данными
+   ~[markdown] служба управления безопасностью данных
+}
+
+::01k023:: [markdown] В языке SQL команды разделяются
+{
+   =[markdown] точкой с запятой
+   ~[markdown] запятой
+   ~[markdown] двоеточием
+   ~[markdown] пробелом
+}
+
+::01k024:: [markdown] Какой из перечисленных операторов SQL используется для выборки данных из таблицы?
+{
+   =[markdown] `SELECT`
+   ~[markdown] `GET`
+   ~[markdown] `VIEW`
+   ~[markdown] `SHOW`
+}
+
+::01k025:: [markdown] Какой из перечисленных операторов SQL используется для добавления данных в таблицу?
+{
+   =[markdown] `INSERT`
+   ~[markdown] `CREATE`
+   ~[markdown] `UPDATE`
+   ~[markdown] `ADD`
+}
+
+::01k026:: [markdown] Какой из перечисленных операторов SQL используется для изменения данных в таблице?
+{
+   =[markdown] `UPDATE`
+   ~[markdown] `CHANGE`
+   ~[markdown] `INSERT`
+   ~[markdown] `SET`
+}
+
+::01k027:: [markdown] Какой из перечисленных операторов SQL используется для удаления данных из таблицы?
+{
+   =[markdown] `DELETE`
+   ~[markdown] `REMOVE`
+   ~[markdown] `DROP`
+   ~[markdown] `CLEAR`
+}
+
+::01k028:: [markdown] Какой из перечисленных операторов SQL используется для удаления таблицы?
+{
+   =[markdown] `DROP`
+   ~[markdown] `DELETE`
+   ~[markdown] `REMOVE`
+   ~[markdown] `CLEAR`
+}
+
+::01k029:: [markdown] Какой из перечисленных операторов SQL используется для создания таблицы?
+{
+   =[markdown] `CREATE`
+   ~[markdown] `ADD`
+   ~[markdown] `INSERT`
+   ~[markdown] `UPDATE`
+}
+
+::01k030:: [markdown] Какой из перечисленных операторов SQL используется для изменения структуры таблицы?
+{
+   =[markdown] `ALTER`
+   ~[markdown] `CHANGE`
+   ~[markdown] `UPDATE`
+   ~[markdown] `MODIFY`
+}
+
+$CATEGORY: 01_intro/usage
+
+$CATEGORY: 01_intro/integration
+
+// definitions
+$CATEGORY: 02_definitions/knowledge
+
+$CATEGORY: 02_definitions/usage
+
+$CATEGORY: 02_definitions/integration
+
+// dockerfile_i
+$CATEGORY: 03_dockerfile_i/knowledge
+
+$CATEGORY: 03_dockerfile_i/usage
+
+$CATEGORY: 03_dockerfile_i/integration
+
+// docker_run
+$CATEGORY: 04_docker_run/knowledge
+
+$CATEGORY: 04_docker_run/usage
+
+$CATEGORY: 04_docker_run/integration
+
+// dockerfile_ii
+$CATEGORY: 05_dockerfile_ii/knowledge
+
+$CATEGORY: 05_dockerfile_ii/usage
+
+$CATEGORY: 05_dockerfile_ii/integration
+
+// container_usage
+$CATEGORY: 06_container_usage/knowledge
+
+$CATEGORY: 06_container_usage/usage
+
+$CATEGORY: 06_container_usage/integration
+
+// docker_compose_i
+$CATEGORY: 07_docker_compose_i/knowledge
+
+$CATEGORY: 07_docker_compose_i/usage
+
+$CATEGORY: 07_docker_compose_i/integration
+
+// docker_compose_ii
+$CATEGORY: 08_docker_compose_ii/knowledge
+
+$CATEGORY: 08_docker_compose_ii/usage
+
+$CATEGORY: 08_docker_compose_ii/integration
+
+// kubernetes_i
+$CATEGORY: 09_kubernetes_i/knowledge
+
+$CATEGORY: 09_kubernetes_i/usage
+
+$CATEGORY: 09_kubernetes_i/integration
+
+// kubernetes_ii
+$CATEGORY: 10_kubernetes_ii/knowledge
+
+$CATEGORY: 10_kubernetes_ii/usage
+
+$CATEGORY: 10_kubernetes_ii/integration
+
+// ingress
+$CATEGORY: 11_ingress/knowledge
+
+$CATEGORY: 11_ingress/usage
+
+$CATEGORY: 11_ingress/integration
+
+// cluster_scaling
+$CATEGORY: 12_cluster_scaling/knowledge
+
+$CATEGORY: 12_cluster_scaling/usage
+
+$CATEGORY: 12_cluster_scaling/integration
+
+// ci_cd
+$CATEGORY: 13_ci_cd/knowledge
+
+$CATEGORY: 13_ci_cd/usage
+
+$CATEGORY: 13_ci_cd/integration
+
+// image_optimization
+$CATEGORY: 14_image_optimization/knowledge
+
+$CATEGORY: 14_image_optimization/usage
+
+$CATEGORY: 14_image_optimization/integration
+
+// best_practices
+$CATEGORY: 15_best_practices/knowledge
+
+$CATEGORY: 15_best_practices/usage
+
+$CATEGORY: 15_best_practices/integration

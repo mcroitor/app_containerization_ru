@@ -1,0 +1,24 @@
+// # Вопросы на тему "Синтаксис Dockerfile"
+
+// Вопросы типа _"короткий ответ"_:
+$CATEGORY: 03_dockerfile_i/2_usage
+
+::03u001:: [markdown] В Dockerfile для создания образа на базе образа `ubuntu\:20.04` используется команда {=FROM ubuntu\:20.04}
+
+::03u002:: [markdown] В Dockerfile для создания образа на базе последнего созданного образа `nginx` используется команда{ =FROM nginx =FROM nginx\:latest}
+
+::03u003:: [markdown] В Dockerfile для создания образа на базе пустого используется команда{ =FROM scratch}
+
+::03u004:: [markdown] Какая команда в Dockerfile используется для установки пакета `nano` в образе на базе OS Ubuntu? {=RUN apt-get install -y nano =RUN apt-get install nano -y =RUN apt install -y nano =RUN apt install nano -y}
+
+::03u005:: [markdown] В Dockerfile для копирования файла `php.ini` из папки `files` контекста сборки в образ в папку `/etc/php/7.4/cli` используется команда {=COPY files/php.ini /etc/php/7.4/cli}
+
+::03u006:: [markdown] В Dockerfile для создания директории `/var/www` в образе используется команда {=RUN mkdir /var/www}
+
+::03u007:: [markdown] Чтобы сменить пользователя в образе на `www-data`, используется команда {=USER www-data}
+
+::03u008:: [markdown] Чтобы установить пакет `nginx` в образе на базе OS Ubuntu, используется команда {=RUN apt-get install -y nginx =RUN apt-get install nginx -y =RUN apt install -y nginx =RUN apt install nginx -y}
+
+::03u009:: [markdown] Чтобы выполнить команду `nginx -g "daemon off;"` при запуске контейнера, используется команда {=CMD ["nginx", "-g", "daemon off;"] =CMD nginx -g "daemon off;"}
+
+::03u010:: [markdown] Для смены рабочей директории в образе на `/var/www` используется команда {=WORKDIR /var/www =WORKDIR /var/www/}

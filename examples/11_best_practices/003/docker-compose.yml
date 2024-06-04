@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./files/nginx
+      dockerfile: Dockerfile
+      args:
+        - NGINX_VERSION=1.23
+    ports:
+      - "80:80"
+    networks:
+      - frontend
+    depends_on:
+      - backend
+    volumes:
+      - ./site:/var/www/html
+  backend:
+    build:
+      context: ./files/php
+      args:
+        PHP_VERSION: 8.1
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - database
+    volumes:
+      - ./site:/var/www/html
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: hack_db
+      MYSQL_HOST: database
+  database:
+    build:
+      context: ./files/db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: hack_db
+    networks:
+      - backend
+    volumes:
+      - database:/var/lib/mysql
+
+networks:
+  frontend: {}
+  backend: {}
+
+volumes:
+  database: {}

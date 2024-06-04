@@ -1,0 +1,16 @@
+# install apache2, run it from www-run user
+FROM debian
+
+RUN apt-get update && apt-get install -y apache2
+
+# Create a new user
+RUN useradd -ms /bin/bash www-run
+
+# Set the user to run the container
+# USER www-run
+
+# Copy site into the container
+# COPY site/ /var/www/html/
+
+# Start apache2
+CMD ["apache2ctl", "-D", "FOREGROUND"]

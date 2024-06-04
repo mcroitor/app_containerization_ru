@@ -1,0 +1,5 @@
+# nginx static web site.
+# use volume to /usr/share/nginx/html to serve site files
+FROM nginx:alpine
+
+VOLUME [ "/usr/share/nginx/html" ]

@@ -1,0 +1,10 @@
+FROM gcc:12.2 AS buildimage
+
+COPY ./files/sample.cpp /opt/
+RUN g++ /opt/sample.cpp -o /opt/sample -static
+
+FROM scratch
+
+COPY --from=buildimage /opt/sample /
+
+CMD [ "/sample" ]

@@ -1,0 +1,73 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Tahoma";
+}
+
+input{
+    border: 1px outset cadetblue;
+    border-radius: 3px;
+    padding:1px 5px 1px 5px;
+}
+.panel {
+    border:1px solid aliceblue;
+}
+
+.flat{
+    margin: 3px;
+    padding: 2px;
+}
+
+.group{
+    display: none;
+    font-size:105%;
+    font-weight: bold;
+    border-bottom: 3px double aliceblue;
+}
+
+.color-corn{
+    background-color: aliceblue;
+}
+
+#main-panel {
+    margin:5px;
+    padding:5px;
+    border-radius: 10px;
+    min-height: 480px;
+    min-width: 640px;
+}
+
+#header {
+    height: 40px;
+    border-radius: 5px;
+    margin:3px;
+}
+
+#menu {
+    margin: 2px;
+    width: 200px;
+    float: left;
+    border-radius: 5px;
+    padding: 2px;
+    min-height: 429px;
+}
+
+#content {
+    border-radius: 5px;
+    min-height: 430px;
+    margin-top: 4px;
+    margin-left: 212px;
+    padding: 2px;    
+}
+.menu-button {
+    display: block;
+    text-decoration: none;
+    width: 180px;
+    height: 25px;
+    padding-left: 10px;
+    padding-top: 3px;
+    margin:3px;
+    border-radius: 3px;
+}
+
+.link {}

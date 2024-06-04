@@ -1,0 +1,54 @@
+# in this example we will do the following steps:
+#  1. create image from debian, image tag will be passed by argument
+#  2. the host and port will be passed by arguments
+#  2. install php and extensions 
+#  3. copy php site in /app folder
+#  4. run php site with php built-in server on 8080 port
+#  5. open 8080 port
+# Maintainer also will be specified and some metadata will be added by labels
+
+ARG DEBIAN_VERSION=latest
+FROM debian:${DEBIAN_VERSION}
+
+ARG PORT=8080
+ARG HOST="localhost"
+ENV PORT=${PORT}
+ENV HOST=${HOST}
+
+ARG PHP_VERSION=
+ENV PHP_VERSION=${PHP_VERSION}
+ENV PHP_EXTENSIONS="php${PHP_VERSION}-curl \
+    php${PHP_VERSION}-gd \
+    php${PHP_VERSION}-mysql"
+
+
+LABEL maintainer="Mihail Croitor <mcroitor@gmail.com>"
+LABEL version="1.0"
+LABEL timestamp="2024-02-29 12:00:00"
+LABEL description="This is an example of using ARG, ENV, LABEL, EXPOSE, VOLUME instructions"
+
+RUN apt-get update && apt-get install -y \
+    php${PHP_VERSION} \
+    php${PHP_VERSION}-cli \
+    php${PHP_VERSION}-common \
+    ${PHP_EXTENSIONS} \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY ./site /app
+
+WORKDIR /app
+
+VOLUME [ "/app/logs" ]
+
+EXPOSE ${PORT}
+
+RUN echo "php -S ${HOST}:${PORT} -t /app" > /start.sh
+
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://${HOST}:${PORT} || exit 1
+
+CMD ["sh", "/start.sh"]
+# usage example:
+#    docker build --build-arg DEBIAN_VERSION=buster --build-arg PORT=8080 \
+#               --build-arg HOST=0.0.0.0 -t bigone .
+#    docker run -p 8080:8080 -d bigone

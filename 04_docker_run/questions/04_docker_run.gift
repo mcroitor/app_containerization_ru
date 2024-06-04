@@ -1,0 +1,55 @@
+// # Вопросы по теме "Запуск контейнеризированных приложений"
+
+$CATEGORY: 04_docker_run/2_usage
+
+// Вопросы типа _"короткий ответ"_:
+
+::04u001:: [markdown] Чтобы собрать образ `myimage` из `Dockerfile`, необходимо выполнить команду{=docker build -t myimage . =docker build --tag myimage . }
+
+::04u002:: [markdown] Чтобы собрать образ `webserver` из `Dockerfile.nginx`, необходимо выполнить команду{= docker build -t webserver -f Dockerfile.nginx . =docker build -t webserver --file Dockerfile.nginx . =docker build --tag webserver -f Dockerfile.nginx . =docker build --tag webserver --file Dockerfile.nginx . =docker build --file Dockerfile.nginx --tag webserver . =docker build -f Dockerfile.nginx --tag webserver . =docker build --file Dockerfile.nginx -t webserver . =docker build -f Dockerfile.nginx -t webserver . }
+
+::04u003:: [markdown] Чтобы собрать образ `sample` с тегом `1.0` из `Dockerfile`, необходимо выполнить команду{= docker build -t sample\:1.0 . =docker build --tag sample\:1.0 . }
+
+::04u004:: [markdown] Чтобы собрать образ `sample` из `Dockerfile`, который находится в папке `php-fpm`, необходимо выполнить команду{= docker build -t sample\:1.0 php-fpm =docker build --tag sample\:1.0 php-fpm =docker build -t sample\:1.0 ./php-fpm =docker build --tag sample\:1.0 ./php-fpm =docker build -t sample\:1.0 php-fpm/ =docker build --tag sample\:1.0 php-fpm/ =docker build -t sample\:1.0 ./php-fpm/ =docker build --tag sample\:1.0 ./php-fpm/ }
+
+::04u005:: [markdown] Для просмотра списка существующих образов используется команда{=docker images}
+
+::04u006:: [markdown] Для удаления образа `sample` используется команда{=docker rmi sample}
+
+::04u007:: [markdown] Для удаления образов `sample` и `webserver` используется команда{=docker rmi sample webserver =docker rmi webserver sample}
+
+::04u008:: [markdown] Для создания контейнера `mycontainer` на базе образа `myimage` используется команда{=docker create --name mycontainer myimage}
+
+::04u009:: [markdown] Для запуска контейнера `mycontainer` используется команда{=docker start mycontainer}
+
+::04u010:: [markdown] Чтобы создать на базе образа `mariadb` контейнер с произвольным именем и сразу его запустить, используется команда{=docker run mariadb}
+
+::04u011:: [markdown] Чтобы создать на базе образа `mariadb` контейнер с именем `mydb` и сразу его запустить, используется команда{=docker run --name mydb mariadb}
+
+::04u012:: [markdown] Чтобы создать на базе образа `nginx` контейнер с именем `web` и сразу его запустить в фоновом режиме, используется команда{=docker run --name web -d nginx =docker run -d --name web nginx}
+
+::04u013:: [markdown] Просмотреть список запущенных контейнеров можно с помощью команды{=docker ps}
+
+::04u014:: [markdown] Просмотреть список всех контейнеров можно с помощью команды{=docker ps -a}
+
+::04u015:: [markdown] Выполнить команду `/etc/init.d/nginx reload` внутри работающего контейнера `nginx` можно с помощью команды{=docker exec nginx /etc/init.d/nginx reload}
+
+::04u016:: [markdown] Выполнить команду `php /var/www/html/cli/cleancache.php` внутри работающего контейнера `php-fpm` можно с помощью команды{=docker exec php-fpm php /var/www/html/cli/cleancache.php}
+
+::04u017:: [markdown] Для запуска приложения `bash` внутри работающего контейнера `debian` с включенным интерактивным режимом используется команда{=docker exec -it debian bash =docker exec -i -t debian bash =docker exec -t -i debian bash =docker exec -t -i debian bash =docker exec -ti debian bash}
+  
+::04u018:: [markdown] Для остановки контейнера `mycontainer` используется команда{=docker stop mycontainer}
+
+::04u019:: [markdown] Для удаления контейнера `mycontainer` используется команда{=docker rm mycontainer}
+
+::04u020:: [markdown] Перезапустить контейнер `mc` можно с помощью команды{=docker restart mc}
+
+::04u021:: [markdown] Для просмотра журналов контейнера `php-fpm` используется команда{=docker logs php-fpm}
+
+::04u022:: [markdown] Для просмотра журналов контейнера `mysql` в режиме `follow` используется команда{=docker logs -f mysql =docker logs --follow mysql}
+
+::04u023:: [markdown] Чтобы скопировать файл `index.html` из папки `/var/www/html` контейнера `web` в локальную директорию `./html`, используется команда{=docker cp web\:/var/www/html/index.html ./html =docker cp web\:/var/www/html/index.html ./html/ =docker cp web\:/var/www/html/index.html html/ =docker cp web\:/var/www/html/index.html html}
+
+::04u024:: [markdown] Чтобы скопировать файл `index.html` из локальной директории `./html` в папку `/var/www/html` контейнера `web`, используется команда{=docker cp ./html/index.html web\:/var/www/html =docker cp ./html/index.html web\:/var/www/html/ =docker cp html/index.html web\:/var/www/html =docker cp html/index.html web\:/var/www/html/}
+  
+::04u025:: [markdown] Запустить контейнер на базе образа `myserver` с запуском команды `/bin/sh` можно с помощью команды{=docker run -it myserver /bin/sh =docker run -i -t myserver /bin/sh =docker run -t -i myserver /bin/sh =docker run -ti myserver /bin/sh}

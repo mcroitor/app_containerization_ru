@@ -1,0 +1,7 @@
+FROM debian:latest
+
+WORKDIR /app
+
+COPY app/helloworld .
+
+CMD ["./helloworld"]

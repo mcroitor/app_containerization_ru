@@ -1,0 +1,9 @@
+FROM php:fpm
+
+# copy the configuration file for php from files/ directory
+COPY files/php-fpm/php-custom.ini /usr/local/etc/php/conf.d/php-custom.ini
+COPY files/php-fpm/www.conf /usr/local/etc/php-fpm.d/www.conf
+
+# copy site files to /var/www/html
+COPY files/site/ /var/www/html/
+RUN chown -R www-data:www-data /var/www/html

@@ -1,0 +1,3 @@
+FROM scratch
+
+ONBUILD COPY . /src
