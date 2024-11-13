@@ -1,6 +1,7 @@
 # Запуск контейнеризированных приложений
 
 - [Запуск контейнеризированных приложений](#запуск-контейнеризированных-приложений)
+  - [Инструменты Docker](#инструменты-docker)
   - [Сборка образа](#сборка-образа)
   - [Просмотр существующих образов](#просмотр-существующих-образов)
   - [Удаление образа](#удаление-образа)
@@ -17,7 +18,30 @@
 
 Контейнеры являются экземплярами образов. Контейнеры могут быть запущены, остановлены, перемещены и удалены. В этом разделе мы рассмотрим команды для работы с контейнерами.
 
+## Инструменты Docker
+
+Docker предлагает набор инструментов для управления контейнерами и используемыми контейнерами ресурсами. МОжно выделить следующие инструменты Docker:
+
+- `docker image` - управление образами;
+- `docker volume` - управление томами;
+- `docker network` - управление сетями;
+- `docker container` - управление контейнерами;
+- `docker buildx` - управление процессом сборки образа;
+- `docker compose` - управление многоконтейнерными приложениями;
+- `docker system` - управление ресурсами Docker;
+- `docker init` - создание DOckerfile на базе существующего проекта.
+
+И многие другие инструменты. Что бы узнать больше о командах Docker, можно воспользоваться командой `docker --help` или `docker <command> --help`.
+
+В данном разделе мы рассмотрим команды для управления образами и контейнерами.
+
 ## Сборка образа
+
+| command   | docker buildx build  |
+| --------- | -------------------- |
+| *alias*   | docker image build   |
+|           | docker builder build |
+|           | docker build         |
 
 После того, как файл `Dockerfile` создан, можно приступить к сборке образа. Сборка образа выполняется обычно из командной строки и для сборки образа используется команда `docker build`. Команда `docker build` имеет следующий синтаксис:
 
@@ -26,6 +50,8 @@ docker build [OPTIONS] PATH | URL | -
 ```
 
 где `PATH` - путь к директории, в которой находится файл `Dockerfile`, `URL` - URL-адрес репозитория Git, в котором находится файл `Dockerfile`, `-` - стандартный ввод.
+
+Команда `docker build`является псевдонимом для команды `docker image build`, кроме того, она будет эквивалентна команде `docker buildx build`.
 
 В случае, если файл `Dockerfile` находится в текущей директории, то для сборки образа достаточно выполнить команду:
 
@@ -47,11 +73,18 @@ docker build --help
 
 ## Просмотр существующих образов
 
+| command   | docker image ls     |
+| --------- | ------------------- |
+| *alias*   | docker images       |
+|           | docker image list   |
+
 Для просмотра существующих образов используется команда `docker images`:
 
 ```bash
 docker images
 ```
+
+Эту команду также можно написать как `docker image ls` или `docker image list`.
 
 Вывод команды будет содержать следующие столбцы:
 
@@ -63,13 +96,18 @@ docker images
 
 ## Удаление образа
 
+| command   | docker image rm     |
+| --------- | ------------------- |
+| *alias*   | docker rmi          |
+|           | docker image remove |
+
 Для удаления образа используется команда `docker rmi`:
 
 ```bash
 docker rmi <image_name>
 ```
 
-Где `<image_name>` - это идентификатор или имя образа.
+Где `<image_name>` - это идентификатор или имя образа. Команда имеет следующие псевдонимы: `docker image rm` и `docker image remove`.
 
 Одной командой можно удалить сразу несколько образов, для этого необходимо перечислить их имена через пробел:
 
@@ -79,13 +117,19 @@ docker rmi <image_name_1> <image_name_2> <image_name_3>
 
 ## Создание контейнера
 
+| command   | docker container create |
+| --------- | ----------------------- |
+| *alias*   | docker create           |
+
 На базе существующего образа можно создать контейнер при помощи команды `docker create`:
 
 ```bash
 docker create <image_name>
 ```
 
-В данном случае будет создан контейнер с произвольным именем на основе образа `<image_name>`. Если образ не найден локально, то он будет загружен из репозитория. Если необходимо создать контейнер с определенным именем, то используется флаг `--name`:
+В данном случае будет создан контейнер с произвольным именем на основе образа `<image_name>`. У команды `docker create` есть псевдоним `docker container create`.
+
+Если образ не найден локально, то он будет загружен из репозитория. Если необходимо создать контейнер с определенным именем, то используется флаг `--name`:
 
 ```bash
 docker create --name <container_name> <image_name>
@@ -98,6 +142,10 @@ docker create --help
 ```
 
 ## Запуск контейнера
+
+| command   | docker container start  |
+| --------- | ----------------------- |
+| *alias*   | docker start            |
 
 После того, как контейнер создан, его можно запустить при помощи команды `docker start`:
 
@@ -129,6 +177,10 @@ docker run -d --name <container_name> <image_name>
 
 ## Взаимодействие с контейнером
 
+| command   | docker container exec   |
+| --------- | ----------------------- |
+| *alias*   | docker exec             |
+
 Взаимодействовать можно только с запущенным контейнером. Для этого необходимо знать его имя или идентификатор. Имя контейнера можно задать при создании контейнера с помощью флага `--name`, а идентификатор контейнера можно узнать при помощи команды `docker ps`.
 
 Выполнить команду внутри контейнера можно при помощи команды `docker exec`:
@@ -136,6 +188,10 @@ docker run -d --name <container_name> <image_name>
 ```bash
 docker exec <container_name> <command>
 ```
+
+| command   | docker container run    |
+| --------- | ----------------------- |
+| *alias*   | docker run              |
 
 При запуске контейнера выполняется команда, указанная в файле `Dockerfile` одной из директив `CMD` или `ENTRYPOINT`. Если необходимо выполнить другую команду, то она указывается после имени образа:
 
@@ -159,6 +215,10 @@ docker run -it ubuntu /bin/bash
 
 ## Перезапуск контейнера
 
+| command   | docker container restart |
+| --------- | ------------------------ |
+| *alias*   | docker restart           |
+
 Для перезапуска контейнера используется команда `docker restart`. Например, для перезапуска контейнера с именем `my_container` используется следующая команда:
 
 ```bash
@@ -166,6 +226,10 @@ docker restart my_container
 ```
 
 ## Копирование файлов
+
+| command   | docker container cp     |
+| --------- | ----------------------- |
+| *alias*   | docker cp               |
 
 Для копирования файлов используется команда `docker cp`. Общий синтаксис команды `docker cp` выглядит следующим образом:
 
@@ -187,6 +251,10 @@ docker cp file.txt my_container:/path/to/file.txt
 
 ## Чтение логов контейнера
 
+| command   | docker container logs   |
+| --------- | ----------------------- |
+| *alias*   | docker logs             |
+
 Для чтения логов контейнера используется команда `docker logs`. Например, для чтения логов контейнера с именем `my_container` используется следующая команда:
 
 ```bash
@@ -200,6 +268,12 @@ docker logs -f my_container
 ```
 
 ## Просмотр контейнеров
+
+| command   | docker container ls     |
+| --------- | ----------------------- |
+| *alias*   | docker ps               |
+|           | docker container list   |
+|           | docker container ps     |
 
 Для просмотра запущенных контейнеров используется команда `docker ps`:
 
@@ -225,6 +299,10 @@ docker ps -a
 
 ## Остановка контейнера
 
+| command   | docker container stop   |
+| --------- | ----------------------- |
+| *alias*   | docker stop             |
+
 Для остановки контейнера используется команда `docker stop`:
 
 ```bash
@@ -238,6 +316,11 @@ docker stop <container_name_1> <container_name_2> <container_name_3>
 ```
 
 ## Удаление контейнера
+
+| command   | docker container rm     |
+| --------- | ----------------------- |
+| *alias*   | docker rm               |
+|           | docker container remove |
 
 Для удаления контейнера используется команда `docker rm`:
 
@@ -256,3 +339,4 @@ docker rm <container_name_1> <container_name_2> <container_name_3>
 1. [How do I run a container?, docker.com](https://docs.docker.com/guides/walkthroughs/run-a-container/)
 2. [Getting started guide, docker.com](https://docs.docker.com/get-started/)
 3. [Запуск контейнера Docker, losst.pro, 2020](https://losst.pro/zapusk-kontejnera-docker)
+4. [Docker CLI, docker.com](https://docs.docker.com/reference/cli/docker/)
