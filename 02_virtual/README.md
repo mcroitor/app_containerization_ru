@@ -74,7 +74,9 @@ qemu-system-x86_64 -hda disk.qcow2 -cdrom ubuntu.iso -boot d -m 2G -smp 2
 
 ```bash
 # 2 GB RAM, 2 CPU cores, network backend
-qemu-system-x86_64 -hda disk.qcow2 -m 2G -smp 2 -netdev user,id=net0 -device e1000,netdev=net0
+# port forwarding: host 2222 -> guest 22, host 8080 -> guest 80
+qemu-system-x86_64 -hda disk.qcow2 -m 2G -smp 2 -device e1000,netdev=net0 \
+    -netdev user,id=net0,hostfwd=tcp::2222-:22,hostfwd=tcp::8080-:80
 ```
 
 В данном случае виртуальная машина запускается с образом диска `disk.qcow2`, указанным количеством оперативной памяти и ядер процессора, а также сетевым адаптером, подключенным к виртуальной сети.
