@@ -136,6 +136,7 @@ __Open Virtualization Format (OVF)__ - это открытый формат дл
 3. [Система виртуализации QEMU, calculate-linux.org, 2020-01-24](https://wiki.calculate-linux.org/ru/qemu)
 4. [Welcome to QEMU’s documentation!, qemu.org](https://www.qemu.org/docs/master/)
 5. [virtual machine manager, virt-manager.org](https://virt-manager.org/)
+6. [Open Virtualization Format, Wikipedia](https://en.wikipedia.org/wiki/Open_Virtualization_Format)
 
 ## Терминология
 
