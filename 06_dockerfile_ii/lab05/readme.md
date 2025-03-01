@@ -1,4 +1,4 @@
-# Лабораторная работа №4: Запуск сайта в контейнере
+# Лабораторная работа №5: Запуск сайта в контейнере
 
 ## Цель работы
 
@@ -18,17 +18,17 @@
 
 ## Выполнение
 
-Создайте репозиторий `containers04` и скопируйте его себе на компьютер.
+Создайте репозиторий `containers05` и скопируйте его себе на компьютер.
 
 ### извлечение конфигурационных файлов apache2, php, mariadb из контейнера
 
-Создайте в папке `containers04` папку `files`, а также
+Создайте в папке `containers05` папку `files`, а также
 
 - папку `files/apache2` - для файлов конфигурации apache2;
 - папку `files/php` - для файлов конфигурации php;
 - папку `files/mariadb` - для файлов конфигурации mariadb.
 
-Создайте в папке `containers04` файл `Dockerfile` со следующим содержимым:
+Создайте в папке `containers05` файл `Dockerfile` со следующим содержимым:
 
 ```Dockerfile
 # create from debian image
@@ -164,7 +164,7 @@ COPY files/php/php.ini /etc/php/8.2/apache2/php.ini
 COPY files/mariadb/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 # copy the supervisor configuration file
-COPY files/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY files/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ```
 
 - для функционирования mariadb создайте папку `/var/run/mysqld` и установите права на неё:
@@ -228,7 +228,7 @@ COPY files/wp-config.php /var/www/html/wordpress/wp-config.php
 
 ### Создание отчета
 
-Создайте в папке `containers04` файл `README.md` который содержать пошаговое выполнение проекта. Описание проекта должно содержать:
+Создайте в папке `containers05` файл `README.md` который содержать пошаговое выполнение проекта. Описание проекта должно содержать:
 
 1. Название лабораторной работы.
 2. Цель работы.
@@ -251,3 +251,16 @@ COPY files/wp-config.php /var/www/html/wordpress/wp-config.php
 При представлении ответа прикрепите к заданию ссылку на репозиторий.
 
 ## Оценивание
+
+- `1 балл` - создан репозиторий `containers05`;
+- `1 балл` - создана папка `files` с файлами конфигурации apache2, php, mariadb;
+- `1 балл` - создан файл `supervisord.conf`;
+- `1 балл` - создан файл `wp-config.php`;
+- `1 балл` - создан файл `Dockerfile`;
+- `1 балл` - наличие цели работы в файле `README.md`
+- `1 балл` - наличие задания в файле `README.md`
+- `1 балл` - наличие описания выполнения работы в файле `README.md`
+- `1 балл` - наличие ответов на вопросы в файле `README.md`
+- `1 балл` - наличие выводов в файле `README.md`
+- `-1 балл` - за каждый день просрочки сдачи
+- `-5 баллов` - за копирование кода у других студентов.
