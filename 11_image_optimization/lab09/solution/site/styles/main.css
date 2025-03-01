@@ -1,0 +1,19 @@
+canvas#brdCanvas {
+    border:1px solid black;
+}
+#toolbar{ 
+    margin: 5px;
+    padding: 5px;
+    background-color: #6badf6;
+    border-bottom: 1px solid gray;
+}
+.left{ float:left; }
+
+.king {
+    cursor: url("../cursors/king.cur"), pointer;
+}
+
+@font-face{
+    font-family: Chess Mark;
+    src:url("../fonts/mark.ttf") format('truetype');
+}

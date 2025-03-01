@@ -1,0 +1,17 @@
+# create from alpine image
+FROM alpine:latest
+
+# update system
+RUN apk update && apk upgrade
+
+# install nginx
+RUN apk add nginx
+
+# copy site
+COPY site /var/www/html
+
+# expose port 80
+EXPOSE 80
+
+# run nginx
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,17 @@
+# create from ubuntu image
+FROM ubuntu:latest
+
+# update system
+RUN apt-get update && apt-get upgrade -y
+
+# install nginx
+RUN apt-get install -y nginx
+
+# copy site
+COPY site /var/www/html
+
+# expose port 80
+EXPOSE 80
+
+# run nginx
+CMD ["nginx", "-g", "daemon off;"]
