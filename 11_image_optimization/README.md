@@ -144,7 +144,7 @@ CMD ["./helloworld"]
 ```bash
 #!/bin/bash
 echo "Building helloworld-build image..."
-docker build -t helloworld-build -f Dockerfile.build .
+docker image build -t helloworld-build -f Dockerfile.build .
 
 echo "Extracting helloworld binary..."
 mkdir -p app
@@ -153,7 +153,7 @@ docker cp extract:/app/helloworld app/helloworld
 docker rm -f extract
 
 echo "Building helloworld-run image..."
-docker build -t helloworld-run -f Dockerfile.run .
+docker image build -t helloworld-run -f Dockerfile.run .
 rm -f app/helloworld
 ```
 
@@ -200,7 +200,7 @@ CMD ["./helloworld"]
 Сборка образа в этом случае сокращается до одной команды:
 
 ```bash
-docker build -t helloworld-run .
+docker image build -t helloworld-run .
 ```
 
 Это возможно благодаря тому что инструкция `COPY` может копировать файлы из одного этапа в другой, при этом необходимо указать номер этапа, из которого нужно скопировать файлы.
@@ -316,9 +316,9 @@ RUN apt-get update && \
 
 ```shell
 # Создание контейнера из образа
-$ docker create --name myphp myphp
+$ docker container create --name myphp myphp
 # Создание образа из контейнера
-$ docker export myphp | docker import - myphp:optimized
+$ docker container export myphp | docker image import - myphp:optimized
 ```
 
 ## Использование .dockerignore

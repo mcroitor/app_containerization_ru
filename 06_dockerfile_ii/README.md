@@ -77,10 +77,14 @@ ENV MY_NAME=$MY_NAME
 RUN echo "Hello, $MY_NAME"
 ```
 
-Переменные окружения можно переопределить при запуске контейнера с помощью флага `-e` команды `docker run`:
+Переменные окружения можно переопределить при создании контейнера с помощью флага `-e` (`--env`):
 
 ```bash
-docker run -e MY_NAME="Jane Doe" myimage
+docker container run -e MY_NAME="Jane Doe" myimage
+```
+
+```bash
+docker container create -e MY_NAME="Jane Doe" --name mycontainer myimage
 ```
 
 ## Взаимодействие с контейнером
@@ -89,7 +93,9 @@ docker run -e MY_NAME="Jane Doe" myimage
 
 ### EXPOSE
 
-Команда `EXPOSE` определяет порты, которые контейнер будет использовать для взаимодействия с внешними системами. Команда `EXPOSE` имеет следующий синтаксис:
+Команда `EXPOSE` определяет порты, которые контейнер будет использовать для взаимодействия с другими контейнерами.
+
+Команда `EXPOSE` имеет следующий синтаксис:
 
 ```dockerfile
 EXPOSE <port> [<port>...]
@@ -105,16 +111,24 @@ FROM ubuntu:18.04
 EXPOSE 80
 ```
 
-Порты, определённые командой `EXPOSE`, доступны другим контейнерам, но не доступны хосту. Их можно перенаправить на порты хоста с помощью флага `-p` (или `--publish`) команды `docker run`, например:
+Порты, определённые командой `EXPOSE`, доступны другим контейнерам, но не доступны хосту. В этом случае невозможно взаимодействовать с контейнером внешним системам, однако некоторый порт или порты можно перенаправить на порт (порты) хоста с при создании контейнера помощью флага `-p` (или `--publish`). 
+
+Например, команда `docker container run`:
 
 ```bash
-docker run -p 80 myimage
+docker container run -p 80 myimage
+```
+
+или команда `docker container create`:
+
+```bash
+docker container create -p 80 --name mycontainer myimage
 ```
 
 В этом случае порт 80 контейнера будет ассоциирован с произвольным портом хоста. Чтобы ассоциировать порт контейнера с определённым портом хоста, необходимо указать порт хоста перед двоеточием, например:
 
 ```bash
-docker run -p 8080:80 myimage
+docker container run -p 8080:80 myimage
 ```
 
 В этом случае порт 80 контейнера будет ассоциирован с портом 8080 хоста.
@@ -139,17 +153,23 @@ FROM ubuntu:18.04
 VOLUME /var/www
 ```
 
-Можно также определить томы во время выполнения контейнера с помощью флага `-v` команды `docker run`:
+Можно также определить томы во время создания контейнера с помощью флага `-v` команды `docker run` (или `docker сreate`):
 
 ```bash
-docker run -v /var/www myimage
+docker container run -v /var/www myimage
 ```
 
-Также можно монтировать папки хоста в контейнер с помощью флага `-v` команды `docker run`:
+Во всех случаях будут созданы анонимные тома, которые будут доступны только для контейнера, создавшего их. Управление анонимными томами осуществляется автоматически Docker. Например, при удалении контейнера, создавшего анонимный том, том также может быть удалён.
+
+Также можно создавать именованные тома контейнер с помощью флага `-v` команды `docker container run`:
 
 ```bash
-docker run -v /path/to/host:/path/to/container myimage
+docker container run -v <volume-name>:/path/into/container myimage
 ```
+
+В этом случае том будет доступен для всех контейнеров, которые его используют. Управление именованными томами осуществляется вручную.
+
+Механизм томов является предпочтительным, если нет необходимости взаимодействовать с файловой системой хоста, а также если необходимо сохранить данные после удаления контейнера. В случае, если необходимо взаимодействовать с файловой системой хоста, можно использовать механизм монтирования хостовой директории в контейнер.
 
 ## Метаданные образа
 
@@ -180,6 +200,8 @@ RUN echo "Hello, world"
 ```bash
 docker inspect myimage
 ```
+
+> **Примечание**: команда `docker inspect` отображает информацию в формате JSON о любом объекте Docker, включая контейнеры, образы, тома и сети.
 
 При определении метаданных образа следует придерживаться следующих рекомендаций:
 
@@ -308,6 +330,6 @@ docker run --stop-signal=SIGKILL myimage
 ## Библиография
 
 1. [Dockerfile reference, docker.com](https://docs.docker.com/engine/reference/builder/)
-2. [vsupalov, __Docker ARG vs ENV__, vsupalov.com](https://vsupalov.com/docker-arg-vs-env/)
+2. [vsupalov, Docker ARG vs ENV, vsupalov.com](https://vsupalov.com/docker-arg-vs-env/)
 3. [Docker object labels, docker.com](https://docs.docker.com/config/labels-custom-metadata/)
 4. [Overview of best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)

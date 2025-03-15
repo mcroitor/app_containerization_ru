@@ -39,8 +39,8 @@ ENV SECRET=supersecret
 Теперь, после сборки образа, переменная окружения SECRET будет доступна внутри контейнера при его запуске:
 
 ```bash
-docker build -t myimage .
-docker run -it -e SECRET=anothersecret --rm myimage sh
+docker image build -t myimage .
+docker container run -it -e SECRET=anothersecret --rm myimage sh
 ```
 
 Однако, использование переменных окружения для передачи секретов не является безопасным способом. Переменные окружения видны внутри контейнера. Также плохо их определять в самом Dockerfile, так как они могут быть прочитаны из образа.

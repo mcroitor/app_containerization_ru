@@ -191,16 +191,10 @@ docker image list
 
 ## Запуск и тестирование
 
-Проверьте размеры образов. Проверьте образы на безопасность.
+Проверьте размеры образов.
 
 ```bash
 docker image list
-docker scout quickview mynginx:raw
-docker scout quickview mynginx:clean
-docker scout quickview mynginx:few
-docker scout quickview mynginx:alpine
-docker scout quickview mynginx:repack
-docker scout quickview mynginx:min
 ```
 
 Приведите таблицу с размерами образов.

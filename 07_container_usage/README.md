@@ -32,10 +32,10 @@
 
 ### Прикрепление тома к контейнеру
 
-Для прикрепления тома к контейнеру используется опция `-v` команды `docker run`. Например, чтобы прикрепить том с именем `opt` к контейнеру `mycontainer`, используется следующая команда:
+Для прикрепления тома к контейнеру используется опция `-v` команды `docker container run`. Например, чтобы прикрепить том с именем `opt` к контейнеру `mycontainer`, используется следующая команда:
 
 ```bash
-docker run -v opt:/opt --name mycontainer myimage
+docker container run -v opt:/opt --name mycontainer myimage
 ```
 
 В этом случае том `opt` будет доступен в контейнере `mycontainer` по пути `/opt`.
@@ -77,15 +77,15 @@ docker volume create opt
 Теперь соберем оба образа:
 
 ```bash
-docker build -t read -f dockerfile.read .
-docker build -t write -f dockerfile.write .
+docker image build -t read -f dockerfile.read .
+docker image build -t write -f dockerfile.write .
 ```
 
 Запустим контейнеры:
 
 ```bash
-docker run -d -v opt:/opt --name write write
-docker run -d -v opt:/opt --name read read
+docker container run -d -v opt:/opt --name write write
+docker container run -d -v opt:/opt --name read read
 ```
 
 ## Сеть
@@ -111,7 +111,7 @@ docker run -d -v opt:/opt --name read read
 - подключение контейнера к сети после его запуска;
 - подключение контейнера к сети при его запуске.
 
-В первом случае используется команда `docker network connect`, во втором - опция `--network` команды `docker run`.
+В первом случае используется команда `docker network connect`, во втором - опция `--network` команды `docker container run`.
 
 Пусть существует два контейнера `frontend` и `backend`, для того чтобы они работали в одной сети `local`, необходимо:
 
@@ -121,8 +121,8 @@ docker run -d -v opt:/opt --name read read
 
 ```bash
 docker network create local
-docker run -d --name backend --network local backend
-docker run -d --name frontend --network local frontend
+docker container run -d --name backend --network local backend
+docker container run -d --name frontend --network local frontend
 ```
 
 ## Библиография
