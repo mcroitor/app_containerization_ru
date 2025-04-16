@@ -23,11 +23,13 @@ services:
     volumes:
       - ./mounts/site:/var/www/html
     env_file:
-      - mysql.env
+      - common.env
+      - database.env
   database:
     image: mariadb:10.6
     env_file:
-      - mysql.env
+      - database.env
+      - database-root.env
     networks:
       - backend
     volumes:

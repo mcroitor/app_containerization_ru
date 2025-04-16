@@ -8,3 +8,4 @@ ENV TIMEOUT=${TIMEOUT}
 VOLUME [ "/opt" ]
 
 CMD ["sh", "-c", "while true; do cat opt/data.txt; sleep ${TIMEOUT}; done"]
+# CMD "while true; do cat opt/data.txt; sleep ${TIMEOUT}; done"

@@ -10,10 +10,14 @@ ARG DEBIAN_VERSION=latest
 FROM debian:${DEBIAN_VERSION}
 
 # ARG instruction
-ARG SAMPLE
+ARG PHP_VERSION=8.2
 
 # ENV instruction
-ENV SAMPLE=${SAMPLE}
+ENV PHP_VERSION=${PHP_VERSION}
+ENV PHP=php${PHP_VERSION}
+ENV PHP_EXTENSIONS="${PHP}-gd ${PHP}-mysql ${PHP}-xml"
+
+RUN apt-get update && apt-get install -y ${PHP} ${PHP_EXTENSIONS}
 
 # run command
-CMD echo "Sample: ${SAMPLE}"
+CMD ["/usr/bin/php", "-v"]

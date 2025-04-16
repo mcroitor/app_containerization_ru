@@ -40,12 +40,33 @@ ENV SECRET=supersecret
 
 ```bash
 docker image build -t myimage .
-docker container run -it -e SECRET=anothersecret --rm myimage sh
 ```
 
 Однако, использование переменных окружения для передачи секретов не является безопасным способом. Переменные окружения видны внутри контейнера. Также плохо их определять в самом Dockerfile, так как они могут быть прочитаны из образа.
 
+Например, если вы выполните команду `docker inspect` на образе, вы увидите переменные окружения:
+
+```bash
+docker image inspect myimage
+...
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "SECRET=supersecret"
+            ],
+...
+```
+
+Также переменные окружения могут быть прочитаны из контейнера:
+
+```bash
+docker container run -it -e SECRET=anothersecret --rm myimage sh
+echo $SECRET
+```
+
+Хранение секретов в переменных окружения является популярным способом, но не самым безопасным. Секреты могут быть прочитаны из образа или контейнера, что делает их уязвимыми для атак.
+
 ## Использование секретов в docker-compose
+
 
 ## Библиография
 
