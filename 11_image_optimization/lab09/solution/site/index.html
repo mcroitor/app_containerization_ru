@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Fen Builder</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+        <script type="text/javascript" src="js/additional.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body onload="init();">
+        <div id="blank">
+            <div id="toolbar">
+                font: 
+                <select id="font" onchange="changeFont();">
+                    <option value="0" selected="selected">Chess Merida</option>
+                    <option value="1">Chess Motif</option>
+                    <option value="2">Chess Adventurer</option>
+                    <option value="3">Chess Leipzig</option>
+                    <option value="4">Chess Usual</option>
+                    <option value="5">Chess Alpha</option>
+                    <option value="6">Chess Mark</option>
+                </select>
+                size:
+                <select id="fieldSize" onchange="changeSize();">
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26" selected="selected">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>                
+                </select>
+            </div>
+            <div>FEN: <input type="text" id="fen" onchange="setBoard();" value="8/8/8/8/8/8/8/8" />
+                <hr />
+                <canvas id="actionPanel" onmousedown="selectAction(event, this);"></canvas>
+            </div>
+            <div class="left">
+                <h4>Workspace:</h4>
+                <canvas id="brdCanvas"></canvas>
+            </div>
+            <div class="left">
+                <h4>Preview:</h4>
+                <img src="" id="previewImage" alt="preview" />
+            </div>
+            <div id="message"></div>
+        </div>
+    </body>
+</html>

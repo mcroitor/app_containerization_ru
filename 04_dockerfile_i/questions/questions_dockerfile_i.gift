@@ -1,8 +1,8 @@
 // # Вопросы на тему "Синтаксис Dockerfile"
 
-$CATEGORY: 03_dockerfile_i/1_knowledge
+$CATEGORY: 04_dockerfile_i/1_knowledge
 
-::03k001:: [markdown] Что такое контекст сборки?
+::04k001:: [markdown] Что такое контекст сборки?
 {
     =[markdown] Это директория, в которой находится файл `Dockerfile`.
     ~[markdown] Это директория, в которой находится файл `docker-compose.yml`.
@@ -10,7 +10,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] Это образ, который используется для сборки других образов.
 }
 
-::03k002:: [markdown] Какой командой задается базовый образ?
+::04k002:: [markdown] Какой командой задается базовый образ?
 {
     =[markdown] `FROM`
     ~[markdown] `BASE`
@@ -18,7 +18,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `BASE_IMAGE_NAME`
 }
 
-::03k003:: [markdown] Специальная текстовая метка, указывающая, например, версию образа или его характеристики, называется
+::04k003:: [markdown] Специальная текстовая метка, указывающая, например, версию образа или его характеристики, называется
 {
     =[markdown] `тегом`
     ~[markdown] `версией`
@@ -26,7 +26,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `атрибутом`
 }
 
-::03k004:: [markdown] При задании базового образа можно указать тег, который соответствует конкретной версии базового образа. Если тег не указан, то будет использован тег
+::04k004:: [markdown] При задании базового образа можно указать тег, который соответствует конкретной версии базового образа. Если тег не указан, то будет использован тег
 {
     =[markdown] `latest`
     ~[markdown] `current`
@@ -34,7 +34,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `recent`
 }
 
-::03k005:: [markdown] Если базовый образ не указан, то будет использован базовый образ
+::04k005:: [markdown] Если базовый образ не указан, то будет использован базовый образ
 {
     =[markdown] `scratch`
     ~[markdown] `empty`
@@ -42,7 +42,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `null`
 }
 
-::03k006:: [markdown] Какой командой задается точка входа для запуска контейнера?
+::04k006:: [markdown] Какой командой задается точка входа для запуска контейнера?
 {
     =[markdown] `CMD`
     ~[markdown] `EXEC`
@@ -50,7 +50,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `START`
 }
 
-::03k007:: [markdown] Чтобы скопировать файлы и директории из контекста сборки в файловую систему образа, используется команда
+::04k007:: [markdown] Чтобы скопировать файлы и директории из контекста сборки в файловую систему образа, используется команда
 {
     =[markdown] `COPY`
     ~[markdown] `MOVE`
@@ -58,7 +58,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `PASTE`
 }
 
-::03k008:: [markdown] Образ контейнера строится по умолчанию на базе описания файла
+::04k008:: [markdown] Образ контейнера строится по умолчанию на базе описания файла
 {
     =[markdown] `Dockerfile`
     ~[markdown] `docker-compose.yaml`
@@ -66,7 +66,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `image.json`
 }
 
-::03k009:: [markdown] Скачать архив по URL ссылке и записать в образ можно при помощи команды
+::04k009:: [markdown] Скачать архив по URL ссылке и записать в образ можно при помощи команды
 {
     =[markdown] `ADD`
     ~[markdown] `COPY`
@@ -74,7 +74,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `DOWNLOAD`
 }
 
-::03k010:: [markdown] Выполнение некоторой команды при построении образа контейнера определяется директивой
+::04k010:: [markdown] Выполнение некоторой команды при построении образа контейнера определяется директивой
 {
     =[markdown] `RUN`
     ~[markdown] `EXEC`
@@ -82,7 +82,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `DO`
 }
 
-::03k011:: [markdown] Определить рабочую директорию в образе можно при помощи команды
+::04k011:: [markdown] Определить рабочую директорию в образе можно при помощи команды
 {
     =[markdown] `WORKDIR`
     ~[markdown] `WORK`
@@ -90,7 +90,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `CD`
 }
 
-::03k012:: [markdown] Сменить пользователя в образе можно при помощи команды
+::04k012:: [markdown] Сменить пользователя в образе можно при помощи команды
 {
     =[markdown] `USER`
     ~[markdown] `CHANGE_USER`
@@ -98,7 +98,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `CHOWN`
 }
 
-::03k013:: [markdown] Чтобы скопировать файл `php-fpm.conf` из папки `files/configs` в образ в папку `/etc/php` образа, нужно использовать команду
+::04k013:: [markdown] Чтобы скопировать файл `php-fpm.conf` из папки `files/configs` в образ в папку `/etc/php` образа, нужно использовать команду
 {
     =[markdown] `COPY files/configs/php-fpm.conf /etc/php`
     ~[markdown] `COPY /etc/php files/configs/php-fpm.conf`
@@ -106,7 +106,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `COPY /files/configs/php-fpm.conf /etc/php`
 }
 
-::03k014:: [markdown] Чтобы создать директорию `/var/www` в образе, нужно использовать команду
+::04k014:: [markdown] Чтобы создать директорию `/var/www` в образе, нужно использовать команду
 {
     =[markdown] `RUN mkdir /var/www`
     ~[markdown] `COPY /var/www`
@@ -114,7 +114,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `MKDIR /var/www`
 }
 
-::03k015:: [markdown] Для установки пакета `nginx` в образе, нужно использовать команду
+::04k015:: [markdown] Для установки пакета `nginx` в образе, нужно использовать команду
 {
     =[markdown] `RUN apt-get install -y nginx`
     ~[markdown] `COPY apt-get install -y nginx`
@@ -122,7 +122,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `ADD apt-get install -y nginx`
 }
 
-::03k016:: [markdown] Чтобы выполнять команду `nginx -g "daemon off;"` при запуске контейнера, нужно использовать команду
+::04k016:: [markdown] Чтобы выполнять команду `nginx -g "daemon off;"` при запуске контейнера, нужно использовать команду
 {
     =[markdown] `CMD ["nginx", "-g", "daemon off;"]`
     ~[markdown] `RUN ["nginx", "-g", "daemon off;"]`
@@ -130,7 +130,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `EXEC ["nginx", "-g", "daemon off;"]`
 }
 
-::03k017:: [markdown] Обновить списки пакетов и сами пакеты в образе на базе OS Ubuntu можно при помощи команды
+::04k017:: [markdown] Обновить списки пакетов и сами пакеты в образе на базе OS Ubuntu можно при помощи команды
 {
     =[markdown] `RUN apt-get update && apt-get -y upgrade`
     ~[markdown] `RUN apt-get update`
@@ -138,7 +138,7 @@ $CATEGORY: 03_dockerfile_i/1_knowledge
     ~[markdown] `UPGRADE packages`
 }
 
-::03k018:: [markdown] Разница между командами `CMD` и `ENTRYPOINT` заключается в том, что
+::04k018:: [markdown] Разница между командами `CMD` и `ENTRYPOINT` заключается в том, что
 {
     =[markdown] `CMD` позволяет переопределить команду при запуске контейнера, а `ENTRYPOINT` - нет.
     ~[markdown] `ENTRYPOINT` позволяет переопределить команду при запуске контейнера, а `CMD` - нет.
