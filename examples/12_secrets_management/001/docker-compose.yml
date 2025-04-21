@@ -1,0 +1,10 @@
+services:
+  myservice:
+    image: alpine:latest
+    secrets:
+      - my_secret
+    command: sh -c 'cat /run/secrets/my_secret'
+
+secrets:
+  my_secret:
+    file: ./secrets/my_secret.txt
