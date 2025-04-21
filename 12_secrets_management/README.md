@@ -4,6 +4,8 @@
   - [Базовые методы защиты](#базовые-методы-защиты)
   - [Использование секретов в Docker](#использование-секретов-в-docker)
   - [Использование секретов в docker-compose](#использование-секретов-в-docker-compose)
+    - [Простой пример](#простой-пример)
+    - [Пример с использованием переменных окружения](#пример-с-использованием-переменных-окружения)
   - [Библиография](#библиография)
 
 **Секретами** в ИТ называют информацию, которая необходима для получения доступа, например, пароли или ключи (также могут быть логины или вообще конфиденциальные данные) и требует сокрытия.
@@ -42,9 +44,9 @@ ENV SECRET=supersecret
 docker image build -t myimage .
 ```
 
-Однако, использование переменных окружения для передачи секретов не является безопасным способом. Переменные окружения видны внутри контейнера. Также плохо их определять в самом Dockerfile, так как они могут быть прочитаны из образа.
+Определение переменной окружения в Dockerfile является небезопасным, так как чтение переменной окружения из образа может быть выполнено с помощью команды `docker image inspect` или `docker image history`.
 
-Например, если вы выполните команду `docker inspect` на образе, вы увидите переменные окружения:
+Например, если выполнить команду `docker inspect` на образе, то можно получить следующий результат:
 
 ```bash
 docker image inspect myimage
@@ -59,17 +61,87 @@ docker image inspect myimage
 Также переменные окружения могут быть прочитаны из контейнера:
 
 ```bash
-docker container run -it -e SECRET=anothersecret --rm myimage sh
-echo $SECRET
+docker container run -it -e SECRET=anothersecret --rm myimage sh -c 'echo $SECRET'
+anothersecret
 ```
 
-Хранение секретов в переменных окружения является популярным способом, но не самым безопасным. Секреты могут быть прочитаны из образа или контейнера, что делает их уязвимыми для атак.
+Хранение секретов в переменных окружения является популярным способом, но не самым безопасным. Секреты могут быть прочитаны из образа или контейнера, что делает их уязвимыми для атак. Поэтому категорически не рекомендуется объявлять секреты в Dockerfile. Кроме того, нужно быть уверенным, что нет доступа к контейнеру.
 
 ## Использование секретов в docker-compose
 
+Для работы с секретами в docker-compose используется специальный раздел `secrets`, который позволяет хранить секреты в зашифрованном виде. Секреты в этом случае могут быть переданы в контейнеры через переменные окружения или файлы.
+
+Секреты монтируются к контейнеру в виде файлов, располагающихся в папке `/run/secrets/`. Например, секрет `mysecret` будет доступен в контейнере по пути `/run/secrets/mysecret`.
+
+Передача секрета в контейнер состоит из двух этапов:
+
+- объявление секрета в конфигурации docker-compose.yml, в элементе первого уровня `secrets`;
+- указание секрета в конфигурации сервиса, в элементе `secrets`.
+
+В отличие от других методов, Docker Secrets не видны в образе и не могут быть прочитаны из контейнера. Кроме того, этот способ позволяет ограничить доступ к секретам при помощи стандартных разрешений файловой системы.
+
+### Простой пример
+
+В первом примере показывается, как передать секрет в контейнер и прочитать его из файла.
+
+```yaml
+services:
+  myservice:
+    image: alpine
+    secrets:
+      - my_secret
+    command: sh -c 'cat /run/secrets/my_secret'
+
+secrets:
+  my_secret:
+    file: ./my_secret.txt
+```
+
+### Пример с использованием переменных окружения
+
+В этом примере следует обратить внимание на конвенцию именования переменных окружения. Некоторые образы контейнеров, включая `mysql`, `mariadb` или `postgres` определяют переменные окружения с суффиксом `_FILE`, которые указывают на файл, содержащий значение переменной окружения. Например, `MYSQL_ROOT_PASSWORD_FILE` указывает на файл, содержащий пароль root для MySQL.
+
+```yaml
+services:
+  mariadb:
+    image: mariadb:latest
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql_password
+    secrets:
+      - mysql_root_password
+      - mysql_password
+  wordpress:
+    image: wordpress:latest
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/mysql_password
+      WORDPRESS_DB_NAME: wordpress
+    secrets:
+      - mysql_password
+    ports:
+      - 8080:80
+    depends_on:
+      - mariadb
+
+secrets:
+  mysql_root_password:
+    environment: MYSQL_ROOT_PASSWORD
+  mysql_password:
+    environment: MYSQL_PASSWORD
+
+volumes:
+  mariadb_data: {}
+```
 
 ## Библиография
 
 1. [techno_mot, Обзор способов защиты контейнеров Docker: от простого к сложному, habr.com, 2024-11-13](https://habr.com/ru/companies/selectel/articles/854850/)
 2. [Kubernetes, Pod Security Standards, kubernetes.io](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
 3. [Kubernetes, Network Policies, kubernetes.io](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+4. [How to use secrets in Docker Compose, docker.com](https://docs.docker.com/compose/how-tos/use-secrets/)
