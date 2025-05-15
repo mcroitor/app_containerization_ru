@@ -13,8 +13,6 @@
 Как уже было рассказано при описании Dockerfile, при сборке образа можно передавать аргументы. Это позволяет управлять процессом сборки образа, например, передавать версию приложения или другие параметры. В Docker Compose аргументы можно задавать в файле `docker-compose.yml` с помощью ключа `build.args`:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     build:
@@ -30,8 +28,6 @@ services:
 В Docker Compose переменные окружения можно передавать в файле `docker-compose.yml` с помощью ключа `environment`:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -43,8 +39,6 @@ services:
 Переменные окружения можно также задавать в виде словаря:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -65,8 +59,6 @@ DB_PORT=5432
 Теперь в файле `docker-compose.yml` можно использовать переменные окружения:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -78,8 +70,6 @@ services:
 Также можно указать файл с переменными окружения в файле `docker-compose.yml` с помощью ключа `env_file`, причем можно перечислить несколько файлов с переменными окружения:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -99,8 +89,6 @@ services:
 Для контейнера можно ограничить доступ к памяти и процессору. В Docker Compose это можно сделать с помощью ключа `deploy.resources`:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -121,8 +109,6 @@ services:
 Для контейнера можно определить доступ к графическому процессору (GPU). В Docker Compose это можно сделать с помощью ключа `deploy.resources`:
 
 ```yaml
-version: '3.9'
-
 services:
   neural_network:
     image: neuwrl:latest
@@ -149,8 +135,6 @@ services:
 Также можно проверить состояние контейнера после его запуска. Например, можно проверить, что контейнер успешно запустился и готов к работе. В Docker Compose это можно сделать с помощью ключа `healthcheck`:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest
@@ -166,8 +150,6 @@ services:
 Иногда сервисы в контейнерах пытаются использовать больше ресурсов, чем им доступно. В этом случае может возникать ошибка `OOME` (Out Of Memory Error). Для предотвращения этой ошибки можно использовать правила перезапуска контейнера:
 
 ```yaml
-version: '3.9'
-
 services:
   web:
     image: myapp:latest

@@ -13,8 +13,7 @@ FROM debian:${DEBIAN_VERSION}
 ARG PHP_VERSION=8.2
 
 # ENV instruction
-ENV PHP_VERSION=${PHP_VERSION}
-ENV PHP=php${PHP_VERSION}
+ENV PHP_VERSION=${PHP_VERSION} PHP=php${PHP_VERSION}
 ENV PHP_EXTENSIONS="${PHP}-gd ${PHP}-mysql ${PHP}-xml"
 
 RUN apt-get update && apt-get install -y ${PHP} ${PHP_EXTENSIONS}

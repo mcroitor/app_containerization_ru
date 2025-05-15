@@ -8,7 +8,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker image start`
 }
 
-::05k001:: [markdown] Какая команда используется для отображения списка существующих образов?
+::05k002:: [markdown] Какая команда используется для отображения списка существующих образов?
 {
   =[markdown] `docker image ls`
   ~[markdown] `docker image show`
@@ -16,7 +16,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker list`
 }
 
-::05k001:: [markdown] Какая команда используется для удаления образа?
+::05k003:: [markdown] Какая команда используется для удаления образа?
 {
   =[markdown] `docker image rm`
   ~[markdown] `docker delete`
@@ -24,7 +24,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker remove image`
 }
 
-::05k001:: [markdown] Какая команда используется для создания контейнера?
+::05k004:: [markdown] Какая команда используется для создания контейнера?
 {
   =[markdown] `docker container create`
   ~[markdown] `docker image build`
@@ -32,7 +32,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container start`
 }
 
-::05k001:: [markdown] Какая команда используется для запуска существующего контейнера?
+::05k005:: [markdown] Какая команда используется для запуска существующего контейнера?
 {
   =[markdown] `docker container start`
   ~[markdown] `docker container run`
@@ -40,7 +40,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container build`
 }
 
-::05k001:: [markdown] При помощи какой команды можно взаимодействовать с контейнером
+::05k006:: [markdown] При помощи какой команды можно взаимодействовать с контейнером
 {
   =[markdown] `docker container exec`
   ~[markdown] `docker container run`
@@ -48,7 +48,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container stop`
 }
 
-::05k001:: [markdown] Какой командой можно перезапустить контейнер?
+::05k007:: [markdown] Какой командой можно перезапустить контейнер?
 {
   =[markdown] `docker container restart`
   ~[markdown] `docker container start`
@@ -56,7 +56,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container stop`
 }
 
-::05k001:: [markdown] Какой командой можно переписать файл в контейнер?
+::05k008:: [markdown] Какой командой можно переписать файл в контейнер?
 {
   =[markdown] `docker container cp`
   ~[markdown] `docker container mv`
@@ -64,7 +64,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container move`
 }
 
-::05k001:: [markdown] Какая команда используется для чтения логов контейнера?
+::05k009:: [markdown] Какая команда используется для чтения логов контейнера?
 {
   =[markdown] `docker container logs`
   ~[markdown] `docker container show`
@@ -72,7 +72,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container list`
 }
 
-::05k001:: [markdown] Какая команда используется для просмотра списка контейнеров?
+::05k010:: [markdown] Какая команда используется для просмотра списка контейнеров?
 {
   =[markdown] `docker container ls`
   ~[markdown] `docker ls container`
@@ -80,7 +80,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker image list`
 }
 
-::05k001:: [markdown] Какая команда используется для остановки контейнера?
+::05k011:: [markdown] Какая команда используется для остановки контейнера?
 {
   =[markdown] `docker container stop`
   ~[markdown] `docker stop container`
@@ -88,7 +88,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container delete`
 }
 
-::05k001:: [markdown] Какая команда используется для удаления контейнера?
+::05k012:: [markdown] Какая команда используется для удаления контейнера?
 {
   =[markdown] `docker container rm`
   ~[markdown] `docker remove container`
@@ -96,7 +96,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container prune`
 }
 
-::05k001:: [markdown] Пусть дан файл `Dockerfile.sample`. Какая команда используется для построения образа с именем `myimage`?
+::05k013:: [markdown] Пусть дан файл `Dockerfile.sample`. Какая команда используется для построения образа с именем `myimage`?
 {
   =[markdown] `docker image build -t myimage -f Dockerfile.sample .`
   ~[markdown] `docker image build -t myimage Dockerfile.sample`
@@ -104,7 +104,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker build -f Dockerfile.sample -t myimage`
 }
 
-::05k001:: [markdown] Пусть дан образ `myimage:1.0`. Какая команда используется для создания контейнера с именем `mycontainer`?
+::05k014:: [markdown] Пусть дан образ `myimage:1.0`. Какая команда используется для создания контейнера с именем `mycontainer`?
 {
   =[markdown] `docker container create --name mycontainer myimage:1.0`
   ~[markdown] `docker container create --name myimage:1.0 mycontainer`
@@ -112,7 +112,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker build --name mycontainer myimage:1.0`
 }
 
-::05k001:: [markdown] Пусть дан контейнер `mycontainer`. Какая команда используется для запуска контейнера в фоновом режиме?
+::05k015:: [markdown] Пусть дан контейнер `mycontainer`. Какая команда используется для запуска контейнера в фоновом режиме?
 {
   =[markdown] `docker start -d mycontainer`
   ~[markdown] `docker run --background mycontainer`
@@ -120,7 +120,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker start -d --name mycontainer`
 }
 
-::05k001:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для подключения к контейнеру с командой `/bin/bash` для взаимодействия с оболочкой?
+::05k016:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для подключения к контейнеру с командой `/bin/bash` для взаимодействия с оболочкой?
 {
   =[markdown] `docker exec -it mycontainer /bin/bash`
   ~[markdown] `docker run mycontainer /bin/bash`
@@ -128,7 +128,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container exec mycontainer /bin/bash`
 }
 
-::05k001:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для чтения последних 50 строк журналов контейнера?
+::05k017:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для чтения последних 50 строк журналов контейнера?
 {
   =[markdown] `docker logs -n 50 mycontainer`
   ~[markdown] `docker container logs -f 50 mycontainer`
@@ -136,7 +136,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker logs -f 50 mycontainer`
 }
 
-::05k001:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для остановки контейнера?
+::05k018:: [markdown] Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для остановки контейнера?
 {
   =[markdown] `docker stop mycontainer`
   ~[markdown] `docker container stop mycontainer`
@@ -144,7 +144,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker container delete mycontainer`
 }
 
-::05k001:: [markdown] Дан образ `myimage`. Какой командой можно запустить контейнер с именем `mycontainer` и перенаправлением порта `8080` на порт `80`?
+::05k019:: [markdown] Дан образ `myimage`. Какой командой можно запустить контейнер с именем `mycontainer` и перенаправлением порта `8080` на порт `80`?
 {
   =[markdown] `docker container run -d --name mycontainer -p 8080:80 myimage`
   ~[markdown] `docker run -d --name mycontainer --ports 8080:80 myimage`
@@ -152,7 +152,7 @@ $CATEGORY: 05_docker_run/1_knowledge
   ~[markdown] `docker run -d --name mycontainer --expose 8080:80 myimage`
 }
 
-::05k001:: [markdown] Дан запущенный контейнер `mycontainer`. Какой командой можно скопировать файл `file.txt` в корень контейнера?
+::05k020:: [markdown] Дан запущенный контейнер `mycontainer`. Какой командой можно скопировать файл `file.txt` в корень контейнера?
 {
   =[markdown] `docker container cp file.txt mycontainer:/`
   ~[markdown] `docker image cp mycontainer:/file.txt .`

@@ -1,0 +1,1752 @@
+
+
+$CATEGORY: $course$/top/exam/1_knowledge/03_definitions
+
+
+::03k001::[markdown]Файл, который содержит в себе все необходимое для запуска приложения (само приложение, динамические библиотеки, необходимые для запуска приложения, конфигурационные файлы, данные) называется\:{
+	=образом
+	~контейнером
+	~сервисом
+	~приложением
+}
+
+
+::03k002::[markdown]Экземпляр образа, который запущен в оперативной памяти, называется\:{
+	=контейнером
+	~образом
+	~сервисом
+	~приложением
+}
+
+
+::03k003::[markdown]Программа, обычно запускаемая на сервере, которая предоставляет узкоспециализированные услуги клиентам, называется\:{
+	=сервисом
+	~образом
+	~контейнером
+	~приложением
+}
+
+
+::03k004::[markdown]Сервис, который предоставляет услуги посредством протокола HTTP, называется\:{
+	=Web сервисом
+	~сервером
+	~кластером
+	~контейнером
+}
+
+
+::03k005::[markdown]Хранилище каких-либо файлов (например, образов, пакетов) называется\:{
+	=репозиторием
+	~кластером
+	~контейнером
+	~сервисом
+}
+
+
+::03k006::[markdown]Специализированный компьютер, на котором запускается серверное программное обеспечение, называется\:{
+	=сервером
+	~клиентом
+	~контейнером
+	~сервисом
+}
+
+
+::03k007::[markdown]Группа компьютеров, на которых запускается приложение, развернутое в контейнерах, называется\:{
+	=кластером
+	~репозиторием
+	~контейнером
+	~сервисом
+}
+
+
+::03k008::[markdown]Процесс увеличения производительности приложения путем увеличения количества ресурсов, выделяемых для его работы, называется\:{
+	=масштабированием
+	~контейнеризацией
+	~кластеризацией
+	~виртуализацией
+}
+
+
+::03k009::[markdown]Увеличение производительности приложения путем увеличения ресурсов, выделяемых для его работы на одном сервере, называется\:{
+	=вертикальным масштабированием
+	~горизонтальным масштабированием
+	~масштабированием
+	~кластеризацией
+}
+
+
+::03k010::[markdown]Увеличение производительности приложения путем увеличения количества серверов, на которых запущено приложение, называется\:{
+	=горизонтальным масштабированием
+	~вертикальным масштабированием
+	~масштабированием
+	~кластеризацией
+}
+
+
+::03k011::[markdown]Программа, которая предоставляет определенные услуги клиентам{
+	=сервис
+	~контейнер
+	~сервер
+	~клиент
+}
+
+
+::03k012::[markdown]Основным свойством серверов является{
+	=надежность
+	~производительность
+	~масштабируемость
+	~управляемость
+}
+
+
+::03k013::[markdown]Способность сервера обрабатывать запросы клиентов за минимальное время{
+	=производительность
+	~надежность
+	~масштабируемость
+	~управляемость
+}
+
+
+::03k014::[markdown]Способность сервера увеличивать производительность путем увеличения ресурсов, выделяемых для его работы{
+	=масштабируемость
+	~надежность
+	~производительность
+	~управляемость
+}
+
+
+::03k015::[markdown]Способность сервера управляться удаленно, без необходимости физического присутствия администратора{
+	=управляемость
+	~надежность
+	~производительность
+	~масштабируемость
+}
+
+
+::03k016::[markdown]Архитектура приложения, в которой весь код приложения находится в одном компоненте, называется{
+	=монолитная
+	~многокомпонентная
+	~микросервисная
+	~модульная
+}
+
+
+::03k017::[markdown]Архитектура приложения, в которой код приложения разделен на независимые модули, называется{
+	=многокомпонентная
+	~монолитная
+	~клиент-серверная
+	~многоуровневая
+}
+
+
+::03k018::[markdown]Процесс управления набором контейнеров называется{
+	=оркестрацией
+	~виртуализацией
+	~контейнеризацией
+	~кластеризацией
+}
+
+
+::03k019::[markdown]Группа компьютеров, объединенных в единую сеть, с установленным специализированным программным обеспечением, которые предоставляют услуги пользователям через интернет (такие как хранение данных, инфраструктура, вычисления){
+	=облако
+	~кластер
+	~сервер
+	~контейнер
+}
+
+
+::03k020::[markdown]Технология, которая позволяет запускать экземпляр некоторой операционной системы в рамках другой операционной системы, называется{
+	=виртуализацией
+	~контейнеризацией
+	~оркестрацией
+	~кластеризацией
+}
+
+
+::03k021::[markdown]Технология, которая позволяет запускать экземпляр приложения в изолированной среде, называется{
+	=контейнеризацией
+	~виртуализацией
+	~оркестрацией
+	~кластеризацией
+}
+
+
+::03k022::[markdown]Компьютер, который предоставляет свои ресурсы (вычислительные, сетевые, хранилища) контейнерам, называется{
+	=хост
+	~сервер
+	~клиент
+	~образ
+}
+
+
+// question: 0  name: Switch category to $course$/top/04_dockerfile_i/1_knowledge
+$CATEGORY: $course$/top/exam/1_knowledge/04_dockerfile_i
+
+
+::04k001::[markdown]Что такое контекст сборки?{
+	=Это директория, в которой находится файл `Dockerfile`.
+	~Это директория, в которой находится файл `docker-compose.yml`.
+	~Это директория, из которой выполняется команда `docker build`.
+	~Это образ, который используется для сборки других образов.
+}
+
+
+::04k002::[markdown]Какой командой задается базовый образ?{
+	=`FROM`
+	~`BASE`
+	~`BASE_IMAGE`
+	~`BASE_IMAGE_NAME`
+}
+
+
+::04k003::[markdown]Специальная текстовая метка, указывающая, например, версию образа или его характеристики, называется{
+	=`тегом`
+	~`версией`
+	~`метаданными`
+	~`атрибутом`
+}
+
+
+::04k004::[markdown]При задании базового образа можно указать тег, который соответствует конкретной версии базового образа. Если тег не указан, то будет использован тег{
+	=`latest`
+	~`current`
+	~`newest`
+	~`recent`
+}
+
+
+::04k005::[markdown]Если базовый образ не указан, то будет использован базовый образ{
+	=`scratch`
+	~`empty`
+	~`none`
+	~`null`
+}
+
+
+::04k008::[markdown]Какой командой задается точка входа для запуска контейнера?{
+	=`CMD`
+	~`EXEC`
+	~`RUN`
+	~`START`
+}
+
+
+::04k009::[markdown]Чтобы скопировать файлы и директории из контекста сборки в файловую систему образа, используется команда\:{
+	=`COPY`
+	~`MOVE`
+	~`INSERT`
+	~`PASTE`
+}
+
+
+::04k010::[markdown]Образ контейнера строится по умолчанию на базе описания файла{
+	=`Dockerfile`
+	~`docker-compose.yaml`
+	~`docker-image.def`
+	~`image.json`
+}
+
+
+::04k011::[markdown]Скачать архив по URL ссылке его и записать в образ можно при помощи команды{
+	=`ADD`
+	~`COPY`
+	~`GET`
+	~`DOWNLOAD`
+}
+
+
+::04k012::[markdown]Выполнение некоторой команды при построении образа контейнера определяется директивой{
+	=`RUN`
+	~`EXEC`
+	~`CMD`
+	~`DO`
+}
+
+
+::04k013::[markdown]Определить рабочую директорию в образе можно при помощи команды{
+	=`WORKDIR`
+	~`WORK`
+	~`DIR`
+	~`CD`
+}
+
+
+::04k014::[markdown]Сменить пользователя в образе можно при помощи команды{
+	=`USER`
+	~`CHANGE_USER`
+	~`SWITCH_USER`
+	~`CHOWN`
+}
+
+
+::04k015::[markdown]Чтобы скопировать файл `php-fpm.conf` из папки `files/configs` в образ в папку `/etc/php` образа, нужно использовать команду{
+	=`COPY files/configs/php-fpm.conf /etc/php`
+	~`COPY /etc/php files/configs/php-fpm.conf`
+	~`COPY /etc/php/php-fpm.conf files/configs`
+	~`COPY /files/configs/php-fpm.conf /etc/php`
+}
+
+
+::04k016::[markdown]Чтобы создать директорию `/var/www` в образе, нужно использовать команду{
+	=`RUN mkdir /var/www`
+	~`COPY /var/www`
+	~`CREATE /var/www`
+	~`MKDIR /var/www`
+}
+
+
+::04k017::[markdown]Для установки пакета `nginx` в образе, нужно использовать команду{
+	=`RUN apt-get install -y nginx`
+	~`COPY apt-get install -y nginx`
+	~`INSTALL nginx`
+	~`ADD apt-get install -y nginx`
+}
+
+
+::04k018::[markdown]Чтобы выполнять команду `nginx -g "daemon off;"` при запуске контейнера, нужно использовать команду{
+	=`CMD ["nginx", "-g", "daemon off;"]`
+	~`RUN ["nginx", "-g", "daemon off;"]`
+	~`START ["nginx", "-g", "daemon off;"]`
+	~`EXEC ["nginx", "-g", "daemon off;"]`
+}
+
+
+::04k019::[markdown]Обновить списки пакетов и сами пакеты в образе на базе OS Ubuntu можно при помощи команды{
+	=`RUN apt-get update && apt-get -y upgrade`
+	~`RUN apt-get update`
+	~`RUN apt-get -y upgrade`
+	~`UPGRADE packages`
+}
+
+
+::04k020::[markdown]Разница между командами `CMD` и `ENTRYPOINT` заключается в том, что{
+	=`CMD` позволяет переопределить команду при запуске контейнера, а `ENTRYPOINT` - нет.
+	~`ENTRYPOINT` позволяет переопределить команду при запуске контейнера, а `CMD` - нет.
+	~`CMD` и `ENTRYPOINT` выполняют одни и те же действия.
+	~`CMD` и `ENTRYPOINT` выполняют разные действия.
+}
+
+
+// question: 0  name: Switch category to $course$/top/05_docker_run/2_usage
+$CATEGORY: $course$/top/exam/2_usage/05_docker_run
+
+
+::05u001::[markdown]Чтобы собрать образ `myimage` из `Dockerfile`, необходимо выполнить команду{
+	=%100%docker build -t myimage .#
+	=%100%docker build --tag myimage .#
+	=%100%docker build -t myimage  -f Dockerfile .#
+	=%100%docker image build -t myimage .#
+	=%100%docker image build --tag myimage .#
+}
+
+
+::05u002::[markdown]Чтобы собрать образ `webserver` из `Dockerfile.nginx`, необходимо выполнить команду{
+	=%100%docker build -t webserver -f Dockerfile.nginx .#
+	=%100%docker build -t webserver --file Dockerfile.nginx .#
+	=%100%docker build --tag webserver -f Dockerfile.nginx .#
+	=%100%docker build --tag webserver --file Dockerfile.nginx .#
+	=%100%docker build --file Dockerfile.nginx --tag webserver .#
+	=%100%docker build -f Dockerfile.nginx --tag webserver .#
+	=%100%docker build --file Dockerfile.nginx -t webserver .#
+	=%100%docker build -f Dockerfile.nginx -t webserver .#
+	=%100%docker image build -t webserver -f Dockerfile.nginx .#
+	=%100%docker image build -t webserver --file Dockerfile.nginx .#
+	=%100%docker image build --tag webserver -f Dockerfile.nginx .#
+}
+
+
+::05u003::[markdown]Чтобы собрать образ `sample` с тегом `1.0` из `Dockerfile`, необходимо выполнить команду{
+	=%100%docker build -t sample\:1.0 .#
+	=%100%docker build --tag sample\:1.0 .#
+	=%100%docker image build -t sample\:1.0 .#
+	=%100%docker image build --tag sample\:1.0 .#
+}
+
+
+::05u004::[markdown]Чтобы собрать образ `sample` из `Dockerfile`, который находится в папке `php-fpm`, необходимо выполнить команду{
+	=%100%docker build -t sample php-fpm#
+	=%100%docker build --tag sample php-fpm#
+	=%100%docker build -t sample ./php-fpm#
+	=%100%docker build --tag sample ./php-fpm#
+	=%100%docker build -t sample php-fpm/#
+	=%100%docker build --tag sample php-fpm/#
+	=%100%docker build -t sample ./php-fpm/#
+	=%100%docker build --tag sample ./php-fpm/#
+	=%100%docker image build -t sample php-fpm#
+	=%100%docker image build -t sample php-fpm/#
+	=%100%docker image build -t sample ./php-fpm#
+}
+
+
+::05u005::[markdown]Для просмотра списка существующих образов используется команда{
+	=%100%docker images#
+	=%100%docker image ls#
+	=%100%docker image list#
+}
+
+
+::05u006::[markdown]Для удаления образа `sample` используется команда{
+	=%100%docker rmi sample#
+	=%100%docker image remove sample#
+	=%100%docker image rm sample#
+}
+
+
+::05u007::[markdown]Для удаления образов `sample` и `webserver` используется команда{
+	=%100%docker rmi sample webserver#
+	=%100%docker rmi webserver sample#
+	=%100%docker image rm webserver sample#
+	=%100%docker image remove webserver sample#
+	=%100%docker image rm sample webserver#
+	=%100%docker image remove sample webserver#
+}
+
+
+::05u008::[markdown]Для создания контейнера `mycontainer` на базе образа `myimage` используется команда{
+	=%100%docker create --name mycontainer myimage#
+	=%100%docker container create --name mycontainer myimage#
+}
+
+
+::05u009::[markdown]Для запуска контейнера `mycontainer` используется команда{
+	=%100%docker start mycontainer#
+	=%100%docker container start mycontainer#
+}
+
+
+::05u010::[markdown]Чтобы создать на базе образа `mariadb` контейнер с произвольным именем и сразу его запустить, используется команда{
+	=%100%docker run mariadb#
+	=%100%docker run  -d mariadb#
+}
+
+
+::05u011::[markdown]Чтобы создать на базе образа `mariadb` контейнер с именем `mydb` и сразу его запустить, используется команда{
+	=%100%docker run --name mydb mariadb#
+	=%100%docker run --name mydb -d mariadb#
+	=%100%docker run -d --name mydb mariadb#
+	=%100%docker run --name mydb  -d mariadb\:latest#
+	=%100%docker run --name mydb mariadb\:latest#
+}
+
+
+::05u012::[markdown]Чтобы создать на базе образа `nginx` контейнер с именем `web` и сразу его запустить в фоновом режиме, используется команда{
+	=%100%docker run --name web -d nginx#
+	=%100%docker run -d --name web nginx#
+	=%100%docker container run --name web -d nginx#
+	=%100%docker container run -d --name web nginx#
+}
+
+
+::05u013::[markdown]Просмотреть список запущенных контейнеров можно с помощью команды{
+	=%100%docker ps#
+	=%100%docker container ls#
+	=%100%docker container list#
+	=%100%docker container ps#
+}
+
+
+::05u014::[markdown]Просмотреть список всех контейнеров можно с помощью команды{
+	=%100%docker ps -a#
+	=%100%docker container ps -a#
+	=%100%docke container ls -a#
+	=%100%docker container list -a#
+}
+
+
+::05u015::[markdown]Выполнить команду `/etc/init.d/nginx reload` внутри работающего контейнера `nginx` можно с помощью команды{
+	=%100%docker exec nginx /etc/init.d/nginx reload#
+	=%100%docker container exec nginx /etc/init.d/nginx reload#
+}
+
+
+::05u016::[markdown]Выполнить команду `php /var/www/html/cli/cleancache.php` внутри работающего контейнера `php-fpm` можно с помощью команды{
+	=%100%docker exec php-fpm php /var/www/html/cli/cleancache.php#
+	=%100%docker container exec php-fpm php /var/www/html/cli/cleancache.php#
+	=%100%docker exec -it php-fpm php /var/www/html/cli/cleancache.php#
+	=%100%docker container exec -it php-fpm php /var/www/html/cli/cleancache.php#
+}
+
+
+::05u017::[markdown]Для запуска приложения `bash` внутри работающего контейнера `debian` с включенным интерактивным режимом используется команда{
+	=%100%docker exec -it debian bash#
+	=%100%docker exec -i -t debian bash#
+	=%100%docker exec -t -i debian bash#
+	=%100%docker exec -t -i debian bash#
+	=%100%docker exec -ti debian bash#
+}
+
+
+::05u018::[markdown]Для остановки контейнера `mycontainer` используется команда{
+	=%100%docker stop mycontainer#
+	=%100%docker container stop mycontainer#
+}
+
+
+::05u019::[markdown]Для удаления контейнера `mycontainer` используется команда{
+	=%100%docker rm mycontainer#
+	=%100%docker container rm mycontainer#
+	=%100%docker container remove mycontainer#
+}
+
+
+::05u020::[markdown]Перезапустить контейнер `mc` можно с помощью команды{
+	=%100%docker restart mc#
+	=%0%docker container restart mc#
+}
+
+
+::05u021::[markdown]Для просмотра журналов контейнера `php-fpm` используется команда{
+	=%100%docker logs php-fpm#
+	=%100%docker container logs php-fpm#
+}
+
+
+::05u022::[markdown]Для просмотра журналов контейнера `mysql` в режиме `follow` используется команда{
+	=%100%docker logs -f mysql#
+	=%100%docker logs --follow mysql#
+	=%100%docker container logs -f mysql#
+	=%0%docker container logs --follow mysql#
+}
+
+
+::05u023::[markdown]Чтобы скопировать файл `index.html` из папки `/var/www/html` контейнера `web` в локальную директорию `./html`, используется команда{
+	=%100%docker cp web\:/var/www/html/index.html ./html#
+	=%100%docker cp web\:/var/www/html/index.html ./html/#
+	=%100%docker cp web\:/var/www/html/index.html html/#
+	=%100%docker cp web\:/var/www/html/index.html html#
+}
+
+
+::05u024::[markdown]Чтобы скопировать файл `index.html` из локальной директории `./html` в папку `/var/www/html` контейнера `web`, используется команда{
+	=%100%docker cp ./html/index.html web\:/var/www/html#
+	=%100%docker cp ./html/index.html web\:/var/www/html/#
+	=%100%docker cp html/index.html web\:/var/www/html#
+	=%100%docker cp html/index.html web\:/var/www/html/#
+}
+
+
+::05u025::[markdown]Запустить контейнер на базе образа `myserver` с запуском команды `/bin/sh` можно с помощью команды{
+	=%100%docker run -it myserver /bin/sh#
+	=%100%docker run -i -t myserver /bin/sh#
+	=%100%docker run -t -i myserver /bin/sh#
+	=%100%docker run -ti myserver /bin/sh#
+}
+
+
+// question: 0  name: Switch category to $course$/top/04_dockerfile_i/2_usage
+$CATEGORY: $course$/top/exam/2_usage/04_dockerfile_i
+
+
+::04u001::[markdown]В Dockerfile для создания образа на базе образа `ubuntu\:20.04` используется команда{
+	=%100%FROM ubuntu\:20.04#
+}
+
+
+::04u002::[markdown]В Dockerfile для создания образа на базе последнего созданного образа `nginx` используется команда{
+	=%100%FROM nginx#
+	=%100%FROM nginx\:latest#
+}
+
+
+::04u003::[markdown]В Dockerfile для создания образа на базе пустого используется команда{
+	=%100%FROM scratch#
+}
+
+
+::04u004::[markdown]Какая команда в Dockerfile используется для установки пакета `nano` в образе на базе OS Ubuntu?{
+	=%100%RUN apt-get install -y nano#
+	=%100%RUN apt-get install nano -y#
+	=%100%RUN apt install -y nano#
+	=%100%RUN apt install nano -y#
+}
+
+
+::04u005::[markdown]В Dockerfile для копирования файла `php.ini` из папки `files` контекста сборки в образ в папку `/etc/php/7.4/cli` используется команда{
+	=%100%COPY files/php.ini /etc/php/7.4/cli#
+	=%100%COPY files/php.ini /etc/php/7.4/cli/#
+	=%100%COPY files/php.ini /etc/php/7.4/cli/php.ini#
+}
+
+
+::04u006::[markdown]В Dockerfile для создания директории `/var/www` в образе используется команда{
+	=%100%RUN mkdir /var/www#
+	=%100%RUN mkdir -p /var/www#
+}
+
+
+::04u007::[markdown]Чтобы сменить пользователя в образе на `www-data`, используется команда{
+	=%100%USER www-data#
+}
+
+
+::04u008::[markdown]Чтобы установить пакет `nginx` в образе на базе OS Ubuntu, используется команда{
+	=%100%RUN apt-get install -y nginx#
+	=%100%RUN apt-get install nginx -y#
+	=%100%RUN apt install -y nginx#
+	=%100%RUN apt install nginx -y#
+}
+
+
+::04u009::[markdown]Чтобы выполнить команду `nginx -g "daemon off;"` при запуске контейнера, используется команда{
+	=%100%CMD ["nginx", "-g", "daemon off;"]#
+	=%100%CMD nginx -g "daemon off;"#
+	=%100%CMD ["nginx","-g","daemon off;"]#
+}
+
+
+::04u010::[markdown]Для смены рабочей директории в образе на `/var/www` используется команда{
+	=%100%WORKDIR /var/www#
+	=%100%WORKDIR /var/www/#
+}
+
+
+$CATEGORY: $course$/top/exam/1_knowledge/05_docker_run
+
+
+::05k001::[markdown]Какая команда используется для построения образа?{
+	=`docker image build`
+	~`docker create`
+	~`docker image run`
+	~`docker image start`
+}
+
+
+::05k002::[markdown]Какая команда используется для отображения списка существующих образов?{
+	=`docker image ls`
+	~`docker image show`
+	~`docker view`
+	~`docker list`
+}
+
+
+::05k003::[markdown]Какая команда используется для удаления образа?{
+	=`docker image rm`
+	~`docker delete`
+	~`docker remove`
+	~`docker remove image`
+}
+
+
+::05k004::[markdown]Какая команда используется для создания контейнера?{
+	=`docker container create`
+	~`docker image build`
+	~`docker container build`
+	~`docker container start`
+}
+
+
+::05k005::[markdown]Какая команда используется для запуска существующего контейнера?{
+	=`docker container start`
+	~`docker container run`
+	~`docker container create`
+	~`docker container build`
+}
+
+
+::05k006::[markdown]При помощи какой команды можно взаимодействовать с контейнером{
+	=`docker container exec`
+	~`docker container run`
+	~`docker container start`
+	~`docker container stop`
+}
+
+
+::05k007::[markdown]Какой командой можно перезапустить контейнер?{
+	=`docker container restart`
+	~`docker container start`
+	~`docker container run`
+	~`docker container stop`
+}
+
+
+::05k008::[markdown]Какой командой можно переписать файл в контейнер?{
+	=`docker container cp`
+	~`docker container mv`
+	~`docker container copy`
+	~`docker container move`
+}
+
+
+::05k009::[markdown]Какая команда используется для чтения логов контейнера?{
+	=`docker container logs`
+	~`docker container show`
+	~`docker container view`
+	~`docker container list`
+}
+
+
+::05k010::[markdown]Какая команда используется для просмотра списка контейнеров?{
+	=`docker container ls`
+	~`docker ls container`
+	~`docker container view`
+	~`docker image list`
+}
+
+
+::05k011::[markdown]Какая команда используется для остановки контейнера?{
+	=`docker container stop`
+	~`docker stop container`
+	~`docker container remove`
+	~`docker container delete`
+}
+
+
+::05k012::[markdown]Какая команда используется для удаления контейнера?{
+	=`docker container rm`
+	~`docker remove container`
+	~`docker container delete`
+	~`docker container prune`
+}
+
+
+::05k013::[markdown]Пусть дан файл `Dockerfile.sample`. Какая команда используется для построения образа с именем `myimage`?{
+	=`docker image build -t myimage -f Dockerfile.sample .`
+	~`docker image build -t myimage Dockerfile.sample`
+	~`docker image build --name myimage --file Dockerfile.sample .`
+	~`docker build -f Dockerfile.sample -t myimage`
+}
+
+
+::05k014::[markdown]Пусть дан образ `myimage\:1.0`. Какая команда используется для создания контейнера с именем `mycontainer`?{
+	=`docker container create --name mycontainer myimage\:1.0`
+	~`docker container create --name myimage\:1.0 mycontainer`
+	~`docker create --name mycontainer myimage .`
+	~`docker build --name mycontainer myimage\:1.0`
+}
+
+
+::05k015::[markdown]Пусть дан контейнер `mycontainer`. Какая команда используется для запуска контейнера в фоновом режиме?{
+	=`docker start mycontainer`
+	~`docker run --background mycontainer`
+	~`docker run -d --name mycontainer`
+	~`docker start -d --name mycontainer`
+}
+
+
+::05k016::[markdown]Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для подключения к контейнеру с командой `/bin/bash` для взаимодействия с оболочкой?{
+	=`docker exec -it mycontainer /bin/bash`
+	~`docker run mycontainer /bin/bash`
+	~`docker start mycontainer /bin/bash`
+	~`docker container exec mycontainer /bin/bash`
+}
+
+
+::05k017::[markdown]Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для чтения последних 50 строк журналов контейнера?{
+	=`docker logs -n 50 mycontainer`
+	~`docker container logs -f 50 mycontainer`
+	~`docker container show 50 mycontainer`
+	~`docker logs -f 50 mycontainer`
+}
+
+
+::05k018::[markdown]Пусть дан запущенный контейнер `mycontainer`. Какая команда используется для остановки контейнера?{
+	=`docker container stop mycontainer`
+	~`docker stop container mycontainer`
+	~`docker container rm mycontainer`
+	~`docker delete container mycontainer`
+}
+
+
+::05k019::[markdown]Дан образ `myimage`. Какой командой можно запустить контейнер с именем `mycontainer` и перенаправлением порта `8080` на порт `80`?{
+	=`docker container run -d --name mycontainer -p 8080\:80 myimage`
+	~`docker run -d --name mycontainer --ports 8080\:80 myimage`
+	~`docker run --name mycontainer -p 8080 myimage`
+	~`docker run -d --name mycontainer --expose 80\:8080 myimage`
+}
+
+
+::05k020::[markdown]Дан запущенный контейнер `mycontainer`. Какой командой можно скопировать файл `file.txt` в корень контейнера?{
+	=`docker container cp file.txt mycontainer\:/`
+	~`docker image cp mycontainer\:/file.txt .`
+	~`docker cp mycontainer\:/file.txt /`
+	~`docker container write file.txt mycontainer\:/file.txt`
+}
+
+
+// question: 0  name: Switch category to $course$/top/06_dockerfile_ii/1_knowledge
+$CATEGORY: $course$/top/exam/1_knowledge/06_dockerfile_ii
+
+
+::05k001::[markdown]Чтобы задать переменную окружения в образе контейнера, используется директива{
+	=`ENV`
+	~`ARG`
+	~`VAR`
+	~`VARIABLE`
+}
+
+
+::05k002::[markdown]Для задания аргумента сборки, который можно использовать во время сборки образа, используется директива{
+	=`ARG`
+	~`ENV`
+	~`BUILD_ARG`
+	~`VAR`
+}
+
+
+::05k003::[markdown]Чтобы открыть порт контейнера, используется директива{
+	=`EXPOSE`
+	~`PORT`
+	~`OPEN`
+	~`PUBLISH`
+}
+
+
+::05k004::[markdown]Для указания точки монтирования тома в контейнере используется директива{
+	=`VOLUME`
+	~`MOUNT`
+	~`MOUNTPOINT`
+	~`MOUNTVOLUME`
+}
+
+
+::05k005::[markdown]Метаданные образа можно задать с помощью директивы{
+	=`LABEL`
+	~`META`
+	~`METADATA`
+	~`COMMENT`
+}
+
+
+::05k006::[markdown]Сменить командную оболочку по умолчанию в образе можно с помощью директивы{
+	=`SHELL`
+	~`CMD`
+	~`SH`
+	~`BASH`
+}
+
+
+::05k007::[markdown]Проверить работу образа можно с помощью директивы{
+	=`HEALTHCHECK`
+	~`CHECK`
+	~`TEST`
+	~`VERIFY`
+}
+
+
+::05k008::[markdown]Задать аргумент `DEBIAN_VERSION` сборки в Dockerfile можно следующим образом{
+	=`ARG DEBIAN_VERSION`
+	~`ENV DEBIAN_VERSION`
+	~`VAR DEBIAN_VERSION`
+	~`SET DEBIAN_VERSION`
+}
+
+
+::05k009::[markdown]Задать переменную окружения `DEBIAN_VERSION` в Dockerfile можно следующим образом{
+	=`ENV DEBIAN_VERSION`
+	~`ARG DEBIAN_VERSION`
+	~`VAR DEBIAN_VERSION`
+	~`SET DEBIAN_VERSION`
+}
+
+
+::05k010::[markdown]Определить аргумент сборки `DEBIAN_VERSION` со значением `10` при сборке образа `myimage`, нужно использовать команду{
+	=`docker build --build-arg DEBIAN_VERSION\=10 -t myimage .`
+	~`docker build -e DEBIAN_VERSION\=10 -t myimage .`
+	~`docker build --arg DEBIAN_VERSION\=10 -t myimage .`
+	~`docker build --build-env DEBIAN_VERSION10 -t myimage .`
+}
+
+
+$CATEGORY: $course$/top/exam/2_usage/06_dockerfile_ii
+
+
+::06u001::[markdown]Чтобы задать аргумент сборки `UBUNTU_VERSION` со значением `20.04`, нужно добавить в Dockerfile следующую строку{
+	=%100%ARG UBUNTU_VERSION\=20.04#
+	=%100%ARG UBUNTU_VERSION\="20.04"#
+}
+
+
+::06u002::[markdown]Чтобы задать аргумент сборки `APP_DIR` со значением `/usr/src/app`, нужно добавить в Dockerfile следующую строку{
+	=%100%ARG APP_DIR\=/usr/src/app#
+	=%100%ARG APP_DIR\="/usr/src/app"#
+}
+
+
+::06u003::[markdown]Чтобы задать переменную окружения `APP_DIR` со значением `/usr/src/app`, нужно добавить в Dockerfile следующую строку{
+	=%100%ENV APP_DIR\=/usr/src/app#
+}
+
+
+::06u004::[markdown]Чтобы задать переменную окружения `UBUNTU_VERSION` со значением `20.04`, нужно добавить в Dockerfile следующую строку{
+	=%100%ENV UBUNTU_VERSION\=20.04#
+}
+
+
+::06u005::[markdown]Чтобы определить аргумент сборки `UBUNTU_VERSION` со значением `20.04` при сборке образа `myimage`, нужно использовать команду{
+	=%100%docker build --build-arg UBUNTU_VERSION\=20.04 -t myimage .#
+	=%100%docker build -t myimage --build-arg UBUNTU_VERSION\=20.04 .#
+}
+
+
+::06u006::[markdown]Чтобы определить аргумент сборки `APP_DIR` со значением `/usr/src/app` при сборке образа `myimage`, нужно использовать команду{
+	=%100%docker build --build-arg APP_DIR\=/usr/src/app -t myimage .#
+	=%100%docker build -t myimage --build-arg APP_DIR\=/usr/src/app .#
+}
+
+
+::06u007::[markdown]В Dockerfile определена переменная окружения `UBUNTU_VERSION`. Напишите директиву, которая выведет значение этой переменной во время сборки образа в файл `/version.txt`.{
+	=%100%RUN echo $UBUNTU_VERSION > /version.txt#
+	=%100%RUN echo "$UBUNTU_VERSION" > /version.txt#
+	=%100%RUN echo $\{UBUNTU_VERSION\} > /version.txt#
+}
+
+
+::06u008::[markdown]В Dockerfile определён аргумент сборки `UBUNTU_VERSION`. Напишите директиву, которая определит переменную окружения `UBUNTU_VERSION` со значением аргумента сборки.{
+	=%100%ENV UBUNTU_VERSION\=$UBUNTU_VERSION#
+	=%100%ENV UBUNTU_VERSION\=$\{UBUNTU_VERSION\}#
+	=%100%ENV UBUNTU_VERSION\="$UBUNTU_VERSION"#
+	=%100%ENV UBUNTU_VERSION\="$\{UBUNTU_VERSION\}"#
+}
+
+
+::06u009::[markdown]В Dockerfile определён аргумент сборки `UBUNTU_VERSION`. Напишите директиву, которая определяет создание образа на базе образа `ubuntu` с использованием аргумента сборки `UBUNTU_VERSION`.{
+	=%100%FROM ubuntu\:$UBUNTU_VERSION#
+	=%100%FROM ubuntu\:$\{UBUNTU_VERSION\}#
+}
+
+
+::06u010::[markdown]Чтобы открыть порт `80` в контейнере, нужно добавить в Dockerfile следующую строку{
+	=%100%EXPOSE 80#
+}
+
+
+::06u011::[markdown]Чтобы открыть порт `8080` в контейнере, нужно добавить в Dockerfile следующую строку{
+	=%100%EXPOSE 8080#
+}
+
+
+::06u012::[markdown]Чтобы пробросить порт `80` контейнера на порт `8080` хоста при создании и запуске контейнера с образом `myimage`, нужно использовать команду{
+	=%100%docker run -p 8080\:80 myimage#
+	=%100%docker run --publish 8080\:80 myimage#
+}
+
+
+::06u013::[markdown]Чтобы определить точку монтирования тома к каталогу `/data` в контейнере, нужно добавить в Dockerfile следующую строку{
+	=%100%VOLUME /data#
+	=%100%VOLUME ["/data"]#
+}
+
+
+::06u014::[markdown]Чтобы определить точку монтирования тома к каталогу `/var/lib/mysql` в контейнере, нужно добавить в Dockerfile следующую строку{
+	=%100%VOLUME /var/lib/mysql#
+	=%100%VOLUME ["/var/lib/mysql"]#
+}
+
+
+::06u015::[markdown]Чтобы задать метаданные образа `maintainer` со значением `Gicu Stirbu`, нужно добавить в Dockerfile следующую строку{
+	=%100%LABEL maintainer\="Gicu Stirbu"#
+	=%100%LABEL maintainer\=Gicu Stirbu#
+}
+
+
+::06u016::[markdown]Чтобы задать метаданные образа `version` со значением `1.0`, нужно добавить в Dockerfile следующую строку{
+	=%100%LABEL version\="1.0"#
+	=%100%LABEL version\=1.0#
+}
+
+
+// question: 0  name: Switch category to $course$/top/07_container_usage/1_knowledge
+$CATEGORY: $course$/top/exam/1_knowledge/07_container_usage
+
+
+::07k001::[markdown]Просмотреть список существующих томов можно с помощью команды\:{
+	=`docker volume list`
+	~`docker volume ps`
+	~`docker volume show`
+	~`docker volume inspect`
+}
+
+
+::07k002::[markdown]Чтобы создать том с именем `opt`, используется команда\:{
+	=`docker volume create opt`
+	~`docker volume create --name opt`
+	~`docker volume make opt`
+	~`docker volume create name\=opt`
+}
+
+
+::07k003::[markdown]Чтобы просмотреть информацию о томе `opt`, используется команда\:{
+	=`docker volume inspect opt`
+	~`docker volume show opt`
+	~`docker volume info opt`
+	~`docker volume ls opt`
+}
+
+
+::07k004::[markdown]Удалить том `opt` можно командой\:{
+	=`docker volume remove opt`
+	~`docker volume unlink opt`
+	~`docker volume delete opt`
+	~`docker volume prune opt`
+}
+
+
+::07k005::[markdown]Удалить все неиспользуемые тома можно командой\:{
+	=`docker volume prune`
+	~`docker volume remove`
+	~`docker volume clear`
+	~`docker volume rm`
+}
+
+
+::07k006::[markdown]Просмотреть список сетей можно с помощью команды\:{
+	=`docker network list`
+	~`docker network ps`
+	~`docker network show`
+	~`docker network inspect`
+}
+
+
+::07k007::[markdown]Чтобы создать сеть с именем `local`, используется команда\:{
+	=`docker network create local`
+	~`docker network make --name local`
+	~`docker network make local`
+	=`docker network create name\=local`
+}
+
+
+::07k008::[markdown]Чтобы просмотреть информацию о сети `local`, используется команда\:{
+	=`docker network inspect local`
+	~`docker network show local`
+	~`docker network info local`
+	~`docker network ls local`
+}
+
+
+::07k009::[markdown]Удалить сеть `local` можно командой\:{
+	=`docker network remove local`
+	~`docker network unlink local`
+	~`docker network delete local`
+	~`docker network prune local`
+}
+
+
+::07k010::[markdown]Подключить контейнер `frontend` к сети `local` можно командой\:{
+	=`docker network connect local frontend`
+	~`docker network connect frontend local`
+	~`docker network attach frontend local`
+	~`docker network attach local frontend`
+}
+
+
+::07k011::[markdown]Отключить контейнер `frontend` от сети `local` можно командой\:{
+	=`docker network disconnect local frontend`
+	~`docker network disconnect frontend local`
+	~`docker network detach frontend local`
+	~`docker network detach local frontend`
+}
+
+
+::07k012::[markdown]Удалить все неиспользуемые сети можно командой\:{
+	=`docker network prune`
+	~`docker network remove`
+	~`docker network clear`
+	~`docker network rm`
+}
+
+
+::07k013::[markdown]Чтобы создать том с именем `data`, используется команда\:{
+	=`docker volume create data`
+	~`docker volume create --name data`
+	~`docker volume make data`
+	~`docker volume create name\=data`
+}
+
+
+::07k014::[markdown]Чтобы просмотреть информацию о томе `data`, используется команда\:{
+	=`docker volume inspect data`
+	~`docker volume show data`
+	~`docker volume info data`
+	~`docker volume ls data`
+}
+
+
+::07k015::[markdown]Удалить том `data` можно командой\:{
+	=`docker volume remove data`
+	~`docker volume unlink data`
+	~`docker volume delete data`
+	~`docker volume prune data`
+}
+
+
+::07k016::[markdown]Чтобы создать сеть с именем `backend`, используется команда\:{
+	=`docker network create backend`
+	~`docker network make --name backend`
+	~`docker network make backend`
+	=`docker network create --name\=backend`
+}
+
+
+::07k017::[markdown]Чтобы просмотреть информацию о сети `backend`, используется команда\:{
+	=`docker network inspect backend`
+	~`docker network show backend`
+	~`docker network info backend`
+	~`docker network ls backend`
+}
+
+
+::07k018::[markdown]Удалить сеть `backend` можно командой\:{
+	=`docker network remove backend`
+	~`docker network unlink backend`
+	~`docker network delete backend`
+	~`docker network prune backend`
+}
+
+
+::07k019::[markdown]Отключить контейнер `database` от сети `backend` можно командой\:{
+	=`docker network disconnect backend database`
+	~`docker network disconnect database backend`
+	~`docker network detach database backend`
+	~`docker network detach backend database`
+}
+
+
+::07k020::[markdown]Подключить контейнер `database` к сети `backend` можно командой\:{
+	=`docker network connect backend database`
+	~`docker network connect database backend`
+	~`docker network attach database backend`
+	~`docker network attach backend database`
+}
+
+
+// question: 0  name: Switch category to $course$/top/07_container_usage/2_usage
+$CATEGORY: $course$/top/exam/2_usage/07_container_usage
+
+
+::07u001::[markdown]Для создания контейнера `webserver` на базе образа `webserver` с пробросом порта `80` контейнера на порт `8000` хоста используется команда\:{
+	=%100%docker create --name webserver -p 8000\:80 webserver#
+	=%100%docker create --name webserver --publish 8000\:80 webserver#
+	=%100%docker create -p 8000\:80 --name webserver webserver#
+	=%100%docker create --publish 8000\:80 --name webserver webserver#
+	=%50%docker run --name webserver -p 8000\:80 webserver#
+	=%50%docker run -p 8000\:80 --name webserver webserver#
+	=%50%docker run --publish 8000\:80 --name webserver webserver#
+	=%50%docker run --name webserver --publish 8000\:80 webserver#
+	=%100%docker container create --name webserver -p 8000\:80 webserver#
+	=%100%docker container create --name webserver --publish 8000\:80 webserver#
+	=%100%docker container create -p 8000\:80 --name webserver webserver#
+}
+
+
+::07u002::[markdown]Для создания и запуска контейнера `webserver` на базе образа `webserver` с пробросом порта `80` контейнера на порт `8080` хоста используется команда\:{
+	=%100%docker run --name webserver -p 8080\:80 webserver#
+	=%100%docker run -p 8080\:80 --name webserver webserver#
+	=%100%docker run --name webserver --publish 8080\:80 webserver#
+	=%100%docker run --publish 8080\:80 --name webserver webserver#
+	=%100%docker run -d -p 8080\:80 --name webserver webserver#
+	=%25%docker run -p 8080\:80 webserver#
+	=%100%docker container run --name webserver -p 8080\:80 webserver#
+	=%100%docker container run -p 8080\:80 --name webserver webserver#
+	=%100%docker container run --name webserver --publish 8080\:80 webserver#
+	=%100%docker container run -d -p 8080\:80 --name webserver webserver#
+	=%100%docker container run -d --name webserver -p 8080\:80 webserver#
+}
+
+
+::07u003::[markdown]Чтобы создать и запустить контейнер `webserver` на базе образа `webserver` с монтированием тома `opt` в директорию `/opt` контейнера используется команда\:{
+	=%100%docker run -v opt\:/opt --name webserver webserver#
+	=%100%docker run --volume opt\:/opt --name webserver webserver#
+	=%100%docker run --name webserver -v opt\:/opt webserver#
+	=%100%docker run --name webserver --volume opt\:/opt webserver#
+	=%100%docker run -d --name webserver -v opt\:/opt webserver#
+	=%100%docker create run -v opt\:/opt --name webserver webserver#
+	=%100%docker create run -d --name webserver -v opt\:/opt webserver#
+}
+
+
+::07u004::[markdown]Чтобы создать и запустить контейнер `nodeapp` на базе образа `nodeapp` с монтированием тома `app` в директорию `/app` контейнера используется команда\:{
+	=%100%docker run -v app\:/app --name nodeapp nodeapp#
+	=%100%docker run --volume app\:/app --name nodeapp nodeapp#
+	=%100%docker run --name nodeapp -v app\:/app nodeapp#
+	=%100%docker run --name nodeapp --volume app\:/app nodeapp#
+	=%100%docker run -d --name nodeapp -v app\:/app nodeapp#
+	=%100%docker run -d -v app\:/app --name nodeapp nodeapp#
+}
+
+
+::07u005::[markdown]Чтобы создать и запустить контейнер `webserver` на базе образа `webserver` с подключением к сети `local` используется команда\:{
+	=%100%docker run --name webserver --network local webserver#
+	=%100%docker run --network local --name webserver webserver#
+	=%100%docker run -d --name webserver --network local webserver#
+	=%100%docker container run --name webserver --network local webserver#
+	=%100%docker container run --network local --name webserver webserver#
+}
+
+
+::07u006::[markdown]Чтобы создать и запустить контейнер `nodeapp` на базе образа `nodeapp` с подключением к сети `backend` используется команда\:{
+	=%100%docker run --name nodeapp --network backend nodeapp#
+	=%100%docker run --network backend --name nodeapp nodeapp#
+	=%100%docker container run --name nodeapp --network backend nodeapp#
+	=%100%docker container run --network backend --name nodeapp nodeapp#
+}
+
+
+::07u007::[markdown]Для удаления сети `local` используется команда\:{
+	=%100%docker network rm local#
+}
+
+
+::07u008::[markdown]В Docker для создания сети с именем `local` используется команда\:{
+	=%100%docker network create local#
+}
+
+
+::07u009::[markdown]Добавить контейнер `frontend` к сети `local` можно командой\:{
+	=%100%docker network connect local frontend#
+}
+
+
+::07u010::[markdown]В Docker для создания тома с именем `opt` используется команда\:{
+	=%100%docker volume create opt#
+}
+
+
+::07u011::[markdown]Для удаления тома `opt` используется команда\:{
+	=%100%docker volume rm opt#
+}
+
+
+// question: 0  name: Switch category to $course$/top/08_docker_compose_i/1_knowledge
+$CATEGORY: $course$/top/exam/1_knowledge/08_docker_compose_i
+
+
+::08k001::[markdown]Docker Compose это{
+	=инструментальное средство для описания и запуска многоконтейнерных приложений
+	~инструментальное средство для описания и запуска одноконтейнерных приложений
+	~сервис для управления образами контейнеров
+	~сервис для управления контейнерами
+}
+
+
+::08k002::[markdown]Какой формат используется для описания многоконтейнерных приложений в Docker Compose?{
+	=YAML
+	~JSON
+	~XML
+	~TOML
+}
+
+
+::08k003::[markdown]Какой файл используется для описания многоконтейнерных приложений в Docker Compose?{
+	=docker-compose.yml
+	~docker-compose.xml
+	~docker-compose.json
+	~docker-compose.toml
+}
+
+
+::08k004::[markdown]Какой командой можно построить и запустить многоконтейнерное приложение, описанное в файле `docker-compose.yml`?{
+	=`docker-compose up`
+	~`docker-compose start`
+	~`docker-compose run`
+	~`docker-compose exec`
+}
+
+
+::08k005::[markdown]Какой командой можно остановить и удалить запущенное многоконтейнерное приложение?{
+	=`docker-compose down`
+	~`docker-compose stop`
+	~`docker-compose stop`
+	~`docker-compose rm`
+}
+
+
+::08k006::[markdown]Чтобы собрать многоконтейнерное приложение, описанное в файле `docker-compose.yml`, необходимо выполнить команду{
+	=`docker-compose build`
+	~`docker-compose compile`
+	~`docker-compose start`
+	~`docker-compose run`
+}
+
+
+::08k007::[markdown]Дан файл `docker-compose.yml`\n```yaml\nservices\:\n  web\:\n    image\: nginx\:latest\n    ports\:\n      - "8080\:80"\n```\nКакой контейнер будет запущен при выполнении команды `docker-compose up`?{
+	=web
+	~nginx
+	~latest
+	~не хва́тает информации для ответа
+}
+
+
+::08k008::[markdown]В файле `docker-compose.yml` необходимо обязательно указывать{
+	=список сервисов
+	~список образов
+	~список сетей
+	~список томов
+}
+
+
+::08k009::[markdown]Какой ключ для указания сервисов в файле `docker-compose.yml`?{
+	=services
+	~containers
+	~service
+	~images
+}
+
+
+::08k010::[markdown]Какой ключ для указания образа, на основе которого будет создан контейнер, в файле `docker-compose.yml`?{
+	=image
+	~container
+	~service
+	~images
+}
+
+
+::08k011::[markdown]Если для сервиса не указан ключ `image`, то необходимо указать ключ{
+	=build
+	~create
+	~run
+	~from
+}
+
+
+::08k012::[markdown]Какой ключ для указания портов, которые необходимо пробросить из контейнера в хост-систему, в файле `docker-compose.yml`?{
+	=ports
+	~expose
+	~publish
+	~forward
+}
+
+
+::08k013::[markdown]Для указания монтирования тома в контейнер в файле `docker-compose.yml` используется ключ{
+	=volumes
+	~mounts
+	~bind
+	~attach
+}
+
+
+::08k014::[markdown]Для указания используемых сетей сервисом в файле `docker-compose.yml` используется ключ{
+	=networks
+	~net
+	~network
+	~nets
+}
+
+
+::08k015::[markdown]Для указания очереди запуска сервисов в файле `docker-compose.yml` используется ключ{
+	=depends_on
+	~run_after
+	~after
+	~before
+}
+
+
+::08k016::[markdown]Для просмотра журнала событий сервиса `myservice`, описанного в файле `docker-compose.yml`, необходимо выполнить команду{
+	=`docker-compose logs myservice`
+	~`docker-compose log myservice`
+	~`docker-compose journal myservice`
+	~`docker-compose events myservice`
+}
+
+
+::08k017::[markdown]Для выполнения команды `command` внутри контейнера сервиса `myservice`, описанного в файле `docker-compose.yml`, необходимо выполнить команду{
+	=`docker-compose exec myservice command`
+	~`docker-compose run myservice command`
+	~`docker-compose start myservice command`
+	~`docker-compose stop myservice command`
+}
+
+
+::08k018::[markdown]Дан файл `docker-compose.yml`\n```yaml\nservices\:\n  database\:\n    image\: postgres\:15\n    expose\:\n      - 5432\n```\nКакой контейнер будет запущен при выполнении команды `docker-compose up -d`?{
+	=database
+	~postgres
+	~latest
+	~image
+}
+
+
+::08k019::[markdown]Для просмотра журнала событий сервиса `proxy`, описанного в файле `docker-compose.yml`, необходимо выполнить команду{
+	=`docker-compose logs proxy`
+	~`docker-compose log proxy`
+	~`docker-compose journal proxy`
+	~`docker-compose events proxy`
+}
+
+
+::08k020::[markdown]Для выполнения команды `py3 /app/update.py` внутри контейнера сервиса `django`, описанного в файле `docker-compose.yml`, необходимо выполнить команду{
+	=`docker-compose exec django "py3 /app/update.py"`
+	~`docker-compose run django "py3 /app/update.py"`
+	~`docker-compose start django "py3 /app/update.py"`
+	~`docker-compose stop django "py3 /app/update.py"`
+}
+
+
+$CATEGORY: $course$/top/exam/2_usage/08_docker_compose_i
+
+
+::08u001::[markdown]Для указания версии синтаксиса Docker Compose в файле `docker-compose.yml` используется ключ{
+	=%100%version#
+}
+
+
+::08u002::[markdown]Для указания сервисов в файле `docker-compose.yml` используется ключ{
+	=%100%services#
+}
+
+
+::08u003::[markdown]Для указания образа, на основе которого будет создан контейнер, в файле `docker-compose.yml` используется ключ{
+	=%100%image#
+}
+
+
+::07u004::[markdown]Для указания портов, которые необходимо пробросить из контейнера в хост-систему, в файле `docker-compose.yml` используется ключ{
+	=%100%ports#
+}
+
+
+::08u005::[markdown]Для указания монтирования тома в контейнер в файле `docker-compose.yml` используется ключ{
+	=%100%volumes#
+}
+
+
+::08u006::[markdown]Для указания используемых сетей сервисом в файле `docker-compose.yml` используется ключ{
+	=%100%networks#
+}
+
+
+::08u007::[markdown]Для указания очереди запуска сервисов в файле `docker-compose.yml` используется ключ{
+	=%100%depends_on#
+}
+
+
+::08u008::[markdown]Для указания пути к катаогу с файлом `Dockerfile` в файле `docker-compose.yml` используется ключ{
+	=%100%build#
+}
+
+
+::08u009::[markdown]Для указания команды, которая будет выполнена при запуске контейнера, в файле `docker-compose.yml` используется ключ{
+	=%100%command#
+}
+
+
+::08u010::[markdown]Чтобы создать инфраструктуру определенную в файле `docker-compose.yml` и построить контейнеры сервисов, необходимо выполнить команду{
+	=%100%docker-compose build#
+	=%100%docker compose build#
+	=%25%docker-compose up#
+	=%25%docker compose up#
+}
+
+
+::08u011::[markdown]Чтобы запустить контейнеры сервисов, определённые в файле `docker-compose.yml`, необходимо выполнить команду{
+	=%100%docker-compose up#
+	=%100%docker-compose up -d#
+	=%100%docker compose up#
+	=%100%docker compose up -d#
+}
+
+
+::08u012::[markdown]Чтобы остановить и удалить контейнеры сервисов, определённые в файле `docker-compose.yml`, необходимо выполнить команду{
+	=%100%docker-compose down#
+	=%100%docker compose down#
+}
+
+
+::08u013::[markdown]Чтобы просмотреть журнал событий сервиса `myservice`, определённого в файле `docker-compose.yml`, необходимо выполнить команду{
+	=%100%docker-compose logs myservice#
+	=%100%docker compose logs myservice#
+	=%100%docker-compose logs -f myservice#
+	=%100%docker compose logs -f myservice#
+}
+
+
+::08u014::[markdown]Чтобы выполнить команду `command` внутри контейнера сервиса `myservice`, определённого в файле `docker-compose.yml`, необходимо выполнить команду{
+	=%100%docker-compose exec myservice command#
+	=%100%docker compose exec myservice command#
+}
+
+
+// question: 0  name: Switch category to $course$/top/09_docker_compose_ii/1_knowledge
+$CATEGORY: $course$/top/exam/1_knowledge/09_docker_compose_ii
+
+
+::09k001::[markdown]Какой ключ используется в файле `docker-compose.yml` для указания переменных окружения, которые необходимо передать в контейнер?{
+	=environment
+	~env
+	~variables
+	~vars
+}
+
+
+::09k002::[markdown]Какой ключ используется в файле `docker-compose.yml` для указания файла с переменными окружения?{
+	=env_file
+	~environment_file
+	~variables_file
+	~vars_file
+}
+
+
+::09k003::[markdown]Какой файл автоматически подставляет Docker Compose в файл `docker-compose.yml`, если переменные окружения объявлены в нём?{
+	=.env
+	~.vars
+	~.variables
+	~.env_file
+}
+
+
+::09k004::[markdown]Какой ключ используется в файле `docker-compose.yml` для указания аргументов сборки образа?{
+	=build.args
+	~image.args
+	~build.arguments
+	~image.variables
+}
+
+
+::09k005::[markdown]Какой ключ используется в файле `docker-compose.yml` для указания контекста сборки образа?{
+	=build.context
+	~image.context
+	~build.dir
+	~image.dir
+}
+
+
+::09k006::[markdown]Каким образом можно в `docker-compose.yml` ограничить процессорное время, доступное контейнеру?{
+	=указать значение ключа `deploy.resources.limits.cpus`
+	~указать значение ключа `deploy.resources.cpu_limit`
+	~указать значение ключа `deploy.resources.cpu.quota`
+	~указать значение ключа `deploy.resources.cpu.shares`
+}
+
+
+::09k007::[markdown]Каким образом можно в `docker-compose.yml` ограничить объём памяти, доступный контейнеру?{
+	=указать значение ключа `deploy.resources.limits.memory`
+	~указать значение ключа `deploy.resources.memory_limit`
+	~указать значение ключа `deploy.resources.memory.quota`
+	~указать значение ключа `deploy.resources.memory.shares`
+}
+
+
+::09k008::[markdown]Какой ключ используется в файле `docker-compose.yml` для указания ограничений ресурсов контейнера?{
+	=deploy.resources
+	~resources
+	~limits
+	~deploy.limits
+}
+
+
+::09k009::[markdown]Дан `docker-compose.yml` файл\:\n\n```yaml\nservices\:\n minecraft\:\n   image\: itzg/minecraft-server\n   ports\:\n     - "25565\:25565"\n   environment\:\n     EULA\: "TRUE"\n   deploy\:\n     resources\:\n       limits\:\n         memory\: 1.5G\n   volumes\:\n     - "\~/minecraft_data\:/data"\n```\n\nКакую переменную среды необходимо определить, чтобы поиграть в Minecraft?{
+	=EULA
+	~environment
+	~itzg
+	~minecraft
+}
+
+
+$CATEGORY: $course$/top/exam/1_knowledge/10_CI_CD
+
+
+::10k001::[markdown]Практика разработки программного обеспечения, при которой разработчики интегрируют свои изменения в основную ветку несколько раз в день, называется{
+	=Непрерывная интеграция
+	~Непрерывная доставка
+	~Непрерывное развертывание
+	~Непрерывное тестирование
+}
+
+
+::10k002::[markdown]Сборки продукта по расписанию позволяют{
+	=уменьшить нагрузку на сервер непрерывной интеграции
+	~уменьшить время тестирования
+	~уменьшить время доставки
+	~уменьшить время развертывания
+}
+
+
+::10k003::[markdown]Практика разработки программного обеспечения, при которой каждое изменение кода проходит автоматизированные тесты на соответствие стандартам качества и безопасности и готово к выпуску в продукцию, называется{
+	=Непрерывная доставка
+	~Непрерывное развертывание
+	~Непрерывная интеграция
+	~Непрерывное тестирование
+}
+
+
+::10k004::[markdown]Практика разработки программного обеспечения, при котором каждое изменение кода, успешно проходящее все этапы тестирования, автоматически разворачивается на производственном сервере, называется{
+	=Непрерывное развертывание
+	~Непрерывная доставка
+	~Непрерывная интеграция
+	~Непрерывное тестирование
+}
+
+
+::10k005::[markdown]Для реализации непрерывной интеграции необходимо{
+	=использовать систему контроля версий
+	~использовать систему управления проектами
+	~использовать систему управления задачами
+	~использовать систему управления релизами
+}
+
+
+::10k006::[markdown]При использовании непрерывной интеграции изменения кода могут интегрироваться в основную ветку{
+	=несколько раз в день
+	~один раз в неделю
+	~каждый раз при внедрении новой функциональности
+	~каждый раз при релизе
+}
+
+
+::10k007::[markdown]При разработке программного продукта для реализации новой функциональности{
+	=надо создавать новую ветку на базе главной ветки
+	~все изменения создаются в главной ветке
+	~невозможно работать в нескольких ветках одновременно
+	~надо создавать новую ветку на базе тестовой ветки
+}
+
+
+::10k008::[markdown]При использовании непрерывной интеграции необходимо{
+	=использовать систему контроля версий
+	~использовать систему управления проектами
+	~использовать систему управления задачами
+	~использовать систему управления релизами
+}
+
+
+::10k009::[markdown]При непрерывной интеграции слияние изменений в основную ветку происходит{
+	=при успешном прохождении всех тестов
+	~при каждом изменении кода
+	~при каждом коммите
+	~при каждом релизе
+}
+
+
+::10k010::[markdown]Непрерывная интеграция позволяет{
+	=выявлять и устранять ошибки на ранних стадиях разработки
+	~уменьшить время тестирования
+	~уменьшить время доставки
+	~уменьшить время развертывания
+}
+
+
+::10k011::[markdown]Какой из перечисленных инструментов используется для организации процессов CI/CD?{
+	=Jenkins
+	~JIRA
+	~Confluence
+	~Git
+}
+
+
+::10k012::[markdown]Что из перечисленного является ключевой особенностью непрерывной доставки?{
+	=Каждое изменение кода проходит автоматизированные тесты и готово к выпуску в продукцию
+	~Каждое изменение кода автоматически разворачивается в производственной среде
+	~Изменения кода интегрируются в основную ветку несколько раз в день
+	~Уменьшение времени выполнения тестов
+}
+
+
+
+$CATEGORY: $course$/top/exam/1_knowledge/11_image_optimization
+
+
+::11k001::[markdown]Какой командой можно просмотреть список образов контейнеров?{
+	=`docker images`
+	~`docker ps`
+	~`docker container ls`
+	~`docker inspect`
+}
+
+
+::11k002::[markdown]Какой командой можно просмотреть информацию о слоях образа?{
+	=`docker history`
+	~`docker inspect`
+	~`docker image ls`
+	~`docker image inspect`
+}
+
+
+::11k003::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM nginx\:latest\nCOPY ./site /usr/share/nginx/html\n```\nКак можно уменьшить размер получаемого образа?{
+	=заменить `nginx\:latest` на `nginx\:alpine`
+	~использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~использовать `.dockerignore`
+}
+
+
+::11k004::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM nginx\:alpine\nCOPY ./site /usr/share/nginx/html\n```\nКак можно уменьшить размер получаемого образа?{
+	=хранить сайт в монтированном томе
+	~использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~использовать `.dockerignore`
+}
+
+
+::11k005::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM debian\:bookworm-slim\nRUN apt-get update && apt-get install -y php-cli\nRUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\n```\nКак можно уменьшить размер получаемого образа?{
+	=объединить слои
+	~использовать многоэтапную сборку
+	~хранить данные в монтированном томе
+	~использовать `.dockerignore`
+}
+
+
+::11k006::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM gcc\:latest\nCOPY app.cpp .\nRUN g++ app.cpp -o app -static\nCMD ["./app"]\n```\nКак можно уменьшить размер получаемого образа?{
+	=использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~хранить данные в монтированном томе
+	~использовать `.dockerignore`
+}
+
+
+::11k007::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM php\:8.1\nCOPY ./site /var/www/html\n```\nКак можно уменьшить размер получаемого образа?{
+	=заменить `php\:8.1` на `php\:8.1-alpine`
+	~использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~использовать `.dockerignore`
+}
+
+
+::11k008::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM drupal\:alpine\nCOPY ./site /var/www/html\n```\nКак можно уменьшить размер получаемого образа?{
+	=хранить сайт в монтированном томе
+	~использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~использовать `.dockerignore`
+}
+
+
+::11k009::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM ubuntu\:22.04\nRUN apt-get update && apt-get install -y python\nRUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\n```\nКак можно уменьшить размер получаемого образа?{
+	=объединить слои
+	~использовать многоэтапную сборку
+	~хранить данные в монтированном томе
+	~использовать `.dockerignore`
+}
+
+
+::11k010::[markdown]Дан Dockerfile\:\n```dockerfile\nFROM openjdk\:latest\nCOPY /app /\nRUN mvn install\nCMD ["java", "-cp", "app\:app/lib/*"]\n```\nКак можно уменьшить размер получаемого образа?{
+	=использовать многоэтапную сборку
+	~уменьшить количество слоев
+	~хранить данные в монтированном томе
+	~использовать `.dockerignore`
+}
+
+
+$CATEGORY: $course$/top/exam/3_integration/06_dockerfile_ii
+
+
+::06i001::[markdown]Напишите `Dockerfile` для образа Web сервера (Apache + PHP), запускающего Drupal, соответствующий следующим критериям\n\n1. Определён аргумент сборки `UBUNTU_VERSION` со значением `22.04`\n2. Определен аргумент сборки `PHP_VERSION` со значением `7.4`\n3. Базовый образ `ubuntu` с тегом `UBUNTU_VERSION`\n4. Определена переменная окружения `PHP_VERSION` со значением аргумента сборки `PHP_VERSION`\n5. Обновлена информация о пакетах и установлены пакеты `apache2`, `php$\{PHP_VERSION\}`, `mod-php$\{PHP_VERSION\}`, `php$\{PHP_VERSION\}-mysql` и `php$\{PHP_VERSION\}-gd`\n6. Определена переменная окружения `APP_DIR` со значением `/var/www/html`\n7. Открыт порт `80` в контейнере\n8. Скопирован конфигурационный файл `apache2.conf` в каталог `/etc/apache2/` из каталога `./config/apache2/`\n9. Скопирован конфигурационный файл `php.ini` в каталог `/etc/php/$\{PHP_VERSION\}/apache2/` из каталога `./config/php/`\n10. Скачан и распакован архив Drupal в каталог `APP_DIR` (ссылка на архив\: `https\://www.drupal.org/download-latest/tar.gz`)\n11. Точка входа в контейнер - `apache2 -D FOREGROUND`{}
+
+
+::06i002::[markdown]Напишите `Dockerfile` соответствующий следующим критериям\:\n\n1. Определён аргумент сборки `DEBIAN_VERSION` со значением `10`\n2. Определен аргумент сборки `JOOMLA_VERSION` со значением `3.10.2`\n3. Базовый образ `debian` с тегом `DEBIAN_VERSION`\n4. Определена переменная окружения `JOOMLA_VERSION` со значением аргумента сборки `JOOMLA_VERSION`\n5. Обновлена информация о пакетах и установлены пакеты `nginx`, `php-fpm`, `php-mysql` и `php-gd`\n6. Определена переменная окружения `APP_DIR` со значением `/var/www/html`\n7. Открыт порт `80` в контейнере\n8. Скопирован конфигурационный файл `nginx.conf` в каталог `/etc/nginx/` из каталога `./config/nginx/`\n9. Скопирован конфигурационный файл `php-fpm.conf` в каталог `/etc/php/$\{PHP_VERSION\}/fpm/` из каталога `./config/php/`\n10. Скачан и распакован архив Joomla в каталог `APP_DIR` (ссылка на архив\: `https\://downloads.joomla.org/cms/joomla3/$\{JOOMLA_VERSION\}/Joomla_$\{JOOMLA_VERSION\}-Stable-Full_Package.tar.gz`)\n11. Точка входа в контейнер - `nginx -g 'daemon off;'`{}
+
+
+::06i003::[markdown]Напишите `Dockerfile` соответствующий следующим критериям\:\n\n1. Определен аргумент сборки `NODE_VERSION` со значением `20-alpine`\n2. Базовый образ `node` с тегом `NODE_VERSION`, именованный как `builder`\n3. Определена переменная окружения `APP_DIR` со значением `/usr/src/app`\n4. Рабочий каталог установлен в `APP_DIR`\n5. Скопирован файл `package.json` в каталог `APP_DIR` из каталога `./src`\n6. Установлены зависимости из файла `package.json` с помощью `npm install`\n7. Определен базовый образ для финального образа как `node` с тегом `NODE_VERSION`\n8. Скопированы установленные зависимости из образа `builder`, директория `node_modules` в рабочий каталог `/app` финального образа\n9. Скопированы файлы из каталога `./src` в рабочий каталог `/app` финального образа\n10. Открыт порт `3000` в контейнере\n11. Точка входа в контейнер - `node /app/index.js`{}
+
+
+::06i004::[markdown]Напишите `Dockerfile` соответствующий следующим критериям\:\n\n1. Определен аргумент сборки `COMPOSER_VERSION` со значением `2.7`\n2. Определен базовый образ `composer` с тегом `COMPOSER_VERSION`, именованный как `builder`\n3. Определена переменная окружения `APP_DIR` со значением `/composer`\n4. Рабочий каталог установлен в `APP_DIR`\n5. Скопирован файл `composer.json` в каталог `APP_DIR` из каталога `./site`\n6. Установлены зависимости из файла `composer.json` с помощью `composer install`\n7. Определен аргумент сборки `PHP_VERSION` со значением `8.1`\n8. Базовый образ `php` с тегом `$\{PHP_VERSION\}-fpm`\n9. Скопированы установленные зависимости из образа `builder`, директория `vendor` в рабочий каталог `/var/www/html` финального образа\n10. Скопированы файлы из каталога `./site` в рабочий каталог `/var/www/html` финального образа{}
+
+
+::06i005::[markdown]Напишите `Dockerfile` для образа с приложением на Python, который будет запускать веб-сервер на порту `8000`. Образ должен содержать следующие директивы\:\n\n1. Определен аргумент сборки `PYTHON_VERSION` со значением `3.9`\n2. Базовый образ `python` с тегом `$\{PYTHON_VERSION\}-alpine`\n3. Определена переменная окружения `DSN` со значением `sqlite\:///data/app.db`\n4. Определена переменная окружения `APP_DIR` со значением `/app`\n5. Рабочий каталог установлен в `APP_DIR`\n6. Смонтирован том к каталогу `/data` в контейнере\n7. Скопирован файл `requirements.txt` в каталог `APP_DIR` из каталога `./src`\n8. Установлены зависимости из файла `requirements.txt` с помощью `pip install --no-cache-dir -r requirements.txt`\n9. Скопированы файлы из каталога `./src` в рабочий каталог `/app`\n10. Открыт порт `8000` в контейнере\n11. Точка входа в контейнер - `python /app/app.py`{}
+
+
+::06i006::[markdown]Напишите `Dockerfile` для образа с приложением на Java, который будет запускать веб-сервер на порту `8080`. Образ должен содержать следующие директивы\:\n\n1. Определен аргумент сборки `JAVA_VERSION` со значением `17`\n2. Базовый образ `chainguard/jdk` с тегом `openjdk-$\{JAVA_VERSION\}`, именованный как `builder`\n3. Определена переменная окружения `APP_DIR` со значением `/app`\n4. Рабочий каталог установлен в `APP_DIR`\n5. Скопирован файл `pom.xml` в каталог `APP_DIR` из каталога `./src`\n6. Скопированы файлы из каталога `./src` в рабочий каталог `/app`\n7. Скомпилированы и упакованы файлы из каталога `/app` с помощью `mvn package`\n8. Базовый образ для финального образа - `chainguard/jre` с тегом `openjdk-$\{JAVA_VERSION\}`\n9. Открыт порт `8080` в контейнере\n10. Скопирован файл из образа `builder`, файл `target/app.jar` в рабочий каталог `/app` финального образа\n11. Точка входа в контейнер - `java -jar /app/app.jar`{}
+
+
+$CATEGORY: $course$/top/exam/3_integration/09_docker_compose_ii
+
+
+::09i001::[markdown]Напишите пример файла `docker-compose.yml`, для приложения `Nginx Unit + PostgreSql`, соответствующий следующим требованиям\n\n1. В файле должно быть описано два сервиса\: `web` и `db`\n2. Сервис `web` основан на образе `unit\:php`\n3. Сервис `web` доступен на порту `8080` хостовой системы\n4. Сервис `web` получает файл переменных окружения из файла `config.env`\n5. Сервис `web` зависит от сервиса `db`\n6. Сервис `web` работает в сети `back-net`\n7. Сервис `web` монтирует том `web-data` в директорию `/www`\n8. Сервис `db` основан на образе `postgres\:latest`\n9. Сервис `db` монтирует том `db-data` в директорию `/var/lib/postgresql/data`\n10. Сервис `db` получает переменные окружения из файла `db.env`\n11. Сервис `db` работает в сети `back-net`\n12. Также в файле описаны тома `web-data` и `db-data`\n13. Также в файле описана сеть `back-net`{}
+
+
+::09i002::[markdown]Напишите пример файла `docker-compose.yml`, для приложения `Python + MariaDB`, соответствующий следующим требованиям\:\n\n1. В файле должно быть описано два сервиса\: `app` и `db`\n2. Сервис `app` основан на образе `python\:3.9`\n3. Сервис `app` доступен на порту `8000` хостовой системы\n4. Сервис `app` получает переменные окружения из файла `app.env`\n5. Сервис `app` зависит от сервиса `db`\n6. Сервис `app` работает в сети `backend`\n7. Сервис `app` монтирует том `app-data` в директорию `/app`\n8. Сервис `db` основан на образе `mariadb\:latest`\n9. Сервис `db` монтирует том `db-data` в директорию `/var/lib/mysql`\n10. Сервис `db` получает переменные окружения из файла `db.env`\n11. Сервис `db` работает в сети `backend`\n12. Также в файле описаны тома `app-data` и `db-data`\n13. Также в файле описана сеть `backend`{}
+
+
+::09i003::[markdown]Напишите пример файла `docker-compose.yml`, для приложения `Node.js + MongoDB`, соответствующий следующим требованиям\:\n\n1. В файле должно быть описано два сервиса\: `app` и `db`\n2. Сервис `app` основан на образе `node\:20-alpine`\n3. Сервис `app` доступен на порту `3000` хостовой системы\n4. Сервис `app` получает переменные окружения из файла `app.env`\n5. Сервис `app` зависит от сервиса `db`\n6. Сервис `app` работает в сети `internal`\n7. Сервис `app` монтирует том `app-data` в директорию `/app`\n8. Сервис `db` основан на образе `mongo\:6.0`\n9. Сервис `db` монтирует том `db-data` в директорию `/data/db`\n10. Сервис `db` получает переменные окружения из файла `db.env`\n11. Сервис `db` работает в сети `backend`\n12. Также в файле описаны тома `app-data` и `db-data`\n13. Также в файле описана сеть `internal`{}
+
+
+::09i004::[markdown]Напишите пример файла `docker-compose.yml` соответствующий следующим требованиям\:\n\n1. В файле должно быть описано два сервиса\: `app-service` и `cache-service`\n2. Сервис `app-service` собирается из контекста сборки `./app`\n3. Сервис `app-service` использует Dockerfile `./app/Dockerfile`\n4. Сервис `app-service` передаёт аргумент `BUILD_VERSION` со значением `1.0.0` в Dockerfile\n5. Сервис `app-service` доступен на порту `8000` хостовой системы\n6. Сервис `app-service` получает переменную окружения `REDIS_HOST` со значением `cache-service`\n7. Сервис `app-service` работает в сети `backend`\n8. Сервис `app-service` монтирует том `app-data` в директорию `/app`\n9. Сервис `cache-service` основан на образе `redis\:latest`\n10. Сервис `cache-service` монтирует файл `mounts/redis.conf` в директорию `/usr/local/etc/redis/redis.conf`\n11. Сервис `cache-service` работает в сети `backend`\n12. Также в файле описан том `app-data`\n13. Также в файле описана сеть `backend`{}
+
+
+::09i005::[markdown]Напишите пример файла `docker-compose.yml` который собирает web сервис `nginx + php-fpm + mysql`, соответствующий следующим требованиям\:\n\n1. В файле должно быть описано три сервиса\: `frontend`, `backend`, `database`\n2. Сервис `frontend` собирается из контекста сборки `./frontend`\n3. Сервис `frontend` доступен на порту `80` хостовой системы\n4. Сервис `frontend` получает переменные окружения из файлов `frontend.env` и `.env`\n5. Сервис `frontend` монтирует том `data` в директорию `/var/www/html`\n6. Сервис `frontend` зависит от сервиса `backend`\n7. Сервис `frontend` работает в сети `intranet`\n8. Сервис `backend` собирается из контекста сборки `./backend`\n9. Сервис `backend` получает переменные окружения из файлов `backend.env` и `.env`\n10. Сервис `backend` монтирует том `data` в директорию `/var/www/html`\n11. Сервис `backend` зависит от сервиса `database`\n12. Сервис `backend` работает в сети `intranet`\n13. Сервис `database` основан на образе `mysql\:latest`\n14. Сервис `database` монтирует том `database` в директорию `/var/lib/mysql`\n15. Сервис `database` получает переменные окружения из файла `database.env`\n16. Сервис `database` работает в сети `intranet`\n17. Также в файле описаны тома `data` и `database`\n18. Также в файле описана сеть `intranet`{}
