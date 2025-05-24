@@ -1,8 +1,18 @@
 # Виртуализация и контейнеризация
 
-Конспект курса "Виртуализация и контейнеризация". Рассчитан на 13 теоретических занятий. Для понимания материала необходимо предварительно изучить курсы "Операционные системы", "Компьютерные сети", "Базы данных".
+Конспект курса "Виртуализация и контейнеризация". Рассчитан на 12 теоретических занятий. Для понимания материала необходимо предварительно изучить курсы "Операционные системы", "Компьютерные сети", "Базы данных".
 
 В рамках данного курса рассматриваются основные технологии виртуализации (на базе Qemu) и контейнеризация приложений (на базе Docker). Рассматриваются основные понятия, создание виртуальных машин, создание образов, запуск контейнеров, взаимодействие с контейнерами, оркестрация контейнеров, CI / CD процессы, оптимизация образов.
+
+По окончании курса студенты смогут:
+
+- Понимать основные понятия виртуализации и контейнеризации;
+- Создавать и настраивать виртуальные машины с использованием Qemu;
+- Создавать и настраивать контейнеры с использованием Docker;
+- Использовать Dockerfile для создания образов контейнеров;
+- Создавать и управлять многоконтейнерными приложениями с использованием docker-compose;
+- Интегрировать контейнеры в CI / CD процессы;
+- Оптимизировать образы контейнеров.
 
 Репозиторий с материалами курса доступен на [GitHub](https://github.com/mcroitor/app_containerization_ru).
 
@@ -12,17 +22,16 @@
 
 1. [Введение / История](01_intro/README.md)
 2. [Виртуализация](02_virtual/README.md)
-3. [Основные понятия](03_definitions/README.md)
-4. [Синтаксис Dockerfile](04_dockerfile_i/README.md)
-5. [Запуск контейнеризированных приложений](05_docker_run/README.md)
-6. [Дополнительные директивы Dockerfile](06_dockerfile_ii/README.md) 
-7. [Взаимодействие с контейнером](07_container_usage/README.md)
-8. [docker-compose I](08_docker_compose_i/README.md)
-9. [docker-compose II](09_docker_compose_ii/README.md)
-10. [Контейнеры в CI / CD процессах](10_CI_CD/README.md)
-11. [Оптимизация образов](11_image_optimization/README.md)
-12. [Управление секретами](12_secrets_management/README.md)
-13. [Рекомендации при разработке контейнеров (best practices)](13_best_practicies/README.md)
+3. [Синтаксис Dockerfile](03_dockerfile_i/README.md)
+4. [Запуск контейнеризированных приложений](04_docker_run/README.md)
+5. [Дополнительные директивы Dockerfile](05_dockerfile_ii/README.md) 
+6. [Взаимодействие с контейнером](06_container_usage/README.md)
+7. [docker-compose I](07_docker_compose_i/README.md)
+8. [docker-compose II](08_docker_compose_ii/README.md)
+9. [Контейнеры в CI / CD процессах](09_CI_CD/README.md)
+10. [Оптимизация образов](10_image_optimization/README.md)
+11. [Управление секретами](11_secrets_management/README.md)
+12. [Рекомендации при разработке контейнеров (best practices)](12_best_practicies/README.md)
 
 ## Дополнительные материалы
 
@@ -41,4 +50,6 @@
 5. [simust, __Основы контейнеризации (обзор Docker и Podman)__, Habr.com, 2022](https://habr.com/ru/articles/659049/)
 6. [Bibin Wilson, Shishir Khandelwal, __How to Reduce Docker Image Size: 6 Optimization Methods__, devopscube.com, 2022](https://devopscube.com/reduce-docker-image-size/)
 7. Vaibhav Kohli, Rajdeep Dua, John Wooten, __Troubleshooting Docker__, Packt, 2017
-8. [kubernetes, Основы Kubernetes, kubernetes.io, 2020](https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/explore/explore-intro/)
+8. [Что такое виртуализация?, AWS, aws.amazon.com](https://aws.amazon.com/ru/what-is/virtualization/)
+9. [simust, Основы виртуализации (обзор), habr.com, 2022-03-28](https://habr.com/ru/articles/657677/)
+10. [Система виртуализации QEMU, calculate-linux.org, 2020-01-24](https://wiki.calculate-linux.org/ru/qemu)

@@ -153,7 +153,7 @@ docker container create --help
 docker container start [OPTIONS] <container_name> [<container_name>...]
 ```
 
-Часто разработчики создают и запускают контеинер одной командой.  Для этого используется команда `docker run`:
+Часто разработчики создают и запускают контейнер одной командой.  Для этого используется команда `docker run`:
 
 | command | docker container run |
 | ------- | -------------------- |
@@ -201,12 +201,18 @@ docker run -d --name <container_name> <image_name>
 | ------- | --------------------- |
 | _alias_ | docker exec           |
 
-Взаимодействовать можно только с запущенным контейнером. Для этого необходимо знать его имя или идентификатор. Имя контейнера можно задать при создании контейнера с помощью флага `--name`, а идентификатор контейнера можно узнать при помощи команды `docker ps`.
+Взаимодействовать можно только с запущенным контейнером. Для этого необходимо знать его имя или идентификатор. Имя контейнера можно задать при создании контейнера с помощью флага `--name`, а идентификатор контейнера можно узнать при помощи команды `docker container ls`.
 
-Выполнить команду внутри контейнера можно при помощи команды `docker exec`:
+Выполнить команду внутри контейнера можно при помощи команды `docker container exec`:
 
 ```bash
-docker exec <container_name> <command>
+docker container exec [OPTIONS] <container_name> <command>
+```
+
+Если необходимо выполнить команду в интерактивном режиме, то используется флаг `-it`, который объединяет два флага `-i` (interactive) и `-t` (pseudo-TTY):
+
+```bash
+docker container exec -it ubuntu /bin/bash
 ```
 
 ## Перезапуск контейнера
@@ -218,7 +224,7 @@ docker exec <container_name> <command>
 Для перезапуска контейнера используется команда `docker restart`. Например, для перезапуска контейнера с именем `my_container` используется следующая команда:
 
 ```bash
-docker restart my_container
+docker container restart my_container
 ```
 
 ## Копирование файлов
@@ -230,19 +236,19 @@ docker restart my_container
 Для копирования файлов используется команда `docker cp`. Общий синтаксис команды `docker cp` выглядит следующим образом:
 
 ```bash
-docker cp <source> <destination>
+docker container cp <source> <destination>
 ```
 
 Например, для копирования файла `file.txt` из контейнера с именем `my_container` в текущий каталог используется следующая команда:
 
 ```bash
-docker cp my_container:/path/to/file.txt .
+docker container cp my_container:/path/to/file.txt .
 ```
 
 В случае, если необходимо скопировать `file.txt` из хоста в контейнер с именем `my_container` из текущего каталога используется следующая команда:
 
 ```bash
-docker cp file.txt my_container:/path/to/file.txt
+docker container cp file.txt my_container:/path/to/file.txt
 ```
 
 ## Чтение логов контейнера
@@ -254,13 +260,13 @@ docker cp file.txt my_container:/path/to/file.txt
 Для чтения логов контейнера используется команда `docker logs`. Например, для чтения логов контейнера с именем `my_container` используется следующая команда:
 
 ```bash
-docker logs my_container
+docker container logs my_container
 ```
 
 Если необходимо просматривать логи в реальном времени, то используется флаг `-f`:
 
 ```bash
-docker logs -f my_container
+docker container logs -f my_container
 ```
 
 ## Просмотр контейнеров
@@ -271,11 +277,7 @@ docker logs -f my_container
 |         | docker container list |
 |         | docker container ps   |
 
-Для просмотра запущенных контейнеров используется команда `docker ps`:
-
-```bash
-docker ps
-```
+Для просмотра запущенных контейнеров используется команда `docker container ls`:
 
 Вывод команды будет содержать следующие столбцы:
 
@@ -290,7 +292,7 @@ docker ps
 Если необходимо просмотреть все контейнеры, включая остановленные, то используется флаг `-a`:
 
 ```bash
-docker ps -a
+docker container ls -a
 ```
 
 ## Остановка контейнера
@@ -299,16 +301,16 @@ docker ps -a
 | ------- | --------------------- |
 | _alias_ | docker stop           |
 
-Для остановки контейнера используется команда `docker stop`:
+Для остановки контейнера используется команда `docker container stop`:
 
 ```bash
-docker stop <container_name>
+docker container stop <container_name>
 ```
 
 Одной командой можно остановить сразу несколько контейнеров, для этого необходимо перечислить их имена через пробел:
 
 ```bash
-docker stop <container_name_1> <container_name_2> <container_name_3>
+docker container stop <container_name_1> <container_name_2> <container_name_3>
 ```
 
 ## Удаление контейнера
@@ -318,16 +320,16 @@ docker stop <container_name_1> <container_name_2> <container_name_3>
 | _alias_ | docker rm               |
 |         | docker container remove |
 
-Для удаления контейнера используется команда `docker rm`:
+Для удаления контейнера используется команда `docker container rm`:
 
 ```bash
-docker rm <container_name>
+docker container rm <container_name>
 ```
 
 Одной командой можно удалить сразу несколько контейнеров, для этого необходимо перечислить их имена через пробел:
 
 ```bash
-docker rm <container_name_1> <container_name_2> <container_name_3>
+docker container rm <container_name_1> <container_name_2> <container_name_3>
 ```
 
 ## Библиография
