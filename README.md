@@ -43,13 +43,13 @@
 
 ## Библиография
 
-1. Лукша Марко, __Kubernetes в действии__, Москва, 2019
-2. Маркелов А. А., __Введение в технологии контейнеров и Kubernetes__ Москва: ДМКб Пресс, 2019.
-3. [Finnix, __50 вопросов по Docker, которые задают на собеседованиях, и ответы на них__, Habr.com, 2020](https://habr.com/ru/companies/southbridge/articles/528206/)
-4. [1shaman, __Лучшие альтернативы для Docker__, Habr.com, 2022](https://habr.com/ru/companies/first/articles/598337/)
-5. [simust, __Основы контейнеризации (обзор Docker и Podman)__, Habr.com, 2022](https://habr.com/ru/articles/659049/)
-6. [Bibin Wilson, Shishir Khandelwal, __How to Reduce Docker Image Size: 6 Optimization Methods__, devopscube.com, 2022](https://devopscube.com/reduce-docker-image-size/)
-7. Vaibhav Kohli, Rajdeep Dua, John Wooten, __Troubleshooting Docker__, Packt, 2017
-8. [Что такое виртуализация?, AWS, aws.amazon.com](https://aws.amazon.com/ru/what-is/virtualization/)
-9. [simust, Основы виртуализации (обзор), habr.com, 2022-03-28](https://habr.com/ru/articles/657677/)
-10. [Система виртуализации QEMU, calculate-linux.org, 2020-01-24](https://wiki.calculate-linux.org/ru/qemu)
+1. Маркелов А. А., __Введение в технологии контейнеров и Kubernetes__ Москва: ДМКб Пресс, 2019.
+2. [Finnix, __50 вопросов по Docker, которые задают на собеседованиях, и ответы на них__, Habr.com, 2020](https://habr.com/ru/companies/southbridge/articles/528206/)
+3. [1shaman, __Лучшие альтернативы для Docker__, Habr.com, 2022](https://habr.com/ru/companies/first/articles/598337/)
+4. [simust, __Основы контейнеризации (обзор Docker и Podman)__, Habr.com, 2022](https://habr.com/ru/articles/659049/)
+5. [Bibin Wilson, Shishir Khandelwal, __How to Reduce Docker Image Size: 6 Optimization Methods__, devopscube.com, 2022](https://devopscube.com/reduce-docker-image-size/)
+6. Vaibhav Kohli, Rajdeep Dua, John Wooten, __Troubleshooting Docker__, Packt, 2017
+7. [Что такое виртуализация?, AWS, aws.amazon.com](https://aws.amazon.com/ru/what-is/virtualization/)
+8. [simust, Основы виртуализации (обзор), habr.com, 2022-03-28](https://habr.com/ru/articles/657677/)
+9. [Система виртуализации QEMU, calculate-linux.org, 2020-01-24](https://wiki.calculate-linux.org/ru/qemu)
+10. [Compose Spec, docker.com](https://github.com/compose-spec/compose-spec)

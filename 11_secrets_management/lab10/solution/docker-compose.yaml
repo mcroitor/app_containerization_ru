@@ -1,0 +1,56 @@
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - frontend
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_HOST: database
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: /run/secrets/user
+      MYSQL_PASSWORD_FILE: /run/secrets/secret
+    secrets:
+      - secret
+      - user
+    networks:
+      - backend
+      - frontend
+  database:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/root_secret
+      MYSQL_DATABASE: my_database
+      MYSQL_USER_FILE: /run/secrets/user
+      MYSQL_PASSWORD_FILE: /run/secrets/secret
+    secrets:
+      - root_secret
+      - secret
+      - user
+    networks:
+      - backend
+    volumes:
+      - database_data:/var/lib/mysql
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+secrets:
+  secret:
+    file: ./secrets/secret.txt
+  user:
+    file: ./secrets/user.txt
+  root_secret:
+    file: ./secrets/root_secret.txt
+
+networks:
+  frontend: {}
+  backend: {}
+
+volumes:
+  database_data: {}
