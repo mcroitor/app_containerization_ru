@@ -12,7 +12,7 @@
 
 Создайте репозиторий `containers02` и склонируйте его себе на компьютер.
 
-Создайте в папке `containers02` папкy `dvd` и файл `readme.md`. В папку `dvd` поместите образ ISO дистрибутива Debian.
+Создайте в папке `containers02` папку `dvd` и файл `readme.md`. В папку `dvd` поместите образ ISO дистрибутива Debian.
 
 Создайте в папке `containers02` файл `.gitignore` со следующим содержимым:
 
@@ -60,7 +60,7 @@ qemu-system-x86_64 -hda debian.qcow2 -cdrom dvd/debian.iso -boot d -m 2G
 qemu-system-x86_64 -hda debian.qcow2 -m 2G -smp 2 -device e1000,netdev=net0 -netdev user,id=net0,hostfwd=tcp::1080-:80,hostfwd=tcp::1022-:22
 ```
 
-Установите LAMP в виртуальной машине. Для переключитесь на суперпользователя и выполните команды:
+Установите LAMP в виртуальной машине. Для этого переключитесь на суперпользователя и выполните команды:
 
 ```bash
 su
@@ -70,16 +70,16 @@ apt install -y apache2 php libapache2-mod-php php-mysql mariadb-server mariadb-c
 
 > _Какое назначение установленных пакетов?_
 
-Скачайте [СУБД  PhpMyAdmin](https://phpmyadmin.net/).
+Скачайте [СУБД PhpMyAdmin](https://phpmyadmin.net/):
 
 ```bash
 wget https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.zip
 ```
 
-Скачайте [CMS Drupal](https://www.drupal.org/).
+Скачайте [CMS WordPress](https://wordpress.org/download/):
 
 ```bash
-wget https://ftp.drupal.org/files/projects/drupal-11.1.1.zip
+wget https://wordpress.org/latest.zip
 ```
 
 Проверьте наличие файлов командой `ls -l`.
@@ -87,26 +87,26 @@ wget https://ftp.drupal.org/files/projects/drupal-11.1.1.zip
 Распакуйте скачанные файлы в папки:
 
 1. СУБД PhpMyAdmin ==> `/var/www/phpmyadmin`;
-2. CMS Drupal ==> `/var/www/drupal`.
+2. CMS WordPress ==> `/var/www/wordpress`;
 
 ```bash
 mkdir /var/www
 unzip phpMyAdmin-5.2.2-all-languages.zip
 mv phpMyAdmin-5.2.2-all-languages /var/www/phpmyadmin
-unzip drupal-11.1.1.zip
-mv drupal-11.1.1 /var/www/drupal
+unzip latest.zip
+mv wordpress /var/www/wordpress
 ```
 
-Создайте через командную строку для CMS базу данных `drupal_db` и пользователя базы данных с вашим именем.
+Создайте через командную строку для CMS базу данных `wordpress_db` и пользователя базы данных с вашим именем.
 
 ```bash
 mysql -u root
 ```
 
 ```sql
-CREATE DATABASE drupal_db;
+CREATE DATABASE wordpress_db;
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON drupal_db.* TO 'user'@'localhost';
+GRANT ALL PRIVILEGES ON wordpress_db.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
@@ -130,22 +130,22 @@ nano /etc/apache2/sites-available/01-phpmyadmin.conf
 </VirtualHost>
 ```
 
-В папке `/etc/apache2/sites-available` создайте файл `02-drupal.conf`
+В папке `/etc/apache2/sites-available` создайте файл `02-wordpress.conf`
 
 ```bash
-nano /etc/apache2/sites-available/02-drupal.conf
+nano /etc/apache2/sites-available/02-wordpress.conf
 ```
 
- с содержимым:
+с содержимым:
 
 ```text
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
-    DocumentRoot "/var/www/drupal"
-    ServerName drupal.localhost
-    ServerAlias www.drupal.localhost
-    ErrorLog "/var/log/apache2/drupal.localhost-error.log"
-    CustomLog "/var/log/apache2/drupal.localhost-access.log" common
+    DocumentRoot "/var/www/wordpress"
+    ServerName wordpress.localhost
+    ServerAlias www.wordpress.localhost
+    ErrorLog "/var/log/apache2/wordpress.localhost-error.log"
+    CustomLog "/var/log/apache2/wordpress.localhost-access.log" common
 </VirtualHost>
 ```
 
@@ -153,14 +153,14 @@ nano /etc/apache2/sites-available/02-drupal.conf
 
 ```bash
 /usr/sbin/a2ensite 01-phpmyadmin
-/usr/sbin/a2ensite 02-drupal
+/usr/sbin/a2ensite 02-wordpress
 ```
 
 Добавьте в файл `/etc/hosts` строки:
 
 ```text
 127.0.0.1 phpmyadmin.localhost
-127.0.0.1 drupal.localhost
+127.0.0.1 wordpress.localhost
 ```
 
 ## Запуск и тестирование
@@ -169,11 +169,11 @@ nano /etc/apache2/sites-available/02-drupal.conf
 
 > _Что выводится на экране в результате выполнения данной команды?_
 
-Перегрузите Apache Web Server.
+Перезагрузите Apache Web Server.
 
-> _Как перегрузить Apache Web Server?_
+> _Как перезагрузить Apache Web Server?_
 
-В браузере проверьте доступность сайтов  `http://drupal.localhost:1080` и `http://phpmyadmin.localhost:1080`. Завершите установку сайтов.
+В браузере проверьте доступность сайтов  `http://wordpress.localhost:1080` и `http://phpmyadmin.localhost:1080`. Завершите установку сайтов.
 
 ## Отчет
 
@@ -182,7 +182,7 @@ nano /etc/apache2/sites-available/02-drupal.conf
 1. Название лабораторной работы.
 2. Имя и фамилию студента, группу.
 3. Дату выполнения работы.
-4. Описание задачи
+4. Описание задачи.
 5. Описание выполнения работы.
 6. Ответы на поставленные вопросы.
 7. Выводы.
@@ -203,16 +203,16 @@ nano /etc/apache2/sites-available/02-drupal.conf
 
 ## Оценивание
 
-- `1 балл` - отчет содержит постановку задачи
-- `1 балл` - отчет содержит описание создания образа диска
-- `1 балл` - отчет содержит описание установки ОС
-- `1 балл` - отчет содержит описание установки LAMP
-- `1 балл` - отчет содержит описание установки конфигурации виртуальных хостов
-- `1 балл` - отчет содержит описание установки Drupal
-- `1 балл` - отчет содержит описание установки PhpMyAdmin
-- `1 балл` - отчет содержит ответы на вопросы
-- `1 балл` - отчет содержит выводы
-- `1 балл` - оформление отчета согласно требованиям (форматирование, наличие библиографии)
-- `2 балла` - защита работы
-- `-1 балл` - за каждый день просрочки сдачи
-- `-5 баллов` - за копирование кода у других студентов
+- `1 балл` - отчет содержит постановку задачи;
+- `1 балл` - отчет содержит описание создания образа диска;
+- `1 балл` - отчет содержит описание установки ОС;
+- `1 балл` - отчет содержит описание установки LAMP;
+- `1 балл` - отчет содержит описание установки конфигурации виртуальных хостов;
+- `1 балл` - отчет содержит описание установки WordPress;
+- `1 балл` - отчет содержит описание установки PhpMyAdmin;
+- `1 балл` - отчет содержит ответы на вопросы;
+- `1 балл` - отчет содержит выводы;
+- `1 балл` - оформление отчета согласно требованиям (форматирование, наличие библиографии);
+- `2 балла` - защита работы;
+- `-1 балл` - за каждый день просрочки сдачи;
+- `-5 баллов` - за копирование кода у других студентов.

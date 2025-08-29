@@ -1,0 +1,7 @@
+FROM containers07-base
+
+# copy tests to the /var/www/html directory
+COPY tests /var/www/html
+
+# run tests
+CMD ["php", "/var/www/html/tests/tests.php"]
