@@ -26,12 +26,12 @@
 4. [Запуск контейнеризированных приложений](04_docker_run/README.md)
 5. [Дополнительные директивы Dockerfile](05_dockerfile_ii/README.md) 
 6. [Взаимодействие с контейнером](06_container_usage/README.md)
-7. [docker-compose I](07_docker_compose_i/README.md)
-8. [docker-compose II](08_docker_compose_ii/README.md)
-9. [Контейнеры в CI / CD процессах](09_CI_CD/README.md)
-10. [Оптимизация образов](10_image_optimization/README.md)
+7. [Создание кластера контейнеров при помощи Docker Compose](07_docker_compose_i/README.md)
+8. [Особенности настройки кластера контейнеров](08_docker_compose_ii/README.md)
+9. [Непрерывные интеграция и доставка (CI / CD)](09_CI_CD/README.md)
+10. [Оптимизация образа контейнера](10_image_optimization/README.md)
 11. [Управление секретами](11_secrets_management/README.md)
-12. [Рекомендации при разработке контейнеров (best practices)](12_best_practicies/README.md)
+12. [Рекомендации при разработке контейнеров](12_best_practicies/README.md)
 
 ## Дополнительные материалы
 
