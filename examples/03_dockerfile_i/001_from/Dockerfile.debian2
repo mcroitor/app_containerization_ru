@@ -1,1 +1,1 @@
-FROM debian:buster
+FROM debian:bookworm-slim
