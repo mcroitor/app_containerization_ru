@@ -1,4 +1,4 @@
-FROM php:7.4-fpm as base
+FROM php:8.4.27-fpm as base
 
 # install pdo_sqlite extension
 RUN apt-get update && \

@@ -93,7 +93,7 @@ $config['db']['password'] = getenv('MYSQL_PASSWORD');
 Обновите Dockerfile, заменив установку расширения `pdo_sqlite` на установку расширения `pdo_mysql`.
 
 ```dockerfile
-FROM php:7.4-fpm AS base
+FROM php:8.4.27-fpm AS base
 
 # install pdo_mysql extension
 RUN apt-get update && \

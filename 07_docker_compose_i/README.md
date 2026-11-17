@@ -269,7 +269,7 @@ services:
         depends_on:
             - mariadb
     php-fpm:
-        image: php:7.4-fpm
+        image: php:8.4.27-fpm
         volumes:
             - ./files/app:/var/www/html
         networks:

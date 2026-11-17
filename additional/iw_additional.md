@@ -68,7 +68,7 @@ COPY ./files/httpd/httpd.conf /usr/local/apache2/conf/httpd.conf
 Создайте файл `Dockerfile.php-fpm` со следующим содержимым:
 
 ```dockerfile
-FROM php:7.4-fpm
+FROM php:8.4.27-fpm
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libfreetype6-dev \

@@ -19,7 +19,7 @@ services:
     build:
       context: ./files/php
       args:
-        PHP_VERSION: 8.1
+        PHP_VERSION: 8.4.27
     networks:
       - backend
       - frontend

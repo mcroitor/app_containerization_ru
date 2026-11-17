@@ -67,7 +67,7 @@ services:
     networks:
       - internal
   backend:
-    image: php:7.4-fpm
+    image: php:8.4.27-fpm
     volumes:
       - ./mounts/site:/var/www/html
     networks:
