@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8.4.27-fpm
 
 RUN apt-get update && apt-get upgrade --no-install-recommends -y && \
     apt-get clean && \

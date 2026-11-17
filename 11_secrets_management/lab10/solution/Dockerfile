@@ -1,4 +1,4 @@
-FROM php:7.4-fpm AS base
+FROM php:8.4.27-fpm AS base
 
 # install pdo_mysql extension
 RUN apt-get update && \

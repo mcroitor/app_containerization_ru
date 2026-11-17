@@ -204,7 +204,7 @@ echo $tests->getResult();
 Создайте в корневом каталоге файл `Dockerfile` со следующим содержимым:
 
 ```dockerfile
-FROM php:7.4-fpm as base
+FROM php:8.4.27-fpm as base
 
 RUN apt-get update && \
     apt-get install -y sqlite3 libsqlite3-dev && \

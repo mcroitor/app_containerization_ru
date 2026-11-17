@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend:
-#    image: php:7.4-fpm
+#    image: php:8.4.27-fpm
     build:
       context: ./php-fpm
       dockerfile: dockerfile
